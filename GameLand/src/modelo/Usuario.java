@@ -4,7 +4,7 @@ public class Usuario {
 
     public static final boolean FEMININO = false;
     public static final boolean MASCULINO = true;
-    
+
     private String nome;
     private String email;
     private String senha;
@@ -12,7 +12,7 @@ public class Usuario {
     private int idade;
     private boolean sexo;
     private int nivel; //Nivel de acesso, normal 0 ou adm 99
-    private Carteira carteira = new Carteira();
+    private final Carteira carteira = new Carteira();
 
     public String getNome() {
         return nome;
@@ -74,6 +74,4 @@ public class Usuario {
         return carteira;
     }
 
-    
-    
 }
