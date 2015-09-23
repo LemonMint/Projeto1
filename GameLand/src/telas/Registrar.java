@@ -5,7 +5,7 @@
  */
 package telas;
 
-import listeners.RegistrarUser;
+import listeners.RegistrarUserListener;
 import modelo.Usuario;
 
 /**
@@ -19,10 +19,10 @@ public class Registrar extends javax.swing.JInternalFrame {
      */
     public Registrar() {
         initComponents();
-        registrarButtonUser.addActionListener(new RegistrarUser());
+        registrarButtonUser.addActionListener(new RegistrarUserListener());
     }
-    
-    public Usuario getUsuario(){
+
+    public Usuario getUsuario() {
         Usuario usuario = new Usuario();
         usuario.setCidade(cidadeUser.getText());
         usuario.setEmail(emailUser.getText());
@@ -32,10 +32,13 @@ public class Registrar extends javax.swing.JInternalFrame {
         usuario.setNome(nomeUser.getText());
         usuario.setRg(Integer.valueOf(rgUser.getText()));
         usuario.setSenha(String.valueOf(senhaUser.getPassword()));
-        usuario.setSexo(isIcon);
+        if (masculinoUser.isSelected()) {
+            usuario.setSexo(Usuario.MASCULINO);
+        } else {
+            usuario.setSexo(Usuario.FEMININO);
+        }
         return usuario;
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.

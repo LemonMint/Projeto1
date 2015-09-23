@@ -6,6 +6,7 @@
 package telas;
 
 import listeners.LoginListener;
+import listeners.RegistrarTelaListener;
 import listeners.RegistroJogosListener;
 import listeners.SairListener;
 
@@ -21,7 +22,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         sairButton.addActionListener(new SairListener());
-        registerButton.addActionListener(new RegistroJogosListener());
+        registerButton.addActionListener(new RegistrarTelaListener());
         loginButton.addActionListener(new LoginListener());
     }
 
