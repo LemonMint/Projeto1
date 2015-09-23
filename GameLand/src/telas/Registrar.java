@@ -6,6 +6,7 @@
 package telas;
 
 import listeners.RegistrarUser;
+import modelo.Usuario;
 
 /**
  *
@@ -18,20 +19,23 @@ public class Registrar extends javax.swing.JInternalFrame {
      */
     public Registrar() {
         initComponents();
-        nomeUser.addActionListener(new ());
-        idadeUser.addActionListener(new ());
-        masculinoUser.addActionListener(new ());
-        femininoUser.addActionListener(new ());
-        cidadeUser.addActionListener(new ());
-        estadoUser.addActionListener(new ());
-        endereçoUser.addActionListener(new ());
-        emailUser.addActionListener(new ());
-        rgUser.addActionListener(new ());
-        usuarioUser.addActionListener(new ());
-        senhaUser.addActionListener(new ());
-        registrarButtonUser.addActionListener(new ());
-        cancelUser.addActionListener(new ());
+        registrarButtonUser.addActionListener(new RegistrarUser());
     }
+    
+    public Usuario getUsuario(){
+        Usuario usuario = new Usuario();
+        usuario.setCidade(cidadeUser.getText());
+        usuario.setEmail(emailUser.getText());
+        usuario.setEstado(estadoUser.getText());
+        usuario.setIdade(Integer.valueOf(idadeUser.getText()));
+        usuario.setLogin(usuarioUser.getText());
+        usuario.setNome(nomeUser.getText());
+        usuario.setRg(Integer.valueOf(rgUser.getText()));
+        usuario.setSenha(String.valueOf(senhaUser.getPassword()));
+        usuario.setSexo(isIcon);
+        return usuario;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,6 +46,7 @@ public class Registrar extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         nomeUser = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -57,14 +62,14 @@ public class Registrar extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         senhaUser = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
-        masculinoUser = new javax.swing.JCheckBox();
-        femininoUser = new javax.swing.JCheckBox();
         registrarButtonUser = new javax.swing.JButton();
         cancelUser = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         estadoUser = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         cidadeUser = new javax.swing.JTextField();
+        masculinoUser = new javax.swing.JRadioButton();
+        femininoUser = new javax.swing.JRadioButton();
 
         setTitle("Registre-se Grátis");
         setMaximumSize(new java.awt.Dimension(0, 0));
@@ -121,15 +126,6 @@ public class Registrar extends javax.swing.JInternalFrame {
 
         jLabel8.setText("Sexo");
 
-        masculinoUser.setText("Masculino");
-        masculinoUser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                masculinoUserActionPerformed(evt);
-            }
-        });
-
-        femininoUser.setText("Feminino");
-
         registrarButtonUser.setText("Registrar");
 
         cancelUser.setText("Cancelar");
@@ -137,6 +133,13 @@ public class Registrar extends javax.swing.JInternalFrame {
         jLabel9.setText("Estado");
 
         jLabel10.setText("Cidade");
+
+        buttonGroup1.add(masculinoUser);
+        masculinoUser.setSelected(true);
+        masculinoUser.setText("Masculino");
+
+        buttonGroup1.add(femininoUser);
+        femininoUser.setText("Feminino");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,6 +163,13 @@ public class Registrar extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel3)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(idadeUser, javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,14 +180,7 @@ public class Registrar extends javax.swing.JInternalFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(masculinoUser)
                                         .addGap(18, 18, 18)
-                                        .addComponent(femininoUser))))
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel3))
+                                        .addComponent(femininoUser)))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -259,18 +262,15 @@ public class Registrar extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaUserActionPerformed
 
-    private void masculinoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masculinoUserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_masculinoUserActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton cancelUser;
     private javax.swing.JTextField cidadeUser;
     private javax.swing.JTextField emailUser;
     private javax.swing.JTextField endereçoUser;
     private javax.swing.JTextField estadoUser;
-    private javax.swing.JCheckBox femininoUser;
+    private javax.swing.JRadioButton femininoUser;
     private javax.swing.JTextField idadeUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -282,7 +282,7 @@ public class Registrar extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JCheckBox masculinoUser;
+    private javax.swing.JRadioButton masculinoUser;
     private javax.swing.JTextField nomeUser;
     private javax.swing.JButton registrarButtonUser;
     private javax.swing.JTextField rgUser;

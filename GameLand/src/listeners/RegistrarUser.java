@@ -6,7 +6,14 @@ import java.awt.event.ActionListener;
 import modelo.Usuario;
 
 public class RegistrarUser implements ActionListener{
-    Usuario user = new Usuario();
+    Usuario user = null;
+    
+    public RegistrarUser() {
+        this.user = user;
+    }
+    
+    
+    
     @Override
     public void actionPerformed(ActionEvent ae) {
         
