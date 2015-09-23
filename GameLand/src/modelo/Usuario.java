@@ -11,7 +11,33 @@ public class Usuario {
     private String login;
     private int idade;
     private boolean sexo;
-    private int nivel; //Nivel de acesso, normal 0 ou adm 99
+    private int rg;
+    private String cidade;
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    private String estado;
+
+    public int getRg() {
+        return rg;
+    }
+
+    public void setRg(int rg) {
+        this.rg = rg;
+    }
     private final Carteira carteira = new Carteira();
 
     public String getNome() {
@@ -60,14 +86,6 @@ public class Usuario {
 
     public void setSexo(boolean sexo) {
         this.sexo = sexo;
-    }
-
-    public int getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
     }
 
     public Carteira getCarteira() {
