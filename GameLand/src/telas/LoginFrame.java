@@ -6,9 +6,7 @@
 package telas;
 
 import listeners.LoginListener;
-import listeners.RegistrarTelaListener;
-import listeners.RegistroJogosListener;
-import listeners.SairListener;
+import modelo.Usuario;
 
 /**
  *
@@ -17,6 +15,13 @@ import listeners.SairListener;
 public class LoginFrame extends javax.swing.JFrame {
 
     private LoginListener listener = new LoginListener(this);
+    
+    public Usuario getUsuario(){
+        Usuario usuario = new Usuario();
+        usuario.setLogin(txtUserName.getText());
+        usuario.setSenha(String.valueOf(txtUserPassword.getPassword()));
+        return usuario;
+    }
     
     public LoginFrame() {
         initComponents();
@@ -43,8 +48,12 @@ public class LoginFrame extends javax.swing.JFrame {
         setTitle("GameLand");
         setResizable(false);
 
+        loginButton.addActionListener(listener);
+        loginButton.setActionCommand("Entrar");
         loginButton.setText("Entrar");
 
+        sairButton.addActionListener(listener);
+        sairButton.setActionCommand("Sair");
         sairButton.setText("Sair");
 
         jLabel2.setText("Senha");

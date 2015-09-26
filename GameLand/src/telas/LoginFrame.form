@@ -74,11 +74,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Entrar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="loginButton.addActionListener(listener);&#xa;loginButton.setActionCommand(&quot;Entrar&quot;);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="sairButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="sairButton.addActionListener(listener);&#xa;sairButton.setActionCommand(&quot;Sair&quot;);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtUserPassword">
     </Component>
