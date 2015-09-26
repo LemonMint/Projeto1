@@ -12,18 +12,12 @@ import modelo.Usuario;
  *
  * @author comp1
  */
-public class Registrar extends javax.swing.JInternalFrame {
+public class RegistrarFrame extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Registrar
-     */
-    public Registrar() {
-        initComponents();
-        registrarButtonUser.addActionListener(new RegistrarUserListener());
-    }
+    private RegistrarUserListener listener = new RegistrarUserListener(this);
 
     public Usuario getUsuario() {
-        Usuario usuario = new Usuario();
+        Usuario usuario = new Usuario();     
         usuario.setCidade(cidadeUser.getText());
         usuario.setEmail(emailUser.getText());
         usuario.setEstado(estadoUser.getText());
@@ -65,8 +59,8 @@ public class Registrar extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         senhaUser = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
-        registrarButtonUser = new javax.swing.JButton();
-        cancelUser = new javax.swing.JButton();
+        ButtonUserRegistrar = new javax.swing.JButton();
+        ButtonCancelRegistrar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         estadoUser = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
@@ -74,6 +68,7 @@ public class Registrar extends javax.swing.JInternalFrame {
         masculinoUser = new javax.swing.JRadioButton();
         femininoUser = new javax.swing.JRadioButton();
 
+        setResizable(true);
         setTitle("Registre-se Grátis");
         setMaximumSize(new java.awt.Dimension(0, 0));
 
@@ -129,9 +124,13 @@ public class Registrar extends javax.swing.JInternalFrame {
 
         jLabel8.setText("Sexo");
 
-        registrarButtonUser.setText("Registrar");
+        ButtonUserRegistrar.addActionListener(listener);
+        ButtonUserRegistrar.setActionCommand("Registrar");
+        ButtonUserRegistrar.setText("Registrar");
 
-        cancelUser.setText("Cancelar");
+        ButtonCancelRegistrar.addActionListener(listener);
+        ButtonCancelRegistrar.setActionCommand("Cancel");
+        ButtonCancelRegistrar.setText("Cancelar");
 
         jLabel9.setText("Estado");
 
@@ -153,9 +152,9 @@ public class Registrar extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nomeUser)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(cancelUser, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                        .addComponent(registrarButtonUser, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ButtonCancelRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(ButtonUserRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(estadoUser)
                     .addComponent(cidadeUser)
                     .addComponent(senhaUser)
@@ -211,7 +210,7 @@ public class Registrar extends javax.swing.JInternalFrame {
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cidadeUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(endereçoUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -233,8 +232,8 @@ public class Registrar extends javax.swing.JInternalFrame {
                 .addComponent(senhaUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(registrarButtonUser)
-                    .addComponent(cancelUser))
+                    .addComponent(ButtonUserRegistrar)
+                    .addComponent(ButtonCancelRegistrar))
                 .addContainerGap())
         );
 
@@ -267,8 +266,9 @@ public class Registrar extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonCancelRegistrar;
+    private javax.swing.JButton ButtonUserRegistrar;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton cancelUser;
     private javax.swing.JTextField cidadeUser;
     private javax.swing.JTextField emailUser;
     private javax.swing.JTextField endereçoUser;
@@ -287,7 +287,6 @@ public class Registrar extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton masculinoUser;
     private javax.swing.JTextField nomeUser;
-    private javax.swing.JButton registrarButtonUser;
     private javax.swing.JTextField rgUser;
     private javax.swing.JPasswordField senhaUser;
     private javax.swing.JTextField usuarioUser;

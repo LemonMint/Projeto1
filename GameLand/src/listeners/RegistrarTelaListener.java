@@ -7,16 +7,16 @@ package listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import telas.Login;
+import telas.LoginFrame;
 
 
 public class RegistrarTelaListener implements ActionListener{
-    Login l;
+    LoginFrame l;
     @Override
     public void actionPerformed(ActionEvent ae) {
     }
 
-    public RegistrarTelaListener(Login l) {
+    public RegistrarTelaListener(LoginFrame l) {
         this.l = l;
     }
     
