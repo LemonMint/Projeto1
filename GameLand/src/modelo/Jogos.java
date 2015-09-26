@@ -4,18 +4,26 @@ package modelo;
 
 public class Jogos {
     private String nomeJogo;
-    private double preçoJogo;
+    private double precoJogo;
     private String plataformaJogo;
     private String anoJogo;
     private String generoJogo;
     private double porcentagem;
+    private int codigoJogo;
 
+    public int getCodigoJogo() {
+        return codigoJogo;
+    }
+
+    public void setCodigoJogo(int codigoJogo) {
+        this.codigoJogo = codigoJogo;
+    }
     public Jogos() {
     }
 
     public Jogos(String nomeJogo, double preçoJogo, String plataformaJogo, String anoJogo, String generoJogo) {
         this.nomeJogo = nomeJogo;
-        this.preçoJogo = preçoJogo;
+        this.precoJogo = precoJogo;
         this.plataformaJogo = plataformaJogo;
         this.anoJogo = anoJogo;
         this.generoJogo = generoJogo;
@@ -29,12 +37,12 @@ public class Jogos {
         this.nomeJogo = nomeJogo;
     }
 
-    public double getPreçoJogo() {
-        return preçoJogo;
+    public double getPrecoJogo() {
+        return precoJogo;
     }
 
-    public void setPreçoJogo(double preçoJogo) {
-        this.preçoJogo = preçoJogo;
+    public void setPrecoJogo(double preçoJogo) {
+        this.precoJogo = preçoJogo;
     }
 
     public String getPlataformaJogo() {
