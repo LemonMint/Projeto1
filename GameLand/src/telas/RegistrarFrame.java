@@ -5,6 +5,7 @@
  */
 package telas;
 
+import javax.swing.JInternalFrame;
 import listeners.RegistrarUserListener;
 import modelo.Usuario;
 
@@ -15,7 +16,13 @@ import modelo.Usuario;
 public class RegistrarFrame extends javax.swing.JInternalFrame {
 
     private RegistrarUserListener listener = new RegistrarUserListener(this);
-
+    
+    public RegistrarFrame()
+    {
+        initComponents();       
+    }
+    
+    
     public Usuario getUsuario() {
         Usuario usuario = new Usuario();     
         usuario.setCidade(cidadeUser.getText());

@@ -25,12 +25,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     
     public void criarRegistro(){
             telaRegistrar = new RegistrarFrame();
-            telaRegistrar.setBounds(200,200,500,500);
             jDesktopPane1.add(telaRegistrar);
-            System.out.println("asasdsda");
-            telaRegistrar.setVisible(true);
-        
-        
     }
 
     /**
