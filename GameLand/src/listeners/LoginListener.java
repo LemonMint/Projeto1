@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import modelo.Usuario;
 import telas.LoginFrame;
-import telas.Principal;
+import telas.PrincipalFrame;
 
 
 public class LoginListener implements ActionListener{
@@ -22,9 +22,9 @@ public class LoginListener implements ActionListener{
         if("Entrar".equals(e.getActionCommand())){
             Usuario usuario = frame.getUsuario();
             //Aqui coloca-se o teste de usuario
-            JOptionPane.showMessageDialog(frame, "Usuario Encontrado: " + usuario.getLogin());
-            Principal p = new Principal();
-            p.show();
+            //JOptionPane.showMessageDialog(frame, "Usuario Encontrado: " + usuario.getLogin());
+            PrincipalFrame p = new PrincipalFrame();
+            p.setVisible(true);
             frame.setVisible(false);
         }else if("Sair".equals(e.getActionCommand())){
             System.exit(0);

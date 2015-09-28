@@ -5,19 +5,28 @@
  */
 package telas;
 
+import javafx.scene.layout.Pane;
+import listeners.PrincipalListener;
 /**
  *
  * @author Lemon
  */
-public class Principal extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Principal
-     */
-    public Principal() {
+public class PrincipalFrame extends javax.swing.JFrame {
+    
+ 
+    public PrincipalFrame() {
         initComponents();
+        listener = new PrincipalListener(this,this.panePrincipal);
     }
-
+    
+    public void criaPane(){
+        RegistrarFrame tela = new RegistrarFrame();
+            System.out.println(panePrincipal);
+            panePrincipal.add(tela);
+            System.out.println("asasdsda");
+            tela.setVisible(true);
+    }
+    private PrincipalListener listener;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,32 +36,39 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        registerButtom = new javax.swing.JButton();
+        panePrincipal = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        menuRegistrar = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+
+        registerButtom.addActionListener(listener);
+        registerButtom.setActionCommand("registrar");
+        registerButtom.setText("Registrar Cliente");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GameLand");
 
-        jDesktopPane1.setBackground(new java.awt.Color(153, 153, 153));
+        panePrincipal.setBackground(new java.awt.Color(153, 153, 153));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+        javax.swing.GroupLayout panePrincipalLayout = new javax.swing.GroupLayout(panePrincipal);
+        panePrincipal.setLayout(panePrincipalLayout);
+        panePrincipalLayout.setHorizontalGroup(
+            panePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 809, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 512, Short.MAX_VALUE)
+        panePrincipalLayout.setVerticalGroup(
+            panePrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 526, Short.MAX_VALUE)
         );
 
         jMenu1.setText("File");
 
-        jMenuItem1.setText("jMenuItem1");
-        jMenu1.add(jMenuItem1);
+        menuRegistrar.addActionListener(listener);
+        menuRegistrar.setActionCommand("registrar");
+        menuRegistrar.setText("Registrar");
+        jMenu1.add(menuRegistrar);
 
         jMenuBar1.add(jMenu1);
 
@@ -65,11 +81,11 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(panePrincipal, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(panePrincipal, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -92,29 +108,31 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrincipalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new PrincipalFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem menuRegistrar;
+    private javax.swing.JDesktopPane panePrincipal;
+    private javax.swing.JButton registerButtom;
     // End of variables declaration//GEN-END:variables
 }

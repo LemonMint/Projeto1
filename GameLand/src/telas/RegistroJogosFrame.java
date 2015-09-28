@@ -10,15 +10,10 @@ import javax.swing.JLabel;
 import listeners.RegistroJogosListener;
 import modelo.Jogos;
 
-/**
- *
- * @author Lemon
- */
+
 public class RegistroJogosFrame extends javax.swing.JInternalFrame {
 
     private RegistroJogosListener Jogoslistener = new RegistroJogosListener(this);
-    
-    
     
     /**
      * Creates new form Registro
