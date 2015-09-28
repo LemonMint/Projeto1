@@ -71,6 +71,7 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
         setResizable(true);
         setTitle("Registre-se Grátis");
         setMaximumSize(new java.awt.Dimension(0, 0));
+        setVisible(true);
 
         jLabel1.setText("Nome");
 

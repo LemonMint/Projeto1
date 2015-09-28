@@ -13,18 +13,18 @@ import telas.RegistrarFrame;
 public class PrincipalListener implements ActionListener{
 
     private PrincipalFrame frame;
-    private JDesktopPane pane;
 
-    public PrincipalListener(PrincipalFrame frame, JDesktopPane pane) {
+
+    public PrincipalListener(PrincipalFrame frame ) {
         this.frame = frame;
-        this.pane = pane;
     }
     
+    RegistrarFrame tela = new RegistrarFrame();
     @Override
     public void actionPerformed(ActionEvent ae) {
         if("registrar".equals(ae.getActionCommand())){
-           frame.criaPane();
-            System.out.println("weqweqeqw");
+            System.out.println("salt");
+            frame.criarRegistro();
         }
         else
             System.out.println("lolol");
