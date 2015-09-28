@@ -26,6 +26,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarRegistro(){
             telaRegistrar = new RegistrarFrame();
             jDesktopPane1.add(telaRegistrar);
+        
+        
     }
 
     /**
