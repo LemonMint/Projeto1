@@ -17,9 +17,6 @@ public class PrincipalListener implements ActionListener {
         this.frame = frame;
     }
 
-    RegistrarFrame tela = new RegistrarFrame();
-    RegistroJogosFrame telaJogo = new RegistroJogosFrame();
-
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (null != ae.getActionCommand()) {
@@ -30,8 +27,11 @@ public class PrincipalListener implements ActionListener {
                 case "registrarJogo":
                     frame.criarRegistroJogos();
                     break;
+                case "excluirJogos":
+                    frame.criarExcluirJogos();
+                    break;
                 default:
-                    System.out.println("lolol");
+                    System.out.println("Não Existe");
                     break;
             }
         }
