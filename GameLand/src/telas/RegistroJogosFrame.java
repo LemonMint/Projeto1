@@ -10,30 +10,27 @@ import javax.swing.JLabel;
 import listeners.RegistroJogosListener;
 import modelo.Jogos;
 
-
 public class RegistroJogosFrame extends javax.swing.JInternalFrame {
 
-    private RegistroJogosListener Jogoslistener = new RegistroJogosListener(this);
-    
+    private RegistroJogosListener listener = new RegistroJogosListener(this);
+
     /**
      * Creates new form Registro
      */
     public RegistroJogosFrame() {
         initComponents();
     }
-    
-    public Jogos getJogo()
-    {
+
+    public Jogos getJogo() {
         Jogos jogo = new Jogos();
         jogo.setNomeJogo(txtGameName.getText());
         jogo.setAnoJogo(txtGameYear.getText());
         jogo.setGeneroJogo(cbGameCat.getSelectedItem().toString());
         jogo.setPlataformaJogo(cbGamePlat.getSelectedItem().toString());
         jogo.setPrecoJogo(Double.parseDouble(txtGamePrice.getText()));
-    
+
         return jogo;
     }
-     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -87,7 +84,7 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
         jLabel4.setText("Categoria");
 
         btCancel.setText("Cancelar");
-        btCancel.addActionListener(Jogoslistener);
+        btCancel.addActionListener(listener);
         btCancel.setActionCommand("Cancelar");
         btCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +93,7 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
         });
 
         btAdd.setText("Adicionar");
-        btAdd.addActionListener(Jogoslistener);
+        btAdd.addActionListener(listener);
         btAdd.setActionCommand("Adicionar");
         btAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,6 +191,6 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtGamePrice;
     private javax.swing.JTextField txtGameYear;
     // End of variables declaration//GEN-END:variables
-    ImageIcon icon = new ImageIcon("C:/Users/comp1/Documents/NetBeansProjects/Projeto1/GameLand/src/Items/games.jpg"); 
+    ImageIcon icon = new ImageIcon("C:/Users/comp1/Documents/NetBeansProjects/Projeto1/GameLand/src/Items/games.jpg");
 
 }

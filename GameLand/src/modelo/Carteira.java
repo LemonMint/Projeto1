@@ -1,4 +1,3 @@
-
 package modelo;
 
 /**
@@ -6,5 +5,5 @@ package modelo;
  * @author Lemon
  */
 class Carteira {
-    
+
 }

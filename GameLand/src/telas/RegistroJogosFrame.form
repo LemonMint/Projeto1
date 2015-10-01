@@ -179,7 +179,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCancelActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="btCancel.addActionListener(Jogoslistener);&#xa;btCancel.setActionCommand(&quot;Cancelar&quot;);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="btCancel.addActionListener(listener);&#xa;btCancel.setActionCommand(&quot;Cancelar&quot;);"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btAdd">
@@ -190,7 +190,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btAddActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="btAdd.addActionListener(Jogoslistener);&#xa;btAdd.setActionCommand(&quot;Adicionar&quot;);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="btAdd.addActionListener(listener);&#xa;btAdd.setActionCommand(&quot;Adicionar&quot;);"/>
       </AuxValues>
     </Component>
   </SubComponents>

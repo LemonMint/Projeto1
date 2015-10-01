@@ -15,17 +15,17 @@ import modelo.Usuario;
 public class LoginFrame extends javax.swing.JFrame {
 
     private LoginListener listener = new LoginListener(this);
-    
-    public Usuario getUsuario(){
+
+    public Usuario getUsuario() {
         Usuario usuario = new Usuario();
         usuario.setLogin(txtUserName.getText());
         usuario.setSenha(String.valueOf(txtUserPassword.getPassword()));
         return usuario;
     }
-    
+
     public LoginFrame() {
         initComponents();
-       
+
     }
 
     /**

@@ -16,15 +16,13 @@ import modelo.Usuario;
 public class RegistrarFrame extends javax.swing.JInternalFrame {
 
     private RegistrarUserListener listener = new RegistrarUserListener(this);
-    
-    public RegistrarFrame()
-    {
-        initComponents();       
+
+    public RegistrarFrame() {
+        initComponents();
     }
-    
-    
+
     public Usuario getUsuario() {
-        Usuario usuario = new Usuario();     
+        Usuario usuario = new Usuario();
         usuario.setCidade(cidadeUser.getText());
         usuario.setEmail(emailUser.getText());
         usuario.setEstado(estadoUser.getText());
