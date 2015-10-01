@@ -21,6 +21,10 @@ public class ExcluirUserListener implements ActionListener{
            if("cancelar".equals(ae.getActionCommand())){
                frame.setVisible(false);
         }
+           else if("pesquisar".equals(ae.getActionCommand())){
+               //Aqui fará a pesquisa
+               JOptionPane.showMessageDialog(frame, "Usuario encontrado");
+           }
         else if("excluir".equals(ae.getActionCommand())){
             JOptionPane.showMessageDialog(frame, "Usuario excluido com exito");
             

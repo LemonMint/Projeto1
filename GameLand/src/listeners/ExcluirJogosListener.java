@@ -23,6 +23,9 @@ public class ExcluirJogosListener implements ActionListener {
         if("cancelar".equals(ae.getActionCommand())){
             frame.setVisible(false);
         }
+        else if("pesquisar".equals(ae.getActionCommand())){
+            JOptionPane.showMessageDialog(frame, "Pesquisar Concluida");
+        }
         else if("excluir".equals(ae.getActionCommand())){
             JOptionPane.showMessageDialog(frame,"Jogo Exluido com Sucesso");
         }}
