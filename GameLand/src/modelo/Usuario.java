@@ -13,7 +13,8 @@ public class Usuario {
     private boolean sexo;
     private int rg;
     private String cidade;
-
+    private String estado; 
+    
     public String getCidade() {
         return cidade;
     }
@@ -29,7 +30,6 @@ public class Usuario {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    private String estado;
 
     public int getRg() {
         return rg;

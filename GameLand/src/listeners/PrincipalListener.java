@@ -30,6 +30,9 @@ public class PrincipalListener implements ActionListener {
                 case "excluirJogos":
                     frame.criarExcluirJogos();
                     break;
+                case "excluirUsuario":
+                    frame.criarExcluirUsuarios();
+                    break;
                 default:
                     System.out.println("Não Existe");
                     break;

@@ -24,6 +24,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
         menuRegistrarJogo.setActionCommand("registrarJogo");
         menuItemExcluirJogos.addActionListener(listener);
         menuItemExcluirJogos.setActionCommand("excluirJogos");
+        menuItemExcluirUsuario.addActionListener(listener);
+        menuItemExcluirUsuario.setActionCommand("excluirUsuario");
   
 
     }
@@ -31,6 +33,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     RegistrarFrame telaRegistrar = null;
     RegistroJogosFrame telaRegistrarJogos = null;
     ExcluirJogosFrame telaExcluirJogos = null;
+    ExcluirUsuariosFrame telaExcluirUsuarios = null;
 
     public void criarRegistro() {
         telaRegistrar = new RegistrarFrame();
@@ -47,7 +50,12 @@ public class PrincipalFrame extends javax.swing.JFrame {
         telaExcluirJogos = new ExcluirJogosFrame();
         jDesktopPane1.add(telaExcluirJogos);
         telaExcluirJogos.setVisible(true);
-        
+    }
+    
+    public void criarExcluirUsuarios(){
+        telaExcluirUsuarios = new ExcluirUsuariosFrame();
+        jDesktopPane1.add(telaExcluirUsuarios);
+        telaExcluirUsuarios.setVisible(true);
     }
 
     /**
@@ -64,6 +72,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         menuRegistrar = new javax.swing.JMenuItem();
         menuRegistrarJogo = new javax.swing.JMenuItem();
+        menuItemExcluirUsuario = new javax.swing.JMenuItem();
         menuItemExcluirJogos = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
@@ -81,7 +90,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
             .addGap(0, 638, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("File");
+        jMenu1.setText("Menus");
 
         menuRegistrar.setText("Registrar");
         jMenu1.add(menuRegistrar);
@@ -89,12 +98,15 @@ public class PrincipalFrame extends javax.swing.JFrame {
         menuRegistrarJogo.setText("Registrar Jogo");
         jMenu1.add(menuRegistrarJogo);
 
+        menuItemExcluirUsuario.setText("ExcluirUsuario");
+        jMenu1.add(menuItemExcluirUsuario);
+
         menuItemExcluirJogos.setText("Excluir Jogo");
         jMenu1.add(menuItemExcluirJogos);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Sobre");
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -155,6 +167,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem menuItemExcluirJogos;
+    private javax.swing.JMenuItem menuItemExcluirUsuario;
     private javax.swing.JMenuItem menuRegistrar;
     private javax.swing.JMenuItem menuRegistrarJogo;
     // End of variables declaration//GEN-END:variables

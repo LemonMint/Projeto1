@@ -6,7 +6,7 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="File"/>
+            <Property name="text" type="java.lang.String" value="Menus"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menuRegistrar">
@@ -19,6 +19,11 @@
                 <Property name="text" type="java.lang.String" value="Registrar Jogo"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuItemExcluirUsuario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ExcluirUsuario"/>
+              </Properties>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemExcluirJogos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Excluir Jogo"/>
@@ -28,7 +33,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Edit"/>
+            <Property name="text" type="java.lang.String" value="Sobre"/>
           </Properties>
         </Menu>
       </SubComponents>
