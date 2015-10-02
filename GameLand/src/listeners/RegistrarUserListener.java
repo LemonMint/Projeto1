@@ -20,7 +20,9 @@ public class RegistrarUserListener implements ActionListener {
             Usuario u = user.getUsuario();
             JOptionPane.showMessageDialog(user, "Nome: " + u.getNome() + "Adicionado com Sucesso");
         } else if ("Cancel".equals(ae.getActionCommand())) {
-            user.setVisible(false);
+            user.Sair();
+        } else if("Sair".equals(ae.getActionCommand())){
+            user.Sair();
         }
     }
 

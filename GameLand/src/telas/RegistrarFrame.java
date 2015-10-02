@@ -19,6 +19,14 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
 
     public RegistrarFrame() {
         initComponents();
+        
+        menuItemSair.addActionListener(listener);
+        menuItemSair.setActionCommand("Sair");
+    }
+    
+    public void Sair()
+    {
+        this.dispose();
     }
 
     public Usuario getUsuario() {
@@ -72,6 +80,9 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
         cidadeUser = new javax.swing.JTextField();
         masculinoUser = new javax.swing.JRadioButton();
         femininoUser = new javax.swing.JRadioButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menuSystem = new javax.swing.JMenu();
+        menuItemSair = new javax.swing.JMenuItem();
 
         setResizable(true);
         setTitle("Registre-se Grátis");
@@ -148,6 +159,15 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
 
         buttonGroup1.add(femininoUser);
         femininoUser.setText("Feminino");
+
+        menuSystem.setText("Sistema");
+
+        menuItemSair.setText("Sair");
+        menuSystem.add(menuItemSair);
+
+        jMenuBar1.add(menuSystem);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -291,7 +311,10 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JRadioButton masculinoUser;
+    private javax.swing.JMenuItem menuItemSair;
+    private javax.swing.JMenu menuSystem;
     private javax.swing.JTextField nomeUser;
     private javax.swing.JTextField rgUser;
     private javax.swing.JPasswordField senhaUser;
