@@ -10,7 +10,8 @@ public class ExcluirJogosFrame extends javax.swing.JInternalFrame {
         initComponents();
         buttonPesquisar.addActionListener(listener);
         buttonPesquisar.setActionCommand("pesquisar");
-         
+        menuItemSair.addActionListener(listener);
+        menuItemSair.setActionCommand("Sair");
     }
 
     /**
@@ -38,6 +39,9 @@ public class ExcluirJogosFrame extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         txtFieldCodigo = new javax.swing.JTextField();
         buttonPesquisar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menuSistem = new javax.swing.JMenu();
+        menuItemSair = new javax.swing.JMenuItem();
 
         jLabel1.setText("Digite o Nome do jogo a ser excluido:");
 
@@ -68,6 +72,15 @@ public class ExcluirJogosFrame extends javax.swing.JInternalFrame {
         jLabel7.setText("Código");
 
         buttonPesquisar.setText("Pesquisar");
+
+        menuSistem.setText("Sistema");
+
+        menuItemSair.setText("Sair");
+        menuSistem.add(menuItemSair);
+
+        jMenuBar1.add(menuSistem);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,6 +169,9 @@ public class ExcluirJogosFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem menuItemSair;
+    private javax.swing.JMenu menuSistem;
     private javax.swing.JTextField txtFieldAno;
     private javax.swing.JTextField txtFieldCodigo;
     private javax.swing.JTextField txtFieldNome;

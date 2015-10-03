@@ -28,6 +28,11 @@ public class ExcluirJogosListener implements ActionListener {
         }
         else if("excluir".equals(ae.getActionCommand())){
             JOptionPane.showMessageDialog(frame,"Jogo Exluido com Sucesso");
-        }}
+        } else if("Sair".equals(ae.getActionCommand())){
+            frame.dispose();
+        }
+        
+    
+    }
     
 }
