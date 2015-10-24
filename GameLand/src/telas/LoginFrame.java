@@ -58,6 +58,8 @@ public class LoginFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Senha");
 
+        txtUserName.setActionCommand("ver");
+        txtUserName.addActionListener(listener);
         txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUserNameActionPerformed(evt);
