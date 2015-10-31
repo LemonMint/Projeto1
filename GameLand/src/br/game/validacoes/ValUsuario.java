@@ -1,6 +1,6 @@
-package validacoes;
+package br.game.validacoes;
 
-import modelo.Usuario;
+import br.game.modelo.Usuario;
 
 public class ValUsuario {
 
@@ -9,7 +9,7 @@ public class ValUsuario {
     }
 
     public static boolean ValLogin(String login, String senha) {
-            return login.equals("login") && senha.equals("123");
+        return login.equals("login") && senha.equals("123");
     }
 
 }

@@ -3,10 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telas;
+package br.game.telas;
 
-import listeners.LoginListener;
-import modelo.Usuario;
+import java.io.IOException;
+import javax.swing.JOptionPane;
+import br.game.listerners.LoginListener;
+import br.game.modelo.Usuario;
+import br.game.inout.SalvareLerLogin;
 
 /**
  *
@@ -23,9 +26,13 @@ public class LoginFrame extends javax.swing.JFrame {
         return usuario;
     }
 
-    public LoginFrame() {
+    public LoginFrame() throws IOException {
         initComponents();
-
+        if (SalvareLerLogin.lerLogin("loginFile.txt") != null) {
+            txtUserName.setText(SalvareLerLogin.lerLogin("loginFile.txt"));
+        } else {
+            SalvareLerLogin.escreverLogin(" ", "loginFile.txt");
+        }
     }
 
     /**
@@ -146,7 +153,11 @@ public class LoginFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginFrame().setVisible(true);
+                try {
+                    new LoginFrame().setVisible(true);
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro ao abrir logFile");
+                }
             }
         });
     }

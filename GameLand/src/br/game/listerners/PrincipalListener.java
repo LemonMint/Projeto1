@@ -1,8 +1,8 @@
-package listeners;
+package br.game.listerners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import telas.PrincipalFrame;
+import br.game.telas.PrincipalFrame;
 
 public class PrincipalListener implements ActionListener {
 

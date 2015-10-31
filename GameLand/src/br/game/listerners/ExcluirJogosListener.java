@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listeners;
+package br.game.listerners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import telas.ExcluirJogosFrame;
+import br.game.telas.ExcluirJogosFrame;
 
 public class ExcluirJogosListener implements ActionListener {
     

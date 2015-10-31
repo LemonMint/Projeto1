@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telas;
+package br.game.telas;
 
 import javax.swing.JInternalFrame;
-import listeners.RegistrarUserListener;
-import modelo.Usuario;
+import br.game.listerners.RegistrarUserListener;
+import br.game.modelo.Usuario;
 
 /**
  *
@@ -18,11 +18,10 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
     private RegistrarUserListener listener = new RegistrarUserListener(this);
 
     public RegistrarFrame() {
-        initComponents();
-        
-        menuExit.addActionListener(listener);
-        menuExit.setActionCommand("Sair");
-    }
+            initComponents();
+        }
+        //menuExit.addActionListener(listener);
+        //menuExit.setActionCommand("Sair");
 
     public Usuario getUsuario() {
         Usuario usuario = new Usuario();
@@ -81,8 +80,6 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
         masculinoUser = new javax.swing.JRadioButton();
         femininoUser = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        menuSystem = new javax.swing.JMenu();
-        menuExit = new javax.swing.JMenuItem();
 
         setResizable(true);
         setTitle("Registre-se Grátis");
@@ -147,7 +144,7 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
 
         ButtonCancelRegistrar.addActionListener(listener);
         ButtonCancelRegistrar.setActionCommand("Cancel");
-        ButtonCancelRegistrar.setText("Cancelar");
+        ButtonCancelRegistrar.setText("Voltar");
 
         jLabel9.setText("Estado");
 
@@ -159,14 +156,6 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
 
         buttonGroup1.add(femininoUser);
         femininoUser.setText("Feminino");
-
-        menuSystem.setText("Sistema");
-
-        menuExit.setText("Sair");
-        menuSystem.add(menuExit);
-
-        jMenuBar1.add(menuSystem);
-
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,40 +165,37 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(senhaUser)
                     .addComponent(nomeUser)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(ButtonCancelRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                        .addComponent(ButtonUserRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(estadoUser)
                     .addComponent(cidadeUser)
-                    .addComponent(senhaUser)
                     .addComponent(endereçoUser)
                     .addComponent(emailUser)
                     .addComponent(rgUser)
                     .addComponent(usuarioUser)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel3)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(idadeUser, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel3)
+                            .addComponent(jLabel8)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(idadeUser, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(masculinoUser)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(femininoUser)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(masculinoUser)
+                                .addGap(18, 18, 18)
+                                .addComponent(femininoUser))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ButtonUserRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ButtonCancelRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -236,7 +222,7 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cidadeUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(endereçoUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -313,8 +299,6 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JRadioButton masculinoUser;
-    private javax.swing.JMenuItem menuExit;
-    private javax.swing.JMenu menuSystem;
     private javax.swing.JTextField nomeUser;
     private javax.swing.JTextField rgUser;
     private javax.swing.JPasswordField senhaUser;

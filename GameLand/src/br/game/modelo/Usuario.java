@@ -1,4 +1,4 @@
-package modelo;
+package br.game.modelo;
 
 public class Usuario {
 
@@ -13,8 +13,8 @@ public class Usuario {
     private boolean sexo;
     private int rg;
     private String cidade;
-    private String estado; 
-    
+    private String estado;
+
     public String getCidade() {
         return cidade;
     }
@@ -38,7 +38,6 @@ public class Usuario {
     public void setRg(int rg) {
         this.rg = rg;
     }
-    private final Carteira carteira = new Carteira();
 
     public String getNome() {
         return nome;
@@ -86,10 +85,6 @@ public class Usuario {
 
     public void setSexo(boolean sexo) {
         this.sexo = sexo;
-    }
-
-    public Carteira getCarteira() {
-        return carteira;
     }
 
 }

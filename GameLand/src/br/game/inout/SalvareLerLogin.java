@@ -1,4 +1,4 @@
-package validacoes;
+package br.game.inout;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,10 +6,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class SalvarLogin {
+public class SalvareLerLogin {
 
-    public static void escreverLogin(String mensagem) throws IOException {
-        FileWriter fileWriter = new FileWriter("logFile.txt", false);
+    public static void escreverLogin(String mensagem, String logFile) throws IOException {
+        FileWriter fileWriter = new FileWriter(logFile, false);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
         //String data = (new java.util.Date()).toString();
         //String msg = data + " : " + mensagem + "\n";
@@ -19,9 +19,9 @@ public class SalvarLogin {
         bufferedWriter.close();
     }
 
-    public static String lerLogin() throws IOException {
+    public static String lerLogin(String logFile) throws IOException {
         String linha = null;
-        FileReader fileReader = new FileReader("logFile.txt");
+        FileReader fileReader = new FileReader(logFile);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         while (bufferedReader.ready()) {

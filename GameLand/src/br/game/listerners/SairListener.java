@@ -1,4 +1,4 @@
-package listeners;
+package br.game.listerners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

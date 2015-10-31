@@ -1,10 +1,10 @@
-package listeners;
+package br.game.listerners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import modelo.Jogos;
-import telas.RegistroJogosFrame;
+import br.game.modelo.Jogos;
+import br.game.telas.RegistroJogosFrame;
 
 public class RegistroJogosListener implements ActionListener {
 

@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telas;
+package br.game.telas;
 
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import listeners.RegistroJogosListener;
-import modelo.Jogos;
+import br.game.listerners.RegistroJogosListener;
+import br.game.modelo.Jogos;
 
 public class RegistroJogosFrame extends javax.swing.JInternalFrame {
 
@@ -20,10 +19,10 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
     public RegistroJogosFrame() {
         initComponents();
         
-        menuItemAdd.addActionListener(listener);
-        menuItemAdd.setActionCommand("Add");
-        menuItemExit.addActionListener(listener);
-        menuItemExit.setActionCommand("Exit");
+       // menuItemAdd.addActionListener(listener);
+        //menuItemAdd.setActionCommand("Add");
+        //menuItemExit.addActionListener(listener);
+        //menuItemExit.setActionCommand("Exit");
     }
 
     public Jogos getJogo() {
@@ -60,15 +59,10 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         btCancel = new javax.swing.JButton();
         btAdd = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        menuItemAdd = new javax.swing.JMenuItem();
-        menuItemExit = new javax.swing.JMenuItem();
 
         setBorder(null);
         setTitle("Cadastro de Jogos");
-        setNormalBounds(new java.awt.Rectangle(0, 0, 100, 200));
-        setOpaque(false);
+        setMinimumSize(new java.awt.Dimension(0, 0));
         setPreferredSize(new java.awt.Dimension(350, 500));
         setVisible(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,11 +73,11 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Nome do Jogo");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 22, 167, -1));
-        getContentPane().add(txtGameName, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 45, 167, -1));
+        getContentPane().add(txtGameName, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 45, 130, -1));
 
         jLabel3.setText("Ano de Lançamento");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 78, -1, -1));
-        getContentPane().add(txtGameYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 101, 167, -1));
+        getContentPane().add(txtGameYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 101, 130, -1));
 
         jLabel6.setText("Preço");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 78, 95, -1));
@@ -101,12 +95,12 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 cbGameCatActionPerformed(evt);
             }
         });
-        getContentPane().add(cbGameCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 157, 167, -1));
+        getContentPane().add(cbGameCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 157, 130, -1));
 
         jLabel4.setText("Categoria");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 134, 80, -1));
 
-        btCancel.setText("Cancelar");
+        btCancel.setText("Voltar");
         btCancel.addActionListener(listener);
         btCancel.setActionCommand("Cancelar");
         btCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +108,7 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 btCancelActionPerformed(evt);
             }
         });
-        getContentPane().add(btCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 190, 131, -1));
+        getContentPane().add(btCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 130, -1));
 
         btAdd.setText("Adicionar");
         btAdd.addActionListener(listener);
@@ -124,19 +118,7 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 btAddActionPerformed(evt);
             }
         });
-        getContentPane().add(btAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 114, -1));
-
-        jMenu1.setText("Sistema");
-
-        menuItemAdd.setText("Adicionar");
-        jMenu1.add(menuItemAdd);
-
-        menuItemExit.setText("Sair");
-        jMenu1.add(menuItemExit);
-
-        jMenuBar1.add(jMenu1);
-
-        setJMenuBar(jMenuBar1);
+        getContentPane().add(btAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 114, -1));
 
         getAccessibleContext().setAccessibleParent(getDesktopPane());
 
@@ -167,10 +149,6 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem menuItemAdd;
-    private javax.swing.JMenuItem menuItemExit;
     private javax.swing.JTextField txtGameCode;
     private javax.swing.JTextField txtGameName;
     private javax.swing.JTextField txtGamePrice;

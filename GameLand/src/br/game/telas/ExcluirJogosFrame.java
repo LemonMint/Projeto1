@@ -1,22 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package telas;
+package br.game.telas;
 
-import listeners.ExcluirUserListener;
+import br.game.listerners.ExcluirJogosListener;
 
-/**
- *
- * @author Lemon
- */
-public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
+public class ExcluirJogosFrame extends javax.swing.JInternalFrame {
 
-    private ExcluirUserListener listener = new ExcluirUserListener(this);
-  
-    public ExcluirUsuariosFrame() {
+    private ExcluirJogosListener listener = new ExcluirJogosListener(this);
+
+    public ExcluirJogosFrame() {
         initComponents();
+        buttonPesquisar.addActionListener(listener);
+        buttonPesquisar.setActionCommand("pesquisar");
+        menuItemSair.addActionListener(listener);
+        menuItemSair.setActionCommand("Sair");
     }
 
     /**
@@ -28,24 +23,29 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
-        buttonCancelar = new javax.swing.JButton();
-        txtFieldEmail = new javax.swing.JTextField();
-        buttonExcluir = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        txtFieldEstado = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        txtFieldRg = new javax.swing.JTextField();
-        txtFieldCidade = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         txtFieldNomeExclusao = new javax.swing.JTextField();
+        buttonCancelar = new javax.swing.JButton();
+        buttonExcluir = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtFieldNome = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtFieldPlataforma = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtFieldAno = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtFieldPreco = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txtFieldCodigo = new javax.swing.JTextField();
         buttonPesquisar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menuSistem = new javax.swing.JMenu();
+        menuItemSair = new javax.swing.JMenuItem();
 
-        jLabel4.setText("E-mail");
+        setTitle("Excluir Jogo");
+
+        jLabel1.setText("Digite o Nome do jogo a ser excluido:");
 
         buttonCancelar.setActionCommand("cancelar");
         buttonCancelar.addActionListener(listener);
@@ -55,27 +55,34 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
         buttonExcluir.addActionListener(listener);
         buttonExcluir.setText("Excluir");
 
-        jLabel5.setText("Estado");
-
-        jLabel7.setText("RG");
-
-        txtFieldEstado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFieldEstadoActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setText("Cidade");
-
-        jLabel1.setText("Digite o Nome do Usuario a ser excluido:");
-
-        jLabel2.setText("Usuario que será excluido:");
+        jLabel2.setText("Jogo que será excluido:");
 
         jLabel3.setText("Nome");
 
-        buttonPesquisar.setActionCommand("pesquisar");
-        buttonPesquisar.addActionListener(listener);
+        jLabel4.setText("Plataforma");
+
+        jLabel5.setText("Ano");
+
+        txtFieldAno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFieldAnoActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Preço");
+
+        jLabel7.setText("Código");
+
         buttonPesquisar.setText("Pesquisar");
+
+        menuSistem.setText("Sistema");
+
+        menuItemSair.setText("Sair");
+        menuSistem.add(menuItemSair);
+
+        jMenuBar1.add(menuSistem);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,24 +93,24 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtFieldNomeExclusao)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtFieldNome)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtFieldRg)
-                    .addComponent(txtFieldEmail)
+                    .addComponent(txtFieldCodigo)
+                    .addComponent(txtFieldPlataforma)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtFieldEstado)
+                    .addComponent(txtFieldAno)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtFieldCidade)
+                    .addComponent(txtFieldPreco)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(buttonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(buttonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel7)
                             .addComponent(jLabel5))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(buttonPesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -114,7 +121,7 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtFieldNomeExclusao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonPesquisar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -125,20 +132,20 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
                 .addGap(4, 4, 4)
-                .addComponent(txtFieldRg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtFieldPlataforma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtFieldEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtFieldAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtFieldCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(txtFieldPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonCancelar)
                     .addComponent(buttonExcluir))
@@ -148,9 +155,9 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtFieldEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldEstadoActionPerformed
+    private void txtFieldAnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldAnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFieldEstadoActionPerformed
+    }//GEN-LAST:event_txtFieldAnoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -164,11 +171,14 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField txtFieldCidade;
-    private javax.swing.JTextField txtFieldEmail;
-    private javax.swing.JTextField txtFieldEstado;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem menuItemSair;
+    private javax.swing.JMenu menuSistem;
+    private javax.swing.JTextField txtFieldAno;
+    private javax.swing.JTextField txtFieldCodigo;
     private javax.swing.JTextField txtFieldNome;
     private javax.swing.JTextField txtFieldNomeExclusao;
-    private javax.swing.JTextField txtFieldRg;
+    private javax.swing.JTextField txtFieldPlataforma;
+    private javax.swing.JTextField txtFieldPreco;
     // End of variables declaration//GEN-END:variables
 }

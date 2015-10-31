@@ -1,5 +1,5 @@
 
-package modelo;
+package br.game.modelo;
 
 
 public class Jogos {

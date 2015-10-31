@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telas;
+package br.game.telas;
 
-import javafx.scene.layout.Pane;
-import listeners.PrincipalListener;
-import listeners.RegistroJogosListener;
+import br.game.listerners.PrincipalListener;
+import br.game.inout.SalvareLerLogin;
 
 /**
  *
@@ -26,16 +25,15 @@ public class PrincipalFrame extends javax.swing.JFrame {
         menuItemExcluirJogos.setActionCommand("excluirJogos");
         menuItemExcluirUsuario.addActionListener(listener);
         menuItemExcluirUsuario.setActionCommand("excluirUsuario");
-  
 
     }
-
     RegistrarFrame telaRegistrar = null;
     RegistroJogosFrame telaRegistrarJogos = null;
     ExcluirJogosFrame telaExcluirJogos = null;
     ExcluirUsuariosFrame telaExcluirUsuarios = null;
 
     public void criarRegistro() {
+
         telaRegistrar = new RegistrarFrame();
         jDesktopPane1.add(telaRegistrar);
     }
@@ -45,14 +43,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
         telaRegistrarJogos = new RegistroJogosFrame();
         jDesktopPane1.add(telaRegistrarJogos);
     }
-    
-    public void criarExcluirJogos(){
+
+    public void criarExcluirJogos() {
         telaExcluirJogos = new ExcluirJogosFrame();
         jDesktopPane1.add(telaExcluirJogos);
         telaExcluirJogos.setVisible(true);
     }
-    
-    public void criarExcluirUsuarios(){
+
+    public void criarExcluirUsuarios() {
         telaExcluirUsuarios = new ExcluirUsuariosFrame();
         jDesktopPane1.add(telaExcluirUsuarios);
         telaExcluirUsuarios.setVisible(true);

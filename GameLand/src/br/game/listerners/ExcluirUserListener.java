@@ -1,11 +1,11 @@
 
-package listeners;
+package br.game.listerners;
 
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import telas.ExcluirUsuariosFrame;
+import br.game.telas.ExcluirUsuariosFrame;
 
 
 public class ExcluirUserListener implements ActionListener{
