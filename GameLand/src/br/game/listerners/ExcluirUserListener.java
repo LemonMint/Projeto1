@@ -19,7 +19,7 @@ public class ExcluirUserListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
            if("cancelar".equals(ae.getActionCommand())){
-               frame.setVisible(false);
+               frame.Sair();
         }
            else if("pesquisar".equals(ae.getActionCommand())){
                //Aqui fará a pesquisa

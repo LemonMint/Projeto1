@@ -42,7 +42,7 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
     }
     
     public void Sair(){
-    
+        PrincipalFrame.telaRegistrar = null;
         this.dispose();
     }
 

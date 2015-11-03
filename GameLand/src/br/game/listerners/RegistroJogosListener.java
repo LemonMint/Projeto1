@@ -22,12 +22,12 @@ public class RegistroJogosListener implements ActionListener {
 
         }
         if ("Cancelar".equals(e.getActionCommand())) {
-            frame.setVisible(false);
+            frame.Sair();
         } else if ("Add".equals(e.getActionCommand())) {
             Jogos jogo = frame.getJogo();
             JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
         } else if ("Exit".equals(e.getActionCommand())) {
-            frame.dispose();
+            frame.Sair();
         }
     }
 }

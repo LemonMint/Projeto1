@@ -13,6 +13,11 @@ public class ExcluirJogosFrame extends javax.swing.JInternalFrame {
         menuItemSair.addActionListener(listener);
         menuItemSair.setActionCommand("Sair");
     }
+    
+    public void Sair(){
+        PrincipalFrame.telaExcluirJogos = null;
+        this.dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

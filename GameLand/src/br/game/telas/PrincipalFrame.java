@@ -27,10 +27,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
         menuItemExcluirUsuario.setActionCommand("excluirUsuario");
 
     }
-    RegistrarFrame telaRegistrar = null;
-    RegistroJogosFrame telaRegistrarJogos = null;
-    ExcluirJogosFrame telaExcluirJogos = null;
-    ExcluirUsuariosFrame telaExcluirUsuarios = null;
+    static RegistrarFrame telaRegistrar = null;
+    static RegistroJogosFrame telaRegistrarJogos = null;
+    static ExcluirJogosFrame telaExcluirJogos = null;
+    static ExcluirUsuariosFrame telaExcluirUsuarios = null;
 
     public void criarRegistro() {
         if (telaRegistrar == null) {

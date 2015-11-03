@@ -14,9 +14,14 @@ import br.game.listerners.ExcluirUserListener;
 public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
 
     private ExcluirUserListener listener = new ExcluirUserListener(this);
-  
+
     public ExcluirUsuariosFrame() {
         initComponents();
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaExcluirUsuarios = null;
+        this.dispose();
     }
 
     /**

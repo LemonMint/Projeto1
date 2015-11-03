@@ -21,7 +21,7 @@ public class ExcluirJogosListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if("cancelar".equals(ae.getActionCommand())){
-            frame.setVisible(false);
+            frame.Sair();
         }
         else if("pesquisar".equals(ae.getActionCommand())){
             JOptionPane.showMessageDialog(frame, "Pesquisar Concluida");
@@ -29,7 +29,7 @@ public class ExcluirJogosListener implements ActionListener {
         else if("excluir".equals(ae.getActionCommand())){
             JOptionPane.showMessageDialog(frame,"Jogo Exluido com Sucesso");
         } else if("Sair".equals(ae.getActionCommand())){
-            frame.dispose();
+            frame.Sair();
         }
         
     
