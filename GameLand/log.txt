@@ -6,3 +6,15 @@ Fri Oct 30 22:02:51 BRST 2015 : Entrada login e senha.
 
 Fri Oct 30 22:02:51 BRST 2015 : Entrada com sucesso.
 
+Tue Nov 03 21:05:58 BRST 2015 : Entrada login e senha.
+Tue Nov 03 21:05:58 BRST 2015 : Erro de senha ou login
+Tue Nov 03 21:06:02 BRST 2015 : Entrada login e senha.
+Tue Nov 03 21:06:02 BRST 2015 : Entrada com sucesso.
+Tue Nov 03 21:08:22 BRST 2015 : Entrada login e senha.
+Tue Nov 03 21:08:22 BRST 2015 : Erro de senha ou login
+Tue Nov 03 21:08:24 BRST 2015 : Entrada login e senha.
+Tue Nov 03 21:08:24 BRST 2015 : Entrada com sucesso.
+Tue Nov 03 21:12:29 BRST 2015 : Entrada login e senha.
+Tue Nov 03 21:12:29 BRST 2015 : Entrada com sucesso.
+Tue Nov 03 21:14:43 BRST 2015 : Entrada login e senha.
+Tue Nov 03 21:14:43 BRST 2015 : Entrada com sucesso.

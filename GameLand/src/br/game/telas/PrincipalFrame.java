@@ -33,26 +33,35 @@ public class PrincipalFrame extends javax.swing.JFrame {
     ExcluirUsuariosFrame telaExcluirUsuarios = null;
 
     public void criarRegistro() {
-
-        telaRegistrar = new RegistrarFrame();
-        jDesktopPane1.add(telaRegistrar);
+        if (telaRegistrar == null) {
+            telaRegistrar = new RegistrarFrame();
+            jDesktopPane1.add(telaRegistrar);
+        }
+        telaRegistrar.setVisible(true);
     }
 
     public void criarRegistroJogos() {
+        if (telaRegistrarJogos == null) {
+            telaRegistrarJogos = new RegistroJogosFrame();
+            jDesktopPane1.add(telaRegistrarJogos);
+        }
+        telaRegistrarJogos.setVisible(true);
 
-        telaRegistrarJogos = new RegistroJogosFrame();
-        jDesktopPane1.add(telaRegistrarJogos);
     }
 
     public void criarExcluirJogos() {
-        telaExcluirJogos = new ExcluirJogosFrame();
-        jDesktopPane1.add(telaExcluirJogos);
+        if (telaExcluirJogos == null) {
+            telaExcluirJogos = new ExcluirJogosFrame();
+            jDesktopPane1.add(telaExcluirJogos);
+        }
         telaExcluirJogos.setVisible(true);
     }
 
     public void criarExcluirUsuarios() {
-        telaExcluirUsuarios = new ExcluirUsuariosFrame();
-        jDesktopPane1.add(telaExcluirUsuarios);
+        if (telaExcluirUsuarios == null) {
+            telaExcluirUsuarios = new ExcluirUsuariosFrame();
+            jDesktopPane1.add(telaExcluirUsuarios);
+        }
         telaExcluirUsuarios.setVisible(true);
     }
 
