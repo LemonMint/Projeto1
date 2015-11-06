@@ -11,8 +11,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import br.game.telas.ExcluirJogosFrame;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ExcluirJogosListener implements ActionListener {
 

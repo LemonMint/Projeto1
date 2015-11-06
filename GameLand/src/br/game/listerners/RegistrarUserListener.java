@@ -7,8 +7,6 @@ import javax.swing.JOptionPane;
 import br.game.modelo.Usuario;
 import br.game.telas.RegistrarFrame;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class RegistrarUserListener implements ActionListener {
 

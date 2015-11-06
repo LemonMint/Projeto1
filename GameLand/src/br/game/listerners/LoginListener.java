@@ -10,8 +10,6 @@ import br.game.telas.LoginFrame;
 import br.game.telas.PrincipalFrame;
 import br.game.inout.SalvareLerLogin;
 import br.game.validacoes.ValUsuario;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class LoginListener implements ActionListener {
 

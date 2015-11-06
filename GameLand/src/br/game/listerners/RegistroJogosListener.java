@@ -33,6 +33,11 @@ public class RegistroJogosListener implements ActionListener {
              */        }
         if ("Cancelar".equals(e.getActionCommand())) {
             frame.Sair();
+            try {
+                SalvarLog.escreverLog("Saida da tela de Registro de Jogos", "log.txt");
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+            }
         }
 
     }
