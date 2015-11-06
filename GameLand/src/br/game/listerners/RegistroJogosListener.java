@@ -19,13 +19,7 @@ public class RegistroJogosListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if ("Adicionar".equals(e.getActionCommand())) {
-            Jogos jogo = frame.getJogo();
-            JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
 
-        }
-        if ("Cancelar".equals(e.getActionCommand())) {
-            frame.Sair();
-        } else if ("Add".equals(e.getActionCommand())) {
             try {
                 Jogos jogo = frame.getJogo();
                 JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
@@ -34,8 +28,13 @@ public class RegistroJogosListener implements ActionListener {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
 
-        } else if ("Exit".equals(e.getActionCommand())) {
+            /*Jogos jogo = frame.getJogo();
+             JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
+             */        }
+        if ("Cancelar".equals(e.getActionCommand())) {
             frame.Sair();
         }
+
     }
+
 }

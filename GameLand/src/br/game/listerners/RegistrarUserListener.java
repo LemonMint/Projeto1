@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 import br.game.modelo.Usuario;
 import br.game.telas.RegistrarFrame;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class RegistrarUserListener implements ActionListener {
 
@@ -30,10 +32,12 @@ public class RegistrarUserListener implements ActionListener {
 
         } else if ("Cancel".equals(ae.getActionCommand())) {
             user.Sair();
-        } else if ("Sair".equals(ae.getActionCommand())) {
-            user.Sair();
+            try {
+                SalvarLog.escreverLog("Saida da tela de Registro de Usuario", "log.txt");
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(user, "Erro ao salvar log");
+            }
+
         }
-
     }
-
 }
