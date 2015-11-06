@@ -25,14 +25,6 @@ public class LoginListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Usuario usuario = frame.getUsuario();
-        /*if ("ver".equals(e.getWhen())) {
-         try {
-         aux = SalvareLerLogin.lerLogin();
-         System.out.println(aux);
-         } catch (IOException ex) {
-         JOptionPane.showMessageDialog(frame, "Erro ao ler arquivo");
-         }
-         }*/
         if ("Entrar".equals(e.getActionCommand())) {
             try {
                 SalvarLog.escreverLog("Entrada login e senha.", "log.txt");

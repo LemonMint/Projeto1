@@ -48,3 +48,25 @@ Tue Nov 03 21:55:12 BRST 2015 : Entrada login e senha.
 Tue Nov 03 21:55:12 BRST 2015 : Entrada com sucesso.
 Tue Nov 03 21:56:08 BRST 2015 : Entrada login e senha.
 Tue Nov 03 21:56:08 BRST 2015 : Entrada com sucesso.
+Thu Nov 05 23:23:49 BRST 2015 : Entrada login e senha.
+Thu Nov 05 23:23:49 BRST 2015 : Entrada com sucesso.
+Thu Nov 05 23:24:27 BRST 2015 : Entrada login e senha.
+Thu Nov 05 23:24:27 BRST 2015 : Entrada com sucesso.
+Thu Nov 05 23:25:52 BRST 2015 : Entrada login e senha.
+Thu Nov 05 23:25:52 BRST 2015 : Erro de senha ou login
+Thu Nov 05 23:25:54 BRST 2015 : Entrada login e senha.
+Thu Nov 05 23:25:54 BRST 2015 : Entrada com sucesso.
+Fri Nov 06 00:36:17 BRST 2015 : Entrada login e senha.
+Fri Nov 06 00:36:17 BRST 2015 : Entrada com sucesso.
+Fri Nov 06 00:37:28 BRST 2015 : Entrada login e senha.
+Fri Nov 06 00:37:28 BRST 2015 : Entrada com sucesso.
+Fri Nov 06 00:38:19 BRST 2015 : Entrada login e senha.
+Fri Nov 06 00:38:19 BRST 2015 : Entrada com sucesso.
+Fri Nov 06 00:39:38 BRST 2015 : Entrada login e senha.
+Fri Nov 06 00:39:38 BRST 2015 : Entrada com sucesso.
+Fri Nov 06 00:39:51 BRST 2015 : Entrada login e senha.
+Fri Nov 06 00:39:51 BRST 2015 : Entrada com sucesso.
+Fri Nov 06 00:40:47 BRST 2015 : Entrada login e senha.
+Fri Nov 06 00:40:47 BRST 2015 : Entrada com sucesso.
+Fri Nov 06 00:43:25 BRST 2015 : Entrada login e senha.
+Fri Nov 06 00:43:25 BRST 2015 : Entrada com sucesso.
