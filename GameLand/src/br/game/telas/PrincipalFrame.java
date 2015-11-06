@@ -6,16 +6,13 @@
 package br.game.telas;
 
 import br.game.listerners.PrincipalListener;
-import br.game.inout.SalvareLerLogin;
 
-/**
- *
- * @author Lemon
- */
+
 public class PrincipalFrame extends javax.swing.JFrame {
 
     public PrincipalFrame() {
         initComponents();
+        jDesktopPane1.setLayout(null);
         PrincipalListener listener = new PrincipalListener(this);
         menuRegistrar.addActionListener(listener);
         menuRegistrar.setActionCommand("registrar");
@@ -27,15 +24,18 @@ public class PrincipalFrame extends javax.swing.JFrame {
         menuItemExcluirUsuario.setActionCommand("excluirUsuario");
 
     }
+    PrincipalFrame frame ;
     static RegistrarFrame telaRegistrar = null;
     static RegistroJogosFrame telaRegistrarJogos = null;
     static ExcluirJogosFrame telaExcluirJogos = null;
     static ExcluirUsuariosFrame telaExcluirUsuarios = null;
 
     public void criarRegistro() {
+        
         if (telaRegistrar == null) {
             telaRegistrar = new RegistrarFrame();
             jDesktopPane1.add(telaRegistrar);
+            
         }
         telaRegistrar.setVisible(true);
     }

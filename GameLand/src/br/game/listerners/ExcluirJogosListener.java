@@ -11,6 +11,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import br.game.telas.ExcluirJogosFrame;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ExcluirJogosListener implements ActionListener {
 
@@ -23,6 +25,7 @@ public class ExcluirJogosListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if ("cancelar".equals(ae.getActionCommand())) {
+            
             try {
                 frame.Sair();
                 SalvarLog.escreverLog("clicou em sair da tela de exclusão de jogos", "log.txt");
