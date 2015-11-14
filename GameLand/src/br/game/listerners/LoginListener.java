@@ -5,10 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JOptionPane;
-import br.game.modelo.Usuario;
+import br.game.modelo.Clientes;
 import br.game.telas.LoginFrame;
 import br.game.telas.PrincipalFrame;
 import br.game.inout.SalvareLerLogin;
+import br.game.modelo.Funcionarios;
 import br.game.validacoes.ValUsuario;
 
 public class LoginListener implements ActionListener {
@@ -22,21 +23,21 @@ public class LoginListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Usuario usuario = frame.getUsuario();
+        Funcionarios funcionarios = frame.getUsuario();
         if ("Entrar".equals(e.getActionCommand())) {
             try {
                 SalvarLog.escreverLog("Entrada login e senha.", "log.txt");
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
-            if (ValUsuario.ValLogin(usuario.getLogin(), usuario.getSenha())) {
+            if (ValUsuario.ValLogin(funcionarios.getNome(), funcionarios.getSenha())) {
                 try {
                     SalvarLog.escreverLog("Entrada com sucesso.", "log.txt");
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                 }
                 try {
-                    SalvareLerLogin.escreverLogin(usuario.getLogin(), "loginFile.txt");
+                    SalvareLerLogin.escreverLogin(funcionarios.getNome(), "loginFile.txt");
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(frame, "Erro ao salvar Login");
                 }

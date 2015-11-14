@@ -82,6 +82,11 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
         jLabel5.setText("Plataforma");
 
         cbGamePlat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PC", "Xbox 360", "Play Station 3", "Xbox One", "Play Station 4", "Nintendo 3ds", "Nintendo WiiU" }));
+        cbGamePlat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbGamePlatActionPerformed(evt);
+            }
+        });
 
         cbGameCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "FPS", "MOBA", "RPG", "MMORPG", "Ação", "Aventura", "Horror Psicológico" }));
         cbGameCat.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +149,8 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16)
-                        .addComponent(btCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,7 +182,8 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btAdd)
-                    .addComponent(btCancel)))
+                    .addComponent(btCancel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getAccessibleContext().setAccessibleParent(getDesktopPane());
@@ -195,6 +202,10 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
     private void cbGameCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbGameCatActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbGameCatActionPerformed
+
+    private void cbGamePlatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbGamePlatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbGamePlatActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

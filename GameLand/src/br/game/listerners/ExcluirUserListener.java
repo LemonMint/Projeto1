@@ -31,7 +31,7 @@ public class ExcluirUserListener implements ActionListener {
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
-            //Aqui fará a pesquisa
+           
         } else if ("excluir".equals(ae.getActionCommand())) {
             try {
                 JOptionPane.showMessageDialog(frame, "Usuario excluido com exito");

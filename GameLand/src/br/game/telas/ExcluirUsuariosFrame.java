@@ -16,7 +16,12 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
     private ExcluirUserListener listener = new ExcluirUserListener(this);
 
     public ExcluirUsuariosFrame() {
+        buttonCancelar.setActionCommand("cancelar");
+        buttonCancelar.addActionListener(listener);
+        buttonExcluir.setActionCommand("excluir");
+        buttonExcluir.addActionListener(listener);
         initComponents();
+        
     }
 
     public void Sair() {
@@ -52,13 +57,14 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
 
         jLabel4.setText("E-mail");
 
-        buttonCancelar.setActionCommand("cancelar");
-        buttonCancelar.addActionListener(listener);
         buttonCancelar.setText("Voltar");
 
-        buttonExcluir.setActionCommand("excluir");
-        buttonExcluir.addActionListener(listener);
         buttonExcluir.setText("Excluir");
+        buttonExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonExcluirActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Estado");
 
@@ -153,6 +159,10 @@ public class ExcluirUsuariosFrame extends javax.swing.JInternalFrame {
     private void txtFieldEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldEstadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFieldEstadoActionPerformed
+
+    private void buttonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonExcluirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

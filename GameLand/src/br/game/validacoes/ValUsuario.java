@@ -1,10 +1,10 @@
 package br.game.validacoes;
 
-import br.game.modelo.Usuario;
+import br.game.modelo.Clientes;
 
 public class ValUsuario {
 
-    public ValUsuario(Usuario user) {
+    public ValUsuario(Clientes user) {
 
     }
 

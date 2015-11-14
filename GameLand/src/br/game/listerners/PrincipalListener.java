@@ -51,6 +51,14 @@ public class PrincipalListener implements ActionListener {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                     }
                     break;
+                case "mostrarJogos":
+                     try {
+                        frame.criarMostrarJogos();
+                        SalvarLog.escreverLog("Menu: Jogos foi acessado", "log.txt");
+                    } catch (IOException ex) {
+                        JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+                    }
+                    break;
                 default:
                     System.out.println("Menu não encontrado!");
                     break;

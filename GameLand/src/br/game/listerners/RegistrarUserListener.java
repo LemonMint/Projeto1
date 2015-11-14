@@ -4,7 +4,7 @@ import br.game.inout.SalvarLog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import br.game.modelo.Usuario;
+import br.game.modelo.Clientes;
 import br.game.telas.RegistrarFrame;
 import java.io.IOException;
 
@@ -21,7 +21,7 @@ public class RegistrarUserListener implements ActionListener {
         if ("Registrar".equals(ae.getActionCommand())) {
 
             try {
-                Usuario u = user.getUsuario();
+                Clientes u = user.getUsuario();
                 JOptionPane.showMessageDialog(user, "Nome: " + u.getNome() + "Adicionado com Sucesso");
                 SalvarLog.escreverLog("Usuário:" + u.getNome() + " salvo com sucesso", "log.txt");
             } catch (IOException ex) {
