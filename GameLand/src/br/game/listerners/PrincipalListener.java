@@ -59,6 +59,8 @@ public class PrincipalListener implements ActionListener {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                     }
                     break;
+                case "Sair":
+                    System.exit(0);
                 default:
                     System.out.println("Menu não encontrado!");
                     break;

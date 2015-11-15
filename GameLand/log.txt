@@ -81,3 +81,89 @@ Fri Nov 13 22:04:22 BRST 2015 : Menu: Jogos foi acessado
 Fri Nov 13 22:04:59 BRST 2015 : Entrada login e senha.
 Fri Nov 13 22:04:59 BRST 2015 : Entrada com sucesso.
 Fri Nov 13 22:05:00 BRST 2015 : Menu: Jogos foi acessado
+Sun Nov 15 17:33:24 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:33:24 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:33:28 BRST 2015 : Menu: Jogos foi acessado
+Sun Nov 15 17:33:51 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:34:01 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:34:07 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:34:07 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:34:08 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:34:11 BRST 2015 : Menu: Jogos foi acessado
+Sun Nov 15 17:34:17 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:35:46 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:35:46 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:35:47 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:35:51 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:37:29 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:37:29 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:37:31 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:39:24 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:39:24 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:39:25 BRST 2015 : Menu: Jogos foi acessado
+Sun Nov 15 17:39:30 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:43:11 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:43:11 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:43:13 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:44:55 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:44:55 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:44:56 BRST 2015 : Menu: Jogos foi acessado
+Sun Nov 15 17:45:00 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:45:04 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:45:05 BRST 2015 : Menu: registrar foi Acessado
+Sun Nov 15 17:46:01 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:46:01 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:46:03 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:47:48 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:47:48 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:47:50 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:47:59 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:47:59 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:48:01 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:48:01 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:48:45 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:48:45 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:48:52 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:49:11 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:49:11 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:49:13 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:49:15 BRST 2015 : Menu: Jogos foi acessado
+Sun Nov 15 17:49:27 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:49:27 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:49:29 BRST 2015 : Menu: registrar foi Acessado
+Sun Nov 15 17:49:33 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:49:50 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:49:50 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:49:51 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:49:55 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:49:57 BRST 2015 : Menu: Jogos foi acessado
+Sun Nov 15 17:50:00 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:50:03 BRST 2015 : Menu: registrar foi Acessado
+Sun Nov 15 17:50:14 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:50:53 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:50:53 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:50:55 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:50:57 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:51:21 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:51:21 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:51:22 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:51:24 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:52:32 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:52:32 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:52:33 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:52:35 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:52:51 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:52:51 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:52:53 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:52:58 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 17:58:03 BRST 2015 : Entrada login e senha.
+Sun Nov 15 17:58:03 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 17:58:06 BRST 2015 : Menu: registrarJogo foi Acessado
+Sun Nov 15 17:58:08 BRST 2015 : Saida da tela de Registro de Jogos
+Sun Nov 15 18:04:40 BRST 2015 : Entrada login e senha.
+Sun Nov 15 18:04:40 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 18:05:42 BRST 2015 : Entrada login e senha.
+Sun Nov 15 18:05:42 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 18:09:56 BRST 2015 : Entrada login e senha.
+Sun Nov 15 18:09:56 BRST 2015 : Entrada com sucesso.
+Sun Nov 15 18:09:57 BRST 2015 : Menu: registrarJogo foi Acessado

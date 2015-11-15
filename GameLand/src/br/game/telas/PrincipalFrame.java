@@ -20,10 +20,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
         btRegistrarJogo.setActionCommand("registrarJogo");
         btJogos.addActionListener(listener);
         btJogos.setActionCommand("mostrarJogos");
+        btSair.addActionListener(listener);
+        btSair.setActionCommand("Sair");
         menuItemExcluirJogos.addActionListener(listener);
         menuItemExcluirJogos.setActionCommand("excluirJogos");
         menuItemExcluirUsuario.addActionListener(listener);
         menuItemExcluirUsuario.setActionCommand("excluirUsuario");
+        menuSair.addActionListener(listener);
+        menuSair.setActionCommand("Sair");
 
     }
     PrincipalFrame frame ;
@@ -92,7 +96,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         btRegistrar = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btRegistrarJogo = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btSair = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -100,6 +104,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         x1 = new javax.swing.JMenuItem();
         menuItemExcluirUsuario = new javax.swing.JMenuItem();
         menuItemExcluirJogos = new javax.swing.JMenuItem();
+        menuSair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -120,7 +125,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         btRegistrarJogo.setText("Cadastrar Jogos");
 
-        jButton6.setText("Sair");
+        btSair.setText("Sair");
 
         jButton7.setText(" Funcionários");
 
@@ -136,7 +141,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
                     .addComponent(btRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                     .addComponent(btRegistrarJogo, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                    .addComponent(btSair, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -156,7 +161,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -180,6 +185,9 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         menuItemExcluirJogos.setText("Excluir Jogo");
         jMenu1.add(menuItemExcluirJogos);
+
+        menuSair.setText("Sair");
+        jMenu1.add(menuSair);
 
         jMenuBar1.add(jMenu1);
 
@@ -246,9 +254,9 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JButton btJogos;
     private javax.swing.JButton btRegistrar;
     private javax.swing.JButton btRegistrarJogo;
+    private javax.swing.JButton btSair;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
@@ -257,6 +265,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem menuItemExcluirJogos;
     private javax.swing.JMenuItem menuItemExcluirUsuario;
+    private javax.swing.JMenuItem menuSair;
     private javax.swing.JMenuItem x1;
     private javax.swing.JMenuItem x12;
     // End of variables declaration//GEN-END:variables

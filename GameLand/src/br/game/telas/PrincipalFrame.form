@@ -32,6 +32,11 @@
                 <Property name="text" type="java.lang.String" value="Excluir Jogo"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuSair">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sair"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
@@ -110,7 +115,7 @@
                           <Component id="btRegistrar" alignment="0" pref="220" max="32767" attributes="0"/>
                           <Component id="jButton4" alignment="1" pref="220" max="32767" attributes="0"/>
                           <Component id="btRegistrarJogo" alignment="0" pref="220" max="32767" attributes="0"/>
-                          <Component id="jButton6" alignment="1" pref="220" max="32767" attributes="0"/>
+                          <Component id="btSair" alignment="1" pref="220" max="32767" attributes="0"/>
                           <Component id="jButton7" alignment="0" pref="220" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -133,7 +138,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jButton6" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="btSair" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -165,7 +170,7 @@
                 <Property name="text" type="java.lang.String" value="Cadastrar Jogos"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton6">
+            <Component class="javax.swing.JButton" name="btSair">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
