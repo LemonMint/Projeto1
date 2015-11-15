@@ -65,21 +65,30 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
         btCancel = new javax.swing.JButton();
         btAdd = new javax.swing.JButton();
 
-        setBorder(null);
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        setForeground(java.awt.Color.white);
         setTitle("Cadastro de Jogos");
-        setMinimumSize(new java.awt.Dimension(0, 0));
-        setPreferredSize(new java.awt.Dimension(350, 500));
         setVisible(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Código");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 22, 95, -1));
+        getContentPane().add(txtGameCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 45, 114, -1));
 
         jLabel2.setText("Nome do Jogo");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 22, 110, -1));
+        getContentPane().add(txtGameName, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 45, 130, -1));
 
         jLabel3.setText("Ano de Lançamento");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 78, -1, -1));
+        getContentPane().add(txtGameYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 101, 130, -1));
 
         jLabel6.setText("Preço");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 78, 95, -1));
+        getContentPane().add(txtGamePrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 101, 114, -1));
 
         jLabel5.setText("Plataforma");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 134, 100, -1));
 
         cbGamePlat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PC", "Xbox 360", "Play Station 3", "Xbox One", "Play Station 4", "Nintendo 3ds", "Nintendo WiiU" }));
         cbGamePlat.addActionListener(new java.awt.event.ActionListener() {
@@ -87,6 +96,7 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 cbGamePlatActionPerformed(evt);
             }
         });
+        getContentPane().add(cbGamePlat, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 157, 114, -1));
 
         cbGameCat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "FPS", "MOBA", "RPG", "MMORPG", "Ação", "Aventura", "Horror Psicológico" }));
         cbGameCat.addActionListener(new java.awt.event.ActionListener() {
@@ -94,8 +104,10 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 cbGameCatActionPerformed(evt);
             }
         });
+        getContentPane().add(cbGameCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 157, 130, -1));
 
         jLabel4.setText("Categoria");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 134, 80, -1));
 
         btCancel.setText("Voltar");
         btCancel.addActionListener(listener);
@@ -105,6 +117,7 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 btCancelActionPerformed(evt);
             }
         });
+        getContentPane().add(btCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 130, -1));
 
         btAdd.setText("Adicionar");
         btAdd.addActionListener(listener);
@@ -114,79 +127,7 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
                 btAddActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtGameCode, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(txtGameName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtGamePrice, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(txtGameYear, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(cbGamePlat, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(cbGameCat, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(16, 16, 16)
-                        .addComponent(btCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtGameCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtGameName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel3))
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtGamePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtGameYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4))
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbGamePlat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbGameCat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btAdd)
-                    .addComponent(btCancel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getAccessibleContext().setAccessibleParent(getDesktopPane());
+        getContentPane().add(btAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 114, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
