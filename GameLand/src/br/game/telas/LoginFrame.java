@@ -8,7 +8,7 @@ package br.game.telas;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import br.game.listerners.LoginListener;
-import br.game.modelo.Clientes;
+import br.game.modelo.Cliente;
 import br.game.inout.SalvareLerLogin;
 import br.game.modelo.Funcionarios;
 

@@ -13,10 +13,9 @@ import java.awt.event.ActionListener;
  *
  * @author comp1
  */
-public class MostrarJogosListener implements ActionListener{
-    
+public class MostrarJogosListener implements ActionListener {
+
     private MostrarJogosFrame frame;
-    
 
     public MostrarJogosListener(MostrarJogosFrame frame) {
         this.frame = frame;
@@ -24,10 +23,16 @@ public class MostrarJogosListener implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if("codigo".equals(e.getActionCommand())){
-            
+        switch (e.getActionCommand()) {
+            case "pesquisar":
+                break;
+            case "voltar":
+                frame.Sair();
+                break;
+            case "vender":
+                break;
+
         }
     }
-
 
 }

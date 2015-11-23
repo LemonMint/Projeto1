@@ -4,7 +4,7 @@ import br.game.inout.SalvarLog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import br.game.modelo.Jogos;
+import br.game.modelo.Jogo;
 import br.game.telas.RegistroJogosFrame;
 import java.io.IOException;
 
@@ -18,28 +18,31 @@ public class RegistroJogosListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if ("Adicionar".equals(e.getActionCommand())) {
+        switch (e.getActionCommand()) {
+            case "cadastrar":
+                try {
+                    Jogo jogo = frame.getJogo();
+                    JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
+                    SalvarLog.escreverLog("Jogo:" + frame.getJogo() + " cadastrado com sucesso", "log.txt");
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+                }
+                break;
+            case "voltar":
+                frame.Sair();
+                try {
+                    SalvarLog.escreverLog("Saida da tela de Registro de Jogos", "log.txt");
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+                }
+                break;
 
-            try {
-                Jogos jogo = frame.getJogo();
-                JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
-                SalvarLog.escreverLog("Jogo:" + frame.getJogo() + " cadastrado com sucesso", "log.txt");
-            } catch (IOException ex) {
-                JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
-            }
-
-            /*Jogos jogo = frame.getJogo();
-             JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
-             */        }
-        if ("Cancelar".equals(e.getActionCommand())) {
-            frame.Sair();
-            try {
-                SalvarLog.escreverLog("Saida da tela de Registro de Jogos", "log.txt");
-            } catch (IOException ex) {
-                JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
-            }
+            case "procurar":
+                //definir
+                break;
+            case "excluir":
+                //Definir
+                break;
         }
-
     }
-
 }

@@ -52,15 +52,21 @@ public class PrincipalListener implements ActionListener {
                     }
                     break;
                 case "mostrarJogos":
-                     try {
+                    try {
                         frame.criarMostrarJogos();
                         SalvarLog.escreverLog("Menu: Jogos foi acessado", "log.txt");
                     } catch (IOException ex) {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                     }
                     break;
-                case "Sair":
-                    System.exit(0);
+                case "creditos":
+                    try {
+                        JOptionPane.showMessageDialog(frame, "Créditos:\nMarcos Paulo\nRaul Porto");
+                        SalvarLog.escreverLog("Menu: Créditos foi clicado.", "log.txt");
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+                    }
+                    break;
                 default:
                     System.out.println("Menu não encontrado!");
                     break;

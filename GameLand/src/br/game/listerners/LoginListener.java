@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JOptionPane;
-import br.game.modelo.Clientes;
+import br.game.modelo.Cliente;
 import br.game.telas.LoginFrame;
 import br.game.telas.PrincipalFrame;
 import br.game.inout.SalvareLerLogin;
