@@ -39,7 +39,7 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
 
     public Cliente getUsuario() {
         Cliente usuario = new Cliente();
-        usuario.setTelefone(Integer.parseInt(txtTelefone.getText()));
+        usuario.setTelefone(txtTelefone.getText());
         usuario.setEmail(txtEmail.getText());
         usuario.setCEP(Integer.parseInt(txtCep.getText()));
         usuario.setIdade(Integer.valueOf(boxIdade.getSelectedItem().toString()));

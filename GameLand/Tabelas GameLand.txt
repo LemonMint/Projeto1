@@ -1,0 +1,36 @@
+CREATE TABLE cliente(
+codigo integer not null,
+nome varchar(250),
+email varchar(250),
+idade integer,
+sexo boolean,
+cpf varchar(15),
+CEP integer,
+telefone varchar(20)
+)
+
+
+
+CREATE TABLE jogo(
+codigoJogo integer,
+nomeJogo varchar(250),
+precoJogo decimal(10,2),
+plataformaJogo varchar(150),
+generoJogo varchar(150),
+descricao varchar(1000),
+precoVenda decimal(10,2),
+produtora varchar(150)
+)
+
+
+
+CREATE TABLE funcionario(
+codigo integer,
+nome varchar(250),
+rg varchar(20),
+cpf varchar(20),
+cargo varchar(150),
+senhacodigo integer
+)
+
+

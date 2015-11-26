@@ -9,21 +9,21 @@ package br.game.modelo;
  *
  * @author comp1
  */
-public class Funcionarios {
+public class Funcionario {
     
     private int codigo;
     private String nome;
-    private int rg;
-    private int cpf;
+    private String rg;
+    private String cpf;
     private String cargo;
-    private String senha;
+    private int senhaCodigo;
 
-    public String getSenha() {
-        return senha;
+    public int getSenhaCodigo() {
+        return senhaCodigo;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setSenhaCodigo(int senhaCodigo) {
+        this.senhaCodigo = senhaCodigo;
     }
 
     public int getCodigo() {
@@ -42,19 +42,19 @@ public class Funcionarios {
         this.nome = nome;
     }
 
-    public int getRg() {
+    public String getRg() {
         return rg;
     }
 
-    public void setRg(int rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

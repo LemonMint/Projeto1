@@ -8,8 +8,8 @@ public class ValUsuario {
 
     }
 
-    public static boolean ValLogin(String login, String senha) {
-        return login.equals("login") && senha.equals("123");
+    public static boolean ValLogin(String login, int senha) {
+        return login.equals("login") && senha == 123;
     }
 
 }

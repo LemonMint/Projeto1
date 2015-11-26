@@ -11,7 +11,17 @@ public class Cliente {
     private boolean sexo;
     private String cpf;
     private int CEP;
-    private int telefone;
+    private String telefone;
+    private int codigo;
+
+    
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
 
     public int getCEP() {
         return CEP;
@@ -61,11 +71,11 @@ public class Cliente {
         this.sexo = sexo;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

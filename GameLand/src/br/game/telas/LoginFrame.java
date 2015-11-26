@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import br.game.listerners.LoginListener;
 import br.game.modelo.Cliente;
 import br.game.inout.SalvareLerLogin;
-import br.game.modelo.Funcionarios;
+import br.game.modelo.Funcionario;
 
 /**
  *
@@ -20,10 +20,10 @@ public class LoginFrame extends javax.swing.JFrame {
 
     private LoginListener listener = new LoginListener(this);
 
-    public Funcionarios getUsuario() {
-        Funcionarios funcionarios = new Funcionarios();
+    public Funcionario getUsuario() {
+        Funcionario funcionarios = new Funcionario();
         funcionarios.setNome(txtUserName.getText());
-        funcionarios.setSenha(String.valueOf(txtUserPassword.getPassword()));
+        funcionarios.setSenhaCodigo(Integer.parseInt(txtUserPassword.getPassword().toString()));
         return funcionarios;
     }
 

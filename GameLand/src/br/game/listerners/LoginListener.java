@@ -9,7 +9,7 @@ import br.game.modelo.Cliente;
 import br.game.telas.LoginFrame;
 import br.game.telas.PrincipalFrame;
 import br.game.inout.SalvareLerLogin;
-import br.game.modelo.Funcionarios;
+import br.game.modelo.Funcionario;
 import br.game.validacoes.ValUsuario;
 
 public class LoginListener implements ActionListener {
@@ -23,14 +23,14 @@ public class LoginListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Funcionarios funcionarios = frame.getUsuario();
+        Funcionario funcionarios = frame.getUsuario();
         if ("Entrar".equals(e.getActionCommand())) {
             try {
                 SalvarLog.escreverLog("Entrada login e senha.", "log.txt");
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
-            if (ValUsuario.ValLogin(funcionarios.getNome(), funcionarios.getSenha())) {
+            if (ValUsuario.ValLogin(funcionarios.getNome(), funcionarios.getSenhaCodigo())) {
                 try {
                     SalvarLog.escreverLog("Entrada com sucesso.", "log.txt");
                 } catch (IOException ex) {
