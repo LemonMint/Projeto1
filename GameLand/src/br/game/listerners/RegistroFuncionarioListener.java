@@ -4,27 +4,27 @@ import br.game.inout.SalvarLog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import br.game.telas.ExcluirUsuariosFrame;
+import br.game.telas.RegistroFuncionarioFrame;
 import java.io.IOException;
 
-public class ExcluirUserListener implements ActionListener {
+public class RegistroFuncionarioListener implements ActionListener {
 
-    public ExcluirUserListener(ExcluirUsuariosFrame frame) {
+    public RegistroFuncionarioListener(RegistroFuncionarioFrame frame) {
         this.frame = frame;
     }
 
-    private ExcluirUsuariosFrame frame;
+    private RegistroFuncionarioFrame frame;
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if ("cancelar".equals(ae.getActionCommand())) {
+        if ("voltar".equals(ae.getActionCommand())) {
             try {
                 frame.Sair();
                 SalvarLog.escreverLog("clicou em sair da tela de exclusão de usuário", "log.txt");
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
-        } else if ("pesquisar".equals(ae.getActionCommand())) {
+        } else if ("registrar".equals(ae.getActionCommand())) {
             try {
                 JOptionPane.showMessageDialog(frame, "Usuario encontrado");
                 SalvarLog.escreverLog("Menu: pesquisar foi clicado", "log.txt");
@@ -32,7 +32,7 @@ public class ExcluirUserListener implements ActionListener {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
            
-        } else if ("excluir".equals(ae.getActionCommand())) {
+        } else if ("demitir".equals(ae.getActionCommand())) {
             try {
                 JOptionPane.showMessageDialog(frame, "Usuario excluido com exito");
                 SalvarLog.escreverLog("Usuário excluido com sucesso.", "log.txt");

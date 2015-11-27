@@ -118,7 +118,7 @@
                           <Component id="btJogos" max="32767" attributes="0"/>
                           <Component id="jButton2" alignment="1" max="32767" attributes="0"/>
                           <Component id="btRegistrar" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jButton4" alignment="1" pref="220" max="32767" attributes="0"/>
+                          <Component id="btCadastrarFuncionario" alignment="1" pref="220" max="32767" attributes="0"/>
                           <Component id="btRegistrarJogo" alignment="0" max="32767" attributes="0"/>
                           <Component id="jButton6" alignment="1" max="32767" attributes="0"/>
                           <Component id="jButton7" alignment="0" max="32767" attributes="0"/>
@@ -142,7 +142,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton7" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="btCadastrarFuncionario" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btCreditos" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -168,7 +168,7 @@
                 <Property name="text" type="java.lang.String" value="Cadastrar Clientes"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="btCadastrarFuncionario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cadastrar Funcion&#xe1;rios"/>
               </Properties>

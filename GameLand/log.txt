@@ -228,3 +228,43 @@ Thu Nov 26 19:52:21 BRST 2015 : Entrada login e senha.
 Thu Nov 26 19:52:21 BRST 2015 : Entrada com sucesso.
 Thu Nov 26 19:52:23 BRST 2015 : Menu: Jogos foi acessado
 Thu Nov 26 19:52:24 BRST 2015 : Menu: registrarJogo foi Acessado
+Fri Nov 27 01:42:19 BRST 2015 : Entrada login e senha.
+Fri Nov 27 01:42:19 BRST 2015 : Entrada com sucesso.
+Fri Nov 27 01:42:27 BRST 2015 : Menu: registrar foi Acessado
+Fri Nov 27 01:42:33 BRST 2015 : Menu: registrar foi Acessado
+Fri Nov 27 01:42:36 BRST 2015 : Saida da tela de Registro de Usuario
+Fri Nov 27 01:42:37 BRST 2015 : Menu: Jogos foi acessado
+Fri Nov 27 01:42:41 BRST 2015 : Menu: registrarJogo foi Acessado
+Fri Nov 27 01:42:43 BRST 2015 : Menu: registrarJogo foi Acessado
+Fri Nov 27 01:42:47 BRST 2015 : Saida da tela de Registro de Jogos
+Fri Nov 27 01:42:49 BRST 2015 : Menu: registrar foi Acessado
+Fri Nov 27 01:42:52 BRST 2015 : Saida da tela de Registro de Usuario
+Fri Nov 27 01:42:53 BRST 2015 : Menu: Jogos foi acessado
+Fri Nov 27 01:50:01 BRST 2015 : Entrada login e senha.
+Fri Nov 27 01:50:01 BRST 2015 : Entrada com sucesso.
+Fri Nov 27 01:50:02 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Fri Nov 27 01:50:23 BRST 2015 : Menu: Créditos foi clicado.
+Fri Nov 27 01:50:23 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Fri Nov 27 01:50:26 BRST 2015 : Menu: registrar foi Acessado
+Fri Nov 27 01:50:26 BRST 2015 : Menu: registrarJogo foi Acessado
+Fri Nov 27 01:50:28 BRST 2015 : Saida da tela de Registro de Usuario
+Fri Nov 27 01:50:33 BRST 2015 : Saida da tela de Registro de Jogos
+Fri Nov 27 01:53:20 BRST 2015 : Entrada login e senha.
+Fri Nov 27 01:53:20 BRST 2015 : Entrada com sucesso.
+Fri Nov 27 01:53:21 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Fri Nov 27 01:53:22 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Fri Nov 27 01:53:23 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Fri Nov 27 01:53:25 BRST 2015 : Menu: pesquisar foi clicado
+Fri Nov 27 01:53:27 BRST 2015 : Usuário excluido com sucesso.
+Fri Nov 27 01:53:36 BRST 2015 : Menu: pesquisar foi clicado
+Fri Nov 27 01:53:36 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Fri Nov 27 01:53:38 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Fri Nov 27 01:53:39 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Fri Nov 27 01:53:42 BRST 2015 : Menu: registrar foi Acessado
+Fri Nov 27 01:53:43 BRST 2015 : Saida da tela de Registro de Usuario
+Fri Nov 27 01:53:44 BRST 2015 : Menu: Jogos foi acessado
+Fri Nov 27 01:53:48 BRST 2015 : Menu: registrarJogo foi Acessado
+Fri Nov 27 01:53:50 BRST 2015 : Saida da tela de Registro de Jogos
+Fri Nov 27 01:53:52 BRST 2015 : Menu: registrar foi Acessado
+Fri Nov 27 01:53:53 BRST 2015 : Saida da tela de Registro de Usuario
+Fri Nov 27 01:53:55 BRST 2015 : Menu: Créditos foi clicado.

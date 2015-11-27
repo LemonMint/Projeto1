@@ -43,10 +43,10 @@ public class PrincipalListener implements ActionListener {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                     }
                     break;
-                case "excluirUsuario":
+                case "cadastrarFuncionario":
                     try {
-                        frame.criarExcluirUsuarios();
-                        SalvarLog.escreverLog("Menu: excluirUsuario foi Acessado", "log.txt");
+                        frame.criarRegistroFunconario();
+                        SalvarLog.escreverLog("Menu: RegistroFuncionario foi Acessado", "log.txt");
                     } catch (IOException ex) {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                     }

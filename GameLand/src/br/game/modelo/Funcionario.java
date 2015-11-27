@@ -11,12 +11,17 @@ package br.game.modelo;
  */
 public class Funcionario {
     
-    private int codigo;
+    public static final boolean FEMININO = false;
+    public static final boolean MASCULINO = true;
+    
+    private String telefone;
     private String nome;
     private String rg;
     private String cpf;
     private String cargo;
     private int senhaCodigo;
+    private int idade;
+    private boolean sexo;
 
     public int getSenhaCodigo() {
         return senhaCodigo;
@@ -26,12 +31,12 @@ public class Funcionario {
         this.senhaCodigo = senhaCodigo;
     }
 
-    public int getCodigo() {
-        return codigo;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -65,4 +70,21 @@ public class Funcionario {
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public boolean isSexo() {
+        return sexo;
+    }
+
+    public void setSexo(boolean sexo) {
+        this.sexo = sexo;
+    }
+    
 }
