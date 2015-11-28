@@ -23,7 +23,7 @@ public class LoginFrame extends javax.swing.JFrame {
     public Funcionario getUsuario() {
         Funcionario funcionarios = new Funcionario();
         funcionarios.setNome(txtUserName.getText());
-        funcionarios.setSenhaCodigo(Integer.parseInt(String.valueOf(txtUserPassword.getPassword())));
+        funcionarios.setSenha(Integer.parseInt(String.valueOf(txtUserPassword.getPassword())));
         return funcionarios;
     }
 

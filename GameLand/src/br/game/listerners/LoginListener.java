@@ -30,7 +30,7 @@ public class LoginListener implements ActionListener {
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
-            if (ValUsuario.ValLogin(funcionarios.getNome(), funcionarios.getSenhaCodigo())) {
+            if (ValUsuario.ValLogin(funcionarios.getNome(), funcionarios.getSenha())) {
                 try {
                     SalvarLog.escreverLog("Entrada com sucesso.", "log.txt");
                 } catch (IOException ex) {

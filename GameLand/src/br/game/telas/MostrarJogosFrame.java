@@ -5,6 +5,7 @@
  */
 package br.game.telas;
 
+import br.game.listerners.LimparCampoListener;
 import br.game.listerners.MostrarJogosListener;
 
 /**
@@ -21,6 +22,9 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
      */
     public MostrarJogosFrame() {
         initComponents();
+        txtNome.addFocusListener(new LimparCampoListener(txtNome, txtNome.getText()));
+        txtCodigo.addFocusListener(new LimparCampoListener(txtCodigo, txtCodigo.getText()));
+        txtCodigoMostrar.addFocusListener(new LimparCampoListener(txtCodigoMostrar, txtCodigoMostrar.getText()));
         btPesquisar.addActionListener(listener);
         btPesquisar.setActionCommand("pesquisar");
         btVoltar.addActionListener(listener);
@@ -83,6 +87,7 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Nome do Jogo");
 
+        txtNome.setText("Informe o nome do Jogo");
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
@@ -91,6 +96,7 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Código");
 
+        txtCodigo.setText("Informe o código do Jogo");
         txtCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCodigoActionPerformed(evt);

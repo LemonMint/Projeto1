@@ -10,25 +10,34 @@ package br.game.modelo;
  * @author comp1
  */
 public class Funcionario {
-    
+
     public static final boolean FEMININO = false;
     public static final boolean MASCULINO = true;
-    
+
+    private Integer codigo;
     private String telefone;
     private String nome;
     private String rg;
     private String cpf;
     private String cargo;
-    private int senhaCodigo;
+    private int senha;
     private int idade;
     private boolean sexo;
 
-    public int getSenhaCodigo() {
-        return senhaCodigo;
+    public Integer getCodigo() {
+        return codigo;
     }
 
-    public void setSenhaCodigo(int senhaCodigo) {
-        this.senhaCodigo = senhaCodigo;
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+    public int getSenha() {
+        return senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
     }
 
     public String getTelefone() {
@@ -86,5 +95,5 @@ public class Funcionario {
     public void setSexo(boolean sexo) {
         this.sexo = sexo;
     }
-    
+
 }

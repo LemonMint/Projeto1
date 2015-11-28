@@ -1,6 +1,7 @@
 package br.game.listerners;
 
 import br.game.inout.SalvarLog;
+import br.game.modelo.Funcionario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -26,12 +27,20 @@ public class RegistroFuncionarioListener implements ActionListener {
             }
         } else if ("registrar".equals(ae.getActionCommand())) {
             try {
-                JOptionPane.showMessageDialog(frame, "Usuario encontrado");
+
+                Funcionario funcionario = frame.getFuncionario();
+                if (funcionario != null) {
+                    if (funcionario.getCodigo() == null) {
+                        System.out.println("DAO ADICIONAR");
+                    } else {
+                        System.out.println("DAO ALTERAR");
+                    }
+                }
                 SalvarLog.escreverLog("Menu: pesquisar foi clicado", "log.txt");
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
-           
+
         } else if ("demitir".equals(ae.getActionCommand())) {
             try {
                 JOptionPane.showMessageDialog(frame, "Usuario excluido com exito");
