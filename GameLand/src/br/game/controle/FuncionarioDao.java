@@ -5,7 +5,7 @@
  */
 package br.game.controle;
 
-import br.game.modelo.Cliente;
+import br.game.modelo.Funcionario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,29 +13,31 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Lemon
+ * @author Marcos
  */
-public class ClienteDao {
+public class FuncionarioDao {
 
-    public void insert(Cliente cliente) {
+    public void insert(Funcionario funcionario) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "insert into clientes (codigo, nome, email, idade, sexo, cpf, CEP, telefone) values(?,?,?,?,?,?,?,?)";
+
+            String sql = "insert into funcionarios (codigo, nome, telefone, rg, cpf, cargo, idade, sexo, senha) values(?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, cliente.getCodigo());
-            ps.setString(2, cliente.getNome());
-            ps.setString(3, cliente.getEmail());
-            ps.setInt(4, cliente.getIdade());
-            if (cliente.isSexo()) {
-                ps.setString(5, "Masculino");
+            ps.setInt(1, funcionario.getCodigo());
+            ps.setString(2, funcionario.getNome());
+            ps.setString(3, funcionario.getTelefone());
+            ps.setString(4, funcionario.getRg());
+            ps.setString(5, funcionario.getCpf());
+            ps.setString(6, funcionario.getCargo());
+            ps.setInt(7, funcionario.getIdade());
+            if (funcionario.isSexo()) {
+                ps.setString(8, "Masculino");
             } else {
-                ps.setString(5, "Feminino");
+                ps.setString(8, "Feminino");
             }
-            ps.setString(6, cliente.getCpf());
-            ps.setInt(7, cliente.getCEP());
-            ps.setString(8, cliente.getTelefone());
+            ps.setInt(9, funcionario.getSenha());
             ps.execute();
 
             conn.commit();
@@ -69,15 +71,15 @@ public class ClienteDao {
         }
     }
 
-    public void delete(Cliente cliente) {
+    public void delete(Funcionario funcionario) {
 
         Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "delete from clientes where codigo = ?";
+            String sql = "delete from funcionarios where codigo = ?";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, cliente.getCodigo());
+            ps.setInt(1, funcionario.getCodigo());
             ps.execute();
 
             conn.commit();
@@ -110,28 +112,28 @@ public class ClienteDao {
         }
     }
 
-    public void update(Cliente cliente) {
+    public void update(Funcionario funcionario) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
-            conn = Conexao.getConnection(); /*nome, email, idade, sexo, cpf, CEP, telefone*/
-
-            String sql = "update clientes set nome = ?, email = ?, idade = ?, sexo = ?, cpf = ?, CEP = ?, telefone = ? where codigo = ?";
+            conn = Conexao.getConnection();
+            String sql = "update funcionarios set nome = ?, telefone = ?, rg = ?, cpf = ?, cargo = ?, idade = ?, sexo = ?, senha = ? where codigo = ?";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, cliente.getNome());
-            ps.setString(2, cliente.getEmail());
-            ps.setInt(3, cliente.getIdade());
-            if (cliente.isSexo()) {
-                ps.setString(4, "Masculino");
+            ps.setString(1, funcionario.getNome());
+            ps.setString(2, funcionario.getTelefone());
+            ps.setString(3, funcionario.getRg());
+            ps.setString(4, funcionario.getCpf());
+            ps.setString(5, funcionario.getCargo());
+            ps.setInt(6, funcionario.getIdade());
+            if (funcionario.isSexo()) {
+                ps.setString(7, "Masculino");
             } else {
-                ps.setString(4, "Feminino");
+                ps.setString(7, "Feminino");
             }
-            ps.setString(5, cliente.getCpf());
-            ps.setInt(6, cliente.getCEP());
-            ps.setString(7, cliente.getTelefone());
-            //Where
-            ps.setInt(8, cliente.getCodigo());
-
+            ps.setInt(8, funcionario.getSenha());
+            
+            ps.setInt(9, funcionario.getCodigo());
+            
             ps.execute();
 
             conn.commit();
@@ -163,50 +165,52 @@ public class ClienteDao {
             }
         }
     }
-
-    public Cliente getClientePorCodigo(Integer codigo) {
+    
+    public Funcionario getFuncionarioPorCodigo(Integer codigo) {
         Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, nome, email, idade, sexo, cpf, CEP, telefone from clientes where codigo = ?";
+            String sql = "select codigo, nome, telefone, rg, cpf, cargo, idade, sexo, senha from funcionarios where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
+            if(rs.next()) {
                 Integer cod = rs.getInt(1);
                 String nome = rs.getString(2);
-                String email = rs.getString(3);
-                Integer idade = rs.getInt(4);
-                String sexo = rs.getString(5);
-                String cpf = rs.getString(6);
-                Integer cep = rs.getInt(7);
-                String telefone = rs.getString(8);
-
-                Cliente cliente = new Cliente();
-
-                cliente.setCodigo(cod);
-                cliente.setNome(nome);
-                cliente.setEmail(email);
-                cliente.setIdade(idade);
-                cliente.setSexo(true);
-                cliente.setCpf(cpf);
-                cliente.setCEP(cep);
-                cliente.setTelefone(telefone);
-                return cliente;
-
+                String telefone = rs.getString(3);
+                String rg = rs.getString(4);
+                String cpf = rs.getString(5);
+                String cargo = rs.getString(6);
+                Integer idade = rs.getInt(7);
+                String sexo = rs.getString(8);
+                Integer senha = rs.getInt(9);
+                
+                Funcionario funcionario = new Funcionario();
+                
+                funcionario.setCodigo(cod);
+                funcionario.setNome(nome);
+                funcionario.setTelefone(telefone);
+                funcionario.setRg(rg);
+                funcionario.setCpf(cpf);
+                funcionario.setCargo(cargo);
+                funcionario.setIdade(idade);
+                funcionario.setSexo(true);
+                funcionario.setSenha(senha);
+                return funcionario;
+                
             }
-        } catch (SQLException e) {
+        } catch(SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
         } finally {
-            if (ps != null) {
+            if( ps != null) {
                 try {
                     ps.close();
                 } catch (SQLException ex) {
                     System.out.println("ERRO: " + ex.getMessage());
                 }
             }
-            if (conn != null) {
+            if(conn != null) {
                 try {
                     conn.close();
                 } catch (SQLException ex) {
