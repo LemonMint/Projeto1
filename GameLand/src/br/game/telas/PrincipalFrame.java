@@ -7,7 +7,6 @@ package br.game.telas;
 
 import br.game.listerners.PrincipalListener;
 
-
 public class PrincipalFrame extends javax.swing.JFrame {
 
     public PrincipalFrame() {
@@ -20,31 +19,34 @@ public class PrincipalFrame extends javax.swing.JFrame {
         btRegistrarJogo.setActionCommand("registrarJogo");
         btJogos.addActionListener(listener);
         btJogos.setActionCommand("mostrarJogos");
-        menuItemExcluirJogos.addActionListener(listener);
-        menuItemExcluirJogos.setActionCommand("excluirJogos");
-        menuItemExcluirUsuario.addActionListener(listener);
-        menuItemExcluirUsuario.setActionCommand("excluirUsuario");
         btCreditos.addActionListener(listener);
         btCreditos.setActionCommand("creditos");
         btCadastrarFuncionario.addActionListener(listener);
         btCadastrarFuncionario.setActionCommand("cadastrarFuncionario");
+        btMostrarFuncionarios.addActionListener(listener);
+        btMostrarFuncionarios.setActionCommand("mostrarFuncionario");
+        btClientes.addActionListener(listener);
+        btClientes.setActionCommand("mostrarCliente");
+        btSair.addActionListener(listener);
+        btSair.setActionCommand("sair");
 
     }
-    PrincipalFrame frame ;
-    static RegistrarFrame telaRegistrar = null;
+    PrincipalFrame frame;
+    static RegistrarClienteFrame telaRegistrarCliente = null;
     static RegistroJogosFrame telaRegistrarJogos = null;
-    static ExcluirJogosFrame telaExcluirJogos = null;
-    static MostrarJogosFrame telaJogos = null;
     static RegistroFuncionarioFrame telaRegistroFuncionario = null;
-    
+    static MostrarJogosFrame telaMostrarJogos = null;
+    static MostrarFuncionarioFrame telaMostraFuncionario = null;
+    static MostrarClienteFrame telaMostrarCliente = null;
+
     public void criarRegistro() {
-        
-        if (telaRegistrar == null) {
-            telaRegistrar = new RegistrarFrame();
-            jDesktopPane1.add(telaRegistrar);
-            
+
+        if (telaRegistrarCliente == null) {
+            telaRegistrarCliente = new RegistrarClienteFrame();
+            jDesktopPane1.add(telaRegistrarCliente);
+
         }
-        telaRegistrar.setVisible(true);
+        telaRegistrarCliente.setVisible(true);
     }
 
     public void criarRegistroJogos() {
@@ -56,28 +58,36 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     }
 
-    public void criarExcluirJogos() {
-        if (telaExcluirJogos == null) {
-            telaExcluirJogos = new ExcluirJogosFrame();
-            jDesktopPane1.add(telaExcluirJogos);
+    public void criarMostrarJogos() {
+        if (telaMostrarJogos == null) {
+            telaMostrarJogos = new MostrarJogosFrame();
+            jDesktopPane1.add(telaMostrarJogos);
         }
-        telaExcluirJogos.setVisible(true);
+        telaMostrarJogos.setVisible(true);
     }
-    
-    public void criarMostrarJogos(){
-        if(telaJogos == null){
-            telaJogos = new MostrarJogosFrame();
-            jDesktopPane1.add(telaJogos);
-        }
-        telaJogos.setVisible(true);
-    }
-    
-    public void criarRegistroFunconario(){
-        if(telaRegistroFuncionario == null){
+
+    public void criarRegistroFunconario() {
+        if (telaRegistroFuncionario == null) {
             telaRegistroFuncionario = new RegistroFuncionarioFrame();
             jDesktopPane1.add(telaRegistroFuncionario);
         }
         telaRegistroFuncionario.setVisible(true);
+    }
+
+    public void criarMostrarFuncionario() {
+        if (telaMostraFuncionario == null) {
+            telaMostraFuncionario = new MostrarFuncionarioFrame();
+            jDesktopPane1.add(telaMostraFuncionario);
+        }
+        telaMostraFuncionario.setVisible(true);
+    }
+
+    public void criarMostrarCliente() {
+        if (telaMostrarCliente == null) {
+            telaMostrarCliente = new MostrarClienteFrame();
+            jDesktopPane1.add(telaMostrarCliente);
+        }
+        telaMostrarCliente.setVisible(true);
     }
 
     /**
@@ -92,23 +102,16 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         btJogos = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btClientes = new javax.swing.JButton();
         btRegistrar = new javax.swing.JButton();
         btCadastrarFuncionario = new javax.swing.JButton();
         btRegistrarJogo = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btSair = new javax.swing.JButton();
+        btMostrarFuncionarios = new javax.swing.JButton();
         btCreditos = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        x12 = new javax.swing.JMenuItem();
-        x1 = new javax.swing.JMenuItem();
-        menuItemExcluirUsuario = new javax.swing.JMenuItem();
-        menuItemExcluirJogos = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 645));
+        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
 
         jDesktopPane1.setBackground(new java.awt.Color(204, 204, 204));
@@ -117,7 +120,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         btJogos.setText("Jogos");
 
-        jButton2.setText("Clientes");
+        btClientes.setText("Clientes");
 
         btRegistrar.setText("Cadastrar Clientes");
 
@@ -125,9 +128,9 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         btRegistrarJogo.setText("Cadastrar Jogos");
 
-        jButton6.setText("Sair");
+        btSair.setText("Sair");
 
-        jButton7.setText(" Funcionários");
+        btMostrarFuncionarios.setText(" Funcionários");
 
         btCreditos.setText("Créditos");
 
@@ -139,12 +142,12 @@ public class PrincipalFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btJogos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btClientes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btCadastrarFuncionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
                     .addComponent(btRegistrarJogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btSair, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btMostrarFuncionarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btCreditos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -156,18 +159,18 @@ public class PrincipalFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btRegistrarJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btMostrarFuncionarios, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btCadastrarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addComponent(btSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(311, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
@@ -176,39 +179,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(774, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jMenu1.setText("Menus");
-
-        x12.setText("Registrar");
-        jMenu1.add(x12);
-
-        x1.setText("Registrar Jogo");
-        x1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                x1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(x1);
-
-        menuItemExcluirUsuario.setText("ExcluirUsuario");
-        jMenu1.add(menuItemExcluirUsuario);
-
-        menuItemExcluirJogos.setText("Excluir Jogo");
-        jMenu1.add(menuItemExcluirJogos);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Sobre");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -222,11 +200,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void x1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_x1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,21 +241,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrarFuncionario;
+    private javax.swing.JButton btClientes;
     private javax.swing.JButton btCreditos;
     private javax.swing.JButton btJogos;
+    private javax.swing.JButton btMostrarFuncionarios;
     private javax.swing.JButton btRegistrar;
     private javax.swing.JButton btRegistrarJogo;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton btSair;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenuItem menuItemExcluirJogos;
-    private javax.swing.JMenuItem menuItemExcluirUsuario;
-    private javax.swing.JMenuItem x1;
-    private javax.swing.JMenuItem x12;
     // End of variables declaration//GEN-END:variables
 }

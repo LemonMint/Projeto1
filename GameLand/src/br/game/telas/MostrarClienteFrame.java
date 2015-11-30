@@ -5,33 +5,37 @@
  */
 package br.game.telas;
 
-import br.game.listerners.PesquisarFuncionariosListener;
+import br.game.listerners.MostrarClientesListener;
 
 /**
  *
  * @author Lemon
  */
-public class MostrarFuncionario extends javax.swing.JInternalFrame {
+public class MostrarClienteFrame extends javax.swing.JInternalFrame {
 
-    PesquisarFuncionariosListener listener = new PesquisarFuncionariosListener(this);
-    
+    MostrarClientesListener listener = new MostrarClientesListener(this);
     /**
-     * Creates new form MostrarFuncionario
+     * Creates new form MostrarClienteFrame
      */
-    public MostrarFuncionario() {
+    public MostrarClienteFrame() {
         initComponents();
         btEditar.addActionListener(listener);
-        btEditar.setActionCommand("editar");
-        btRemover.addActionListener(listener);
-        btRemover.setActionCommand("remover");
-        btVoltar.addActionListener(listener);
-        btVoltar.setActionCommand("voltar");
         btPesquisar.addActionListener(listener);
+        btVoltar.addActionListener(listener);
+        btRemover.addActionListener(listener);
+        btEditar.setActionCommand("editar");
         btPesquisar.setActionCommand("pesquisar");
+        btRemover.setActionCommand("remover");
+        btVoltar.setActionCommand("voltar");
     }
     
     public String getDadosPesquisa(){
-        return txtPesquisa.getText();        
+        return txtPesquisa.getText();
+    }
+    
+      public void Sair() {
+        PrincipalFrame.telaMostrarJogos = null;
+        this.dispose();
     }
 
     /**
@@ -53,7 +57,7 @@ public class MostrarFuncionario extends javax.swing.JInternalFrame {
         btVoltar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(51, 51, 51));
-        setTitle("Pesquisar Funcionários");
+        setPreferredSize(new java.awt.Dimension(520, 435));
 
         btPesquisar.setText("Pesquisar");
 
@@ -73,11 +77,11 @@ public class MostrarFuncionario extends javax.swing.JInternalFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btPesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                    .addComponent(btPesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                     .addComponent(btEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btRemover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -96,7 +100,7 @@ public class MostrarFuncionario extends javax.swing.JInternalFrame {
                     .addComponent(txtPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btEditar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

@@ -14,11 +14,11 @@ import br.game.modelo.Cliente;
  *
  * @author comp1
  */
-public class RegistrarFrame extends javax.swing.JInternalFrame {
+public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
 
     private RegistrarUserListener listener = new RegistrarUserListener(this);
 
-    public RegistrarFrame() {
+    public RegistrarClienteFrame() {
         initComponents();
         txtNomeCadastro.addFocusListener(new LimparCampoListener(txtNomeCadastro, "Informe seu nome completo"));
         txtCpf.addFocusListener(new LimparCampoListener(txtCpf, "Digite seu CPF"));
@@ -51,7 +51,7 @@ public class RegistrarFrame extends javax.swing.JInternalFrame {
     }
 
     public void Sair() {
-        PrincipalFrame.telaRegistrar = null;
+        PrincipalFrame.telaRegistrarCliente = null;
         this.dispose();
     }
 

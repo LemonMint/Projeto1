@@ -5,42 +5,38 @@
  */
 package br.game.telas;
 
-import br.game.listerners.LimparCampoListener;
-import br.game.listerners.MostrarJogosListener;
+import br.game.listerners.PesquisarFuncionariosListener;
+import br.game.modelo.Funcionario;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author comp1
+ * @author Lemon
  */
-public class MostrarJogosFrame extends javax.swing.JInternalFrame {
+public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
 
-    private MostrarJogosListener listener = new MostrarJogosListener(this);
+    PesquisarFuncionariosListener listener = new PesquisarFuncionariosListener(this);
 
-    //Imagem do tamanho 330 por 110
     /**
-     * Creates new form JogosFrame
+     * Creates new form MostrarFuncionario
      */
-    public MostrarJogosFrame() {
+    public MostrarFuncionarioFrame() {
         initComponents();
-        txtPesquisar.addFocusListener(new LimparCampoListener(txtPesquisar, txtPesquisar.getText()));
-        btPesquisar.addActionListener(listener);
-        btPesquisar.setActionCommand("pesquisar");
-        btVoltar.addActionListener(listener);
-        btVoltar.setActionCommand("voltar");
         btEditar.addActionListener(listener);
         btEditar.setActionCommand("editar");
         btRemover.addActionListener(listener);
         btRemover.setActionCommand("remover");
+        btVoltar.addActionListener(listener);
+        btVoltar.setActionCommand("voltar");
+        btPesquisar.addActionListener(listener);
+        btPesquisar.setActionCommand("pesquisar");
     }
 
-    public int PesquisaCod() {
-        return Integer.parseInt(txtPesquisar.getText());
+    public String getDadosPesquisa() {
+        return txtPesquisa.getText();
     }
 
-    
-     public void Sair() {
-        PrincipalFrame.telaMostrarJogos = null;
-        this.dispose();
+    public void setListFuncionario() {
     }
 
     /**
@@ -54,25 +50,31 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btPesquisar = new javax.swing.JButton();
-        txtPesquisar = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ListFuncionario = new javax.swing.JList();
+        txtPesquisa = new javax.swing.JTextField();
         btEditar = new javax.swing.JButton();
         btRemover = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
         btVoltar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(51, 51, 51));
-        setTitle("Mostrar Jogos");
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Pesquisar Funcionários");
+        setPreferredSize(new java.awt.Dimension(520, 435));
 
         btPesquisar.setText("Pesquisar");
 
-        txtPesquisar.setText("Digite o nome ou código do jogo.");
+        ListFuncionario.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(ListFuncionario);
 
         btEditar.setText("Editar");
 
         btRemover.setText("Remover");
-
-        jScrollPane1.setViewportView(jList1);
 
         btVoltar.setText("Voltar");
 
@@ -82,15 +84,15 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btRemover, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btEditar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btPesquisar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                    .addComponent(btVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPesquisar)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
+                    .addComponent(btRemover, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                    .addComponent(btVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btPesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
+                    .addComponent(txtPesquisa))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -99,16 +101,16 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPesquisar)
-                    .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btEditar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btRemover)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btVoltar))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE))
+                        .addComponent(btVoltar)))
                 .addContainerGap())
         );
 
@@ -134,13 +136,13 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JList ListFuncionario;
     private javax.swing.JButton btEditar;
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btRemover;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtPesquisar;
+    private javax.swing.JTextField txtPesquisa;
     // End of variables declaration//GEN-END:variables
 }

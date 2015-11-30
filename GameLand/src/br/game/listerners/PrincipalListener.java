@@ -35,14 +35,6 @@ public class PrincipalListener implements ActionListener {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                     }
                     break;
-                case "excluirJogos":
-                    try {
-                        frame.criarExcluirJogos();
-                        SalvarLog.escreverLog("Menu: excluirJogos foi Acessado", "log.txt");
-                    } catch (IOException ex) {
-                        JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
-                    }
-                    break;
                 case "cadastrarFuncionario":
                     try {
                         frame.criarRegistroFunconario();
@@ -62,10 +54,34 @@ public class PrincipalListener implements ActionListener {
                 case "creditos":
                     try {
                         JOptionPane.showMessageDialog(frame, "Créditos:\nMarcos Paulo\nRaul Porto");
-                        SalvarLog.escreverLog("Menu: Créditos foi clicado.", "log.txt");
+                        SalvarLog.escreverLog("Menu: Créditos foi acessado.", "log.txt");
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                     }
+                    break;
+                case "mostrarFuncionario":
+                    try {
+                        frame.criarMostrarJogos();
+                        SalvarLog.escreverLog("Menu: MostrarFuncionario foi acessado", "log.txt");
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+                    }
+                    break;
+                case "mostrarCliente":
+                    try {
+                        frame.criarMostrarCliente();
+                        SalvarLog.escreverLog("Menu: MostrarCliente foi acessado", "log.txt");
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+                    }
+                    break;
+                case "sair":
+                    try {
+                        SalvarLog.escreverLog("Menu: Fim do programa", "log.txt");
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
+                    }
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Menu não encontrado!");

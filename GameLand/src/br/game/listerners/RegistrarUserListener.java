@@ -5,14 +5,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import br.game.modelo.Cliente;
-import br.game.telas.RegistrarFrame;
+import br.game.telas.RegistrarClienteFrame;
 import java.io.IOException;
 
 public class RegistrarUserListener implements ActionListener {
 
-    private RegistrarFrame user;
+    private RegistrarClienteFrame user;
 
-    public RegistrarUserListener(RegistrarFrame user) {
+    public RegistrarUserListener(RegistrarClienteFrame user) {
         this.user = user;
     }
 

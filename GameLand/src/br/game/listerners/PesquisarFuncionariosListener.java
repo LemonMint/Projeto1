@@ -5,8 +5,9 @@
  */
 package br.game.listerners;
 
+import br.game.controle.FuncionarioDao;
 import br.game.modelo.Funcionario;
-import br.game.telas.MostrarFuncionario;
+import br.game.telas.MostrarFuncionarioFrame;
 import br.game.telas.RegistroFuncionarioFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,10 +18,10 @@ import java.awt.event.ActionListener;
  */
 public class PesquisarFuncionariosListener implements ActionListener {
 
-    private MostrarFuncionario mostrarFuncionario;
+    private MostrarFuncionarioFrame frame;
 
-    public PesquisarFuncionariosListener(MostrarFuncionario mostrarFuncionario) {
-        this.mostrarFuncionario = mostrarFuncionario;
+    public PesquisarFuncionariosListener(MostrarFuncionarioFrame frame) {
+        this.frame = frame;
     }
 
     @Override
@@ -28,18 +29,20 @@ public class PesquisarFuncionariosListener implements ActionListener {
 
         switch (ae.getActionCommand()) {
             case "pesquisar":
-                String dadosPesquisa = mostrarFuncionario.getDadosPesquisa();
+                String dadosPesquisa = frame.getDadosPesquisa();
                 if (dadosPesquisa.matches("[0-9]+")) {
                     Integer codigoPesquisado = Integer.valueOf(dadosPesquisa);
                     //Pesquisar por codigo
                     System.out.println("pesquisar por codigo");
-                    Funcionario f = null; //do dao
-                    RegistroFuncionarioFrame telaRegistroFuncionario = new RegistroFuncionarioFrame(f);
-                    telaRegistroFuncionario.setVisible(true);
+                    FuncionarioDao q = new FuncionarioDao();
+                    Funcionario f = q.getFuncionarioPorCodigo(codigoPesquisado); //do dao
+                    
                 } else {
                     //Pesquisa por nome 
                     System.out.println("Pesquisar por nome");
                 }
+                break;
+            case "editar":
                 break;
 
         }

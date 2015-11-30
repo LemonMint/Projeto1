@@ -5,35 +5,32 @@
  */
 package br.game.listerners;
 
-import br.game.telas.MostrarJogosFrame;
+import br.game.telas.MostrarClienteFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- *
- * @author comp1
- */
-public class MostrarJogosListener implements ActionListener {
+public class MostrarClientesListener implements ActionListener {
 
-    private MostrarJogosFrame frame;
+    private MostrarClienteFrame frame;
 
-    public MostrarJogosListener(MostrarJogosFrame frame) {
+    public MostrarClientesListener(MostrarClienteFrame frame) {
         this.frame = frame;
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
+    public void actionPerformed(ActionEvent ae) {
+        switch (ae.getActionCommand()) {
             case "pesquisar":
-                break;
-            case "voltar":
-                frame.Sair();
                 break;
             case "editar":
                 break;
             case "remover":
                 break;
+            case "voltar":
+                frame.Sair();
+                break;
         }
+
     }
 
 }

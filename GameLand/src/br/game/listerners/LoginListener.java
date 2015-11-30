@@ -23,8 +23,9 @@ public class LoginListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Funcionario funcionarios = frame.getUsuario();
+        
         if ("Entrar".equals(e.getActionCommand())) {
+            Funcionario funcionarios = frame.getUsuario();
             try {
                 SalvarLog.escreverLog("Entrada login e senha.", "log.txt");
             } catch (IOException ex) {
@@ -60,7 +61,6 @@ public class LoginListener implements ActionListener {
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
             }
-            
             System.exit(0);
         }
     }
