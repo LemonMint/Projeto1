@@ -61,7 +61,7 @@ public class PrincipalListener implements ActionListener {
                     break;
                 case "mostrarFuncionario":
                     try {
-                        frame.criarMostrarJogos();
+                        frame.criarMostrarFuncionario();
                         SalvarLog.escreverLog("Menu: MostrarFuncionario foi acessado", "log.txt");
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(frame, "Erro ao salvar log");

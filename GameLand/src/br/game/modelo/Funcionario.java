@@ -96,4 +96,10 @@ public class Funcionario {
         this.sexo = sexo;
     }
 
+    @Override
+    public String toString() {
+        return  codigo + " " + nome;
+    }
+
+    
 }

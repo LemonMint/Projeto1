@@ -7,6 +7,8 @@ package br.game.telas;
 
 import br.game.listerners.PesquisarFuncionariosListener;
 import br.game.modelo.Funcionario;
+import java.util.List;
+import java.util.Vector;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,7 +38,9 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
         return txtPesquisa.getText();
     }
 
-    public void setListFuncionario() {
+    public void setListFuncionario(List<Funcionario> lista) {
+
+        listFuncionario.setListData(lista.toArray());
     }
 
     /**
@@ -51,7 +55,7 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         btPesquisar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ListFuncionario = new javax.swing.JList();
+        listFuncionario = new javax.swing.JList();
         txtPesquisa = new javax.swing.JTextField();
         btEditar = new javax.swing.JButton();
         btRemover = new javax.swing.JButton();
@@ -65,12 +69,12 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
 
         btPesquisar.setText("Pesquisar");
 
-        ListFuncionario.setModel(new javax.swing.AbstractListModel() {
+        listFuncionario.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(ListFuncionario);
+        jScrollPane1.setViewportView(listFuncionario);
 
         btEditar.setText("Editar");
 
@@ -136,13 +140,13 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList ListFuncionario;
     private javax.swing.JButton btEditar;
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btRemover;
     private javax.swing.JButton btVoltar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList listFuncionario;
     private javax.swing.JTextField txtPesquisa;
     // End of variables declaration//GEN-END:variables
 }

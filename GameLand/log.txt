@@ -437,3 +437,17 @@ Mon Nov 30 12:05:17 BRST 2015 : Saida da tela de Registro de Jogos
 Mon Nov 30 12:05:17 BRST 2015 : Menu: Jogos foi acessado
 Mon Nov 30 12:05:19 BRST 2015 : Menu: registrarJogo foi Acessado
 Mon Nov 30 12:05:20 BRST 2015 : Saida da tela de Registro de Jogos
+Mon Nov 30 12:50:48 BRST 2015 : Entrada login e senha.
+Mon Nov 30 12:50:48 BRST 2015 : Entrada com sucesso.
+Mon Nov 30 12:50:51 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Mon Nov 30 13:00:04 BRST 2015 : Entrada login e senha.
+Mon Nov 30 13:00:04 BRST 2015 : Entrada com sucesso.
+Mon Nov 30 13:00:07 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Mon Nov 30 13:01:47 BRST 2015 : Entrada login e senha.
+Mon Nov 30 13:01:47 BRST 2015 : Entrada com sucesso.
+Mon Nov 30 13:01:48 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Mon Nov 30 13:04:29 BRST 2015 : Entrada login e senha.
+Mon Nov 30 13:04:29 BRST 2015 : Entrada com sucesso.
+Mon Nov 30 13:04:33 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Mon Nov 30 13:04:51 BRST 2015 : Menu: MostrarCliente foi acessado
+Mon Nov 30 13:04:54 BRST 2015 : Menu: Jogos foi acessado
