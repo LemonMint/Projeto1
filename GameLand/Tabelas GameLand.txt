@@ -25,12 +25,15 @@ produtora varchar(150)
 
 
 CREATE TABLE funcionario(
-codigo integer,
+codigo integer primary key auto increment,
+telefone varchar(20),
 nome varchar(250),
 rg varchar(20),
 cpf varchar(20),
 cargo varchar(150),
-senhacodigo integer
+senha integer,
+idade integer,
+sexo boolean
 )
 
 

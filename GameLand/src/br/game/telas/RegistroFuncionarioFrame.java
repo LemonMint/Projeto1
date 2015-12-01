@@ -8,7 +8,6 @@ package br.game.telas;
 import br.game.listerners.LimparCampoListener;
 import br.game.listerners.RegistroFuncionarioListener;
 import br.game.modelo.Funcionario;
-import com.sun.org.apache.bcel.internal.generic.L2D;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,8 +47,9 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
     }
 
     public Funcionario getFuncionario() {
-        if (pwSenha.getText().toString().equals(pwReSenha.getText().toString())) {
+        if (String.valueOf(pwSenha.getPassword()).equals(String.valueOf(pwReSenha.getPassword()))) {
             Funcionario funcionario = new Funcionario();
+            funcionario.setNome(txtNome.getText());
             funcionario.setCodigo(codigoFuncionario);
             funcionario.setCargo(txtCargo.getText());
             funcionario.setCpf(txtCpf.getText());
@@ -61,7 +61,7 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
                 funcionario.setSexo(Funcionario.FEMININO);
             }
             funcionario.setIdade(Integer.valueOf(jComboBox1.getSelectedItem().toString()));
-            funcionario.setSenha(Integer.valueOf(pwSenha.getText().toString()));
+            funcionario.setSenha(Integer.valueOf(String.valueOf(pwSenha.getPassword())));
             return funcionario;
         } else {
             JOptionPane.showMessageDialog(this, "Senhas não são iguais");
@@ -174,11 +174,7 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
 
         jLabel13.setText("Senha de acesso");
 
-        pwSenha.setText("jPasswordField1");
-
         jLabel9.setText("Repita a senha");
-
-        pwReSenha.setText("jPasswordField2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

@@ -25,21 +25,21 @@ public class FuncionarioDao {
         try {
             conn = Conexao.getConnection();
 
-            String sql = "insert into funcionarios (codigo, nome, telefone, rg, cpf, cargo, idade, sexo, senha) values(?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into funcionario (nome, telefone, rg, cpf, cargo, idade, sexo, senha) values(?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, funcionario.getCodigo());
-            ps.setString(2, funcionario.getNome());
-            ps.setString(3, funcionario.getTelefone());
-            ps.setString(4, funcionario.getRg());
-            ps.setString(5, funcionario.getCpf());
-            ps.setString(6, funcionario.getCargo());
-            ps.setInt(7, funcionario.getIdade());
-            if (funcionario.isSexo()) {
-                ps.setString(8, "Masculino");
+            //ps.setInt(1, funcionario.getCodigo());
+            ps.setString(1, funcionario.getNome());
+            ps.setString(2, funcionario.getTelefone());
+            ps.setString(3, funcionario.getRg());
+            ps.setString(4, funcionario.getCpf());
+            ps.setString(5, funcionario.getCargo());
+            ps.setInt(6, funcionario.getIdade());
+           if (funcionario.isSexo()) {
+               ps.setBoolean(7, true);
             } else {
-                ps.setString(8, "Feminino");
+               ps.setBoolean(7, false);
             }
-            ps.setInt(9, funcionario.getSenha());
+            ps.setInt(8, funcionario.getSenha());
             ps.execute();
 
             conn.commit();
@@ -79,7 +79,7 @@ public class FuncionarioDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "delete from funcionarios where codigo = ?";
+            String sql = "delete from funcionario where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, funcionario.getCodigo());
             ps.execute();
@@ -119,7 +119,7 @@ public class FuncionarioDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "update funcionarios set nome = ?, telefone = ?, rg = ?, cpf = ?, cargo = ?, idade = ?, sexo = ?, senha = ? where codigo = ?";
+            String sql = "update funcionario set nome = ?, telefone = ?, rg = ?, cpf = ?, cargo = ?, idade = ?, sexo = ?, senha = ? where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, funcionario.getNome());
             ps.setString(2, funcionario.getTelefone());
@@ -128,9 +128,9 @@ public class FuncionarioDao {
             ps.setString(5, funcionario.getCargo());
             ps.setInt(6, funcionario.getIdade());
             if (funcionario.isSexo()) {
-                ps.setString(7, "Masculino");
+                ps.setBoolean(7, true);
             } else {
-                ps.setString(7, "Feminino");
+                ps.setBoolean(7, false);
             }
             ps.setInt(8, funcionario.getSenha());
 
@@ -173,7 +173,7 @@ public class FuncionarioDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, nome, telefone, rg, cpf, cargo, idade, sexo, senha from funcionarios where codigo = ?";
+            String sql = "select codigo, telefone, nome, rg, cpf, cargo, idade, sexo, senha from funcionario where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
@@ -185,7 +185,7 @@ public class FuncionarioDao {
                 String cpf = rs.getString(5);
                 String cargo = rs.getString(6);
                 Integer idade = rs.getInt(7);
-                String sexo = rs.getString(8);
+                Boolean sexo = rs.getBoolean(8);
                 Integer senha = rs.getInt(9);
 
                 Funcionario funcionario = new Funcionario();
@@ -197,7 +197,7 @@ public class FuncionarioDao {
                 funcionario.setCpf(cpf);
                 funcionario.setCargo(cargo);
                 funcionario.setIdade(idade);
-                funcionario.setSexo(true);
+                funcionario.setSexo(sexo);
                 funcionario.setSenha(senha);
                 return funcionario;
 
@@ -229,7 +229,8 @@ public class FuncionarioDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, nome, telefone, rg, cpf, cargo, idade, sexo, senha from funcionarios where nome = ?";
+            String sql = "select codigo, nome, telefone, rg, cpf, cargo, idade, sexo, senha from funcionario where nome = ?";
+            //String sql = "SELECT CODIGO, NOME, TELEFONE, RG, CPF, CARGO, IDADE, SEXO, SENHA FROM FUNCIONARIO WHERE NOME = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, nome1);
             ResultSet rs = ps.executeQuery();
@@ -241,7 +242,7 @@ public class FuncionarioDao {
                 String cpf = rs.getString(5);
                 String cargo = rs.getString(6);
                 Integer idade = rs.getInt(7);
-                String sexo = rs.getString(8);
+                Boolean sexo = rs.getBoolean(8);
                 Integer senha = rs.getInt(9);
 
                 Funcionario funcionario = new Funcionario();
@@ -253,7 +254,7 @@ public class FuncionarioDao {
                 funcionario.setCpf(cpf);
                 funcionario.setCargo(cargo);
                 funcionario.setIdade(idade);
-                funcionario.setSexo(true);
+                funcionario.setSexo(sexo);
                 funcionario.setSenha(senha);
                 lista.add(funcionario);
 

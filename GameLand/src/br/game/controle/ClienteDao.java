@@ -10,6 +10,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -216,5 +218,64 @@ public class ClienteDao {
         }
         return null;
     }
+    
+    
+    public List<Cliente> getClientePorNome(String nomePesquisado) {
+        List<Cliente> lista = new ArrayList<Cliente>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = Conexao.getConnection();
+            String sql = "select codigo, nome, email, idade, sexo, cpf, CEP, telefone from cliente where codigo = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, nomePesquisado);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                Integer cod = rs.getInt(1);
+                String nome = rs.getString(2);
+                String email = rs.getString(3);
+                Integer idade = rs.getInt(4);
+                String sexo = rs.getString(5);
+                String cpf = rs.getString(6);
+                Integer cep = rs.getInt(7);
+                String telefone = rs.getString(8);
+
+                Cliente cliente = new Cliente();
+
+                cliente.setCodigo(cod);
+                cliente.setNome(nome);
+                cliente.setEmail(email);
+                cliente.setIdade(idade);
+                cliente.setSexo(true);
+                cliente.setCpf(cpf);
+                cliente.setCEP(cep);
+                cliente.setTelefone(telefone);
+                
+                lista.add(cliente);
+                return lista;
+
+            }
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+        }
+        return null;
+    }
+
+    
 
 }

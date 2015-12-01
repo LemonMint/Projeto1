@@ -6,6 +6,7 @@
 package br.game.telas;
 
 import br.game.listerners.PrincipalListener;
+import br.game.modelo.Funcionario;
 
 public class PrincipalFrame extends javax.swing.JFrame {
 
@@ -77,10 +78,23 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarMostrarFuncionario() {
         if (telaMostraFuncionario == null) {
             telaMostraFuncionario = new MostrarFuncionarioFrame();
+            telaMostraFuncionario.setPrincipal(this);
             jDesktopPane1.add(telaMostraFuncionario);
         }
         telaMostraFuncionario.setVisible(true);
     }
+    
+        public void criarRegistroFunconario(Funcionario funcionario) {
+        if (telaRegistroFuncionario == null) {
+            telaRegistroFuncionario = new RegistroFuncionarioFrame(funcionario);
+            jDesktopPane1.add(telaRegistroFuncionario);
+        }
+        telaRegistroFuncionario.setVisible(true);
+    }
+
+    
+
+  
 
     public void criarMostrarCliente() {
         if (telaMostrarCliente == null) {

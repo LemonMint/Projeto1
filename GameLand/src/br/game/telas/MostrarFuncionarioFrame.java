@@ -7,6 +7,7 @@ package br.game.telas;
 
 import br.game.listerners.PesquisarFuncionariosListener;
 import br.game.modelo.Funcionario;
+import static br.game.telas.PrincipalFrame.telaMostraFuncionario;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.JOptionPane;
@@ -17,13 +18,15 @@ import javax.swing.JOptionPane;
  */
 public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
 
-    PesquisarFuncionariosListener listener = new PesquisarFuncionariosListener(this);
+    private PesquisarFuncionariosListener listener = new PesquisarFuncionariosListener(this);
+    private PrincipalFrame principal;
 
     /**
      * Creates new form MostrarFuncionario
      */
     public MostrarFuncionarioFrame() {
         initComponents();
+        addFocusListener(listener);
         btEditar.addActionListener(listener);
         btEditar.setActionCommand("editar");
         btRemover.addActionListener(listener);
@@ -38,9 +41,22 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
         return txtPesquisa.getText();
     }
 
-    public void setListFuncionario(List<Funcionario> lista) {
+    public void Sair() {
+        PrincipalFrame.telaMostraFuncionario = null;
+        this.dispose();
+    }
 
+    public void setListFuncionario(List<Funcionario> lista) {
         listFuncionario.setListData(lista.toArray());
+    }
+
+    public void mostrarFuncionarioFrame() {
+        Funcionario funcionario = (Funcionario) listFuncionario.getSelectedValue();
+        principal.criarRegistroFunconario(funcionario);
+    }
+
+    public void setPrincipal(PrincipalFrame principal) {
+        this.principal = principal;
     }
 
     /**
