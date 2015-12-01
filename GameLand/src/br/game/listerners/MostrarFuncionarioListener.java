@@ -20,11 +20,11 @@ import java.util.List;
  *
  * @author Lemon
  */
-public class PesquisarFuncionariosListener implements ActionListener,FocusListener {
+public class MostrarFuncionarioListener implements ActionListener,FocusListener {
 
     private MostrarFuncionarioFrame frame;
 
-    public PesquisarFuncionariosListener(MostrarFuncionarioFrame frame) {
+    public MostrarFuncionarioListener(MostrarFuncionarioFrame frame) {
         this.frame = frame;
     }
 
@@ -84,7 +84,6 @@ public class PesquisarFuncionariosListener implements ActionListener,FocusListen
 
     @Override
     public void focusLost(FocusEvent fe) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 }

@@ -5,12 +5,9 @@
  */
 package br.game.telas;
 
-import br.game.listerners.PesquisarFuncionariosListener;
+import br.game.listerners.MostrarFuncionarioListener;
 import br.game.modelo.Funcionario;
-import static br.game.telas.PrincipalFrame.telaMostraFuncionario;
 import java.util.List;
-import java.util.Vector;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
 
-    private PesquisarFuncionariosListener listener = new PesquisarFuncionariosListener(this);
+    private MostrarFuncionarioListener listener = new MostrarFuncionarioListener(this);
     private PrincipalFrame principal;
 
     /**
@@ -26,7 +23,7 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
      */
     public MostrarFuncionarioFrame() {
         initComponents();
-        addFocusListener(listener);
+//        listFuncionario.addFocusListener(listener);
         btEditar.addActionListener(listener);
         btEditar.setActionCommand("editar");
         btRemover.addActionListener(listener);
@@ -53,6 +50,7 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
     public void mostrarFuncionarioFrame() {
         Funcionario funcionario = (Funcionario) listFuncionario.getSelectedValue();
         principal.criarRegistroFunconario(funcionario);
+        listFuncionario.setListData(new Object[]{});
     }
 
     public void setPrincipal(PrincipalFrame principal) {
@@ -78,18 +76,12 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
         btVoltar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(51, 51, 51));
-        setMaximizable(true);
         setResizable(true);
         setTitle("Pesquisar Funcionários");
         setPreferredSize(new java.awt.Dimension(520, 435));
 
         btPesquisar.setText("Pesquisar");
 
-        listFuncionario.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(listFuncionario);
 
         btEditar.setText("Editar");

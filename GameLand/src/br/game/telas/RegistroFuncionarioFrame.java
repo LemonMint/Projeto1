@@ -30,7 +30,8 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
     public RegistroFuncionarioFrame(Funcionario f) {
         initComponents();
         initListeners();
-        codigoFuncionario = f.getCodigo();
+        if (f != null){
+            codigoFuncionario = f.getCodigo();
         txtNome.setText(f.getNome());
         txtCargo.setText(f.getCargo());
         txtCpf.setText(f.getCpf());
@@ -44,6 +45,8 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
         jComboBox1.setSelectedItem(f.getIdade());
         pwSenha.setText(String.valueOf(f.getSenha()));
         pwReSenha.setText(String.valueOf(f.getSenha()));
+        }
+        
     }
 
     public Funcionario getFuncionario() {
