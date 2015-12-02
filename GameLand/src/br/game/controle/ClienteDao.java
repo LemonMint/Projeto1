@@ -24,20 +24,20 @@ public class ClienteDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "insert into cliente (codigo, nome, email, idade, sexo, cpf, CEP, telefone) values(?,?,?,?,?,?,?,?)";
+            String sql = "insert into cliente (nome, email, idade, sexo, cpf, CEP, telefone) values(?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, cliente.getCodigo());
-            ps.setString(2, cliente.getNome());
-            ps.setString(3, cliente.getEmail());
-            ps.setInt(4, cliente.getIdade());
+            //ps.setInt(1, cliente.getCodigo());
+            ps.setString(1, cliente.getNome());
+            ps.setString(2, cliente.getEmail());
+            ps.setInt(3, cliente.getIdade());
             if (cliente.isSexo()) {
-                ps.setBoolean(5, true);
+                ps.setBoolean(4, true);
             } else {
-                ps.setBoolean(5, false);
+                ps.setBoolean(4, false);
             }
-            ps.setString(6, cliente.getCpf());
-            ps.setInt(7, cliente.getCEP());
-            ps.setString(8, cliente.getTelefone());
+            ps.setString(5, cliente.getCpf());
+            ps.setInt(6, cliente.getCEP());
+            ps.setString(7, cliente.getTelefone());
             ps.execute();
 
             conn.commit();
@@ -225,13 +225,12 @@ public class ClienteDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, nome, email, idade, sexo, cpf, CEP, telefone from cliente where codigo = ?";
+            String sql = "select * from cliente where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, nomePesquisado);
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
+            while(rs.next()) {
                 Cliente cliente = new Cliente();
-
                 cliente.setCodigo(rs.getInt(1));
                 cliente.setNome(rs.getString(2));
                 cliente.setEmail(rs.getString(3));
@@ -242,16 +241,17 @@ public class ClienteDao {
                 cliente.setTelefone(rs.getString(8));
                 
                 lista.add(cliente);
-                return lista;
 
             }
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
+            e.printStackTrace();
         } finally {
             if (ps != null) {
                 try {
                     ps.close();
                 } catch (SQLException ex) {
+                    ex.printStackTrace();
                     System.out.println("ERRO: " + ex.getMessage());
                 }
             }
@@ -259,11 +259,12 @@ public class ClienteDao {
                 try {
                     conn.close();
                 } catch (SQLException ex) {
+                    ex.printStackTrace();
                     System.out.println("ERRO: " + ex.getMessage());
                 }
             }
         }
-        return null;
+        return lista;
     }
 
     

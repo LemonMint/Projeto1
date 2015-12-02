@@ -30,23 +30,23 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
     public RegistroFuncionarioFrame(Funcionario f) {
         initComponents();
         initListeners();
-        if (f != null){
+        if (f != null) {
             codigoFuncionario = f.getCodigo();
-        txtNome.setText(f.getNome());
-        txtCargo.setText(f.getCargo());
-        txtCpf.setText(f.getCpf());
-        txtRg.setText(f.getRg());
-        txtTelefone.setText(f.getTelefone());
-        if (f.isSexo()) {
-            jRadioButton1.setSelected(true);
-        } else {
-            jRadioButton2.setSelected(true);
+            txtNome.setText(f.getNome());
+            txtCargo.setText(f.getCargo());
+            txtCpf.setText(f.getCpf());
+            txtRg.setText(f.getRg());
+            txtTelefone.setText(f.getTelefone());
+            if (f.isSexo()) {
+                jRadioButton1.setSelected(true);
+            } else {
+                jRadioButton2.setSelected(true);
+            }
+            jComboBox1.setSelectedItem(f.getIdade());
+            pwSenha.setText(String.valueOf(f.getSenha()));
+            pwReSenha.setText(String.valueOf(f.getSenha()));
         }
-        jComboBox1.setSelectedItem(f.getIdade());
-        pwSenha.setText(String.valueOf(f.getSenha()));
-        pwReSenha.setText(String.valueOf(f.getSenha()));
-        }
-        
+
     }
 
     public Funcionario getFuncionario() {

@@ -62,7 +62,7 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
         btVoltar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(51, 51, 51));
-        setTitle("Mostrar Jogos");
+        setTitle("Pesquisar Jogos");
 
         btPesquisar.setText("Pesquisar");
 

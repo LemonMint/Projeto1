@@ -11,12 +11,12 @@ import java.io.IOException;
 
 public class RegistroFuncionarioListener implements ActionListener {
 
+    private RegistroFuncionarioFrame frame;
+    FuncionarioDao dao = new FuncionarioDao();
+
     public RegistroFuncionarioListener(RegistroFuncionarioFrame frame) {
         this.frame = frame;
     }
-
-    private RegistroFuncionarioFrame frame;
-    FuncionarioDao dao = new FuncionarioDao();
 
     @Override
     public void actionPerformed(ActionEvent ae) {

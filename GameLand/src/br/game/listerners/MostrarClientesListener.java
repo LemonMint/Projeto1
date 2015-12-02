@@ -10,6 +10,7 @@ import br.game.modelo.Cliente;
 import br.game.telas.MostrarClienteFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class MostrarClientesListener implements ActionListener {
 
@@ -24,17 +25,24 @@ public class MostrarClientesListener implements ActionListener {
         switch (ae.getActionCommand()) {
             case "pesquisar":
                 String dadosPesquisa = frame.getDadosPesquisa();
-                if (dadosPesquisa.matches("[0-9]+")&& !dadosPesquisa.isEmpty()) {
+                if (dadosPesquisa.matches("[0-9]+") && !dadosPesquisa.isEmpty()) {
                     Integer codigoPesquisado = Integer.valueOf(dadosPesquisa);
                     //Pesquisar por codigo
                     System.out.println("pesquisar por codigo");
                     ClienteDao q = new ClienteDao();
                     Cliente f = q.getClientePorCodigo(codigoPesquisado); //do dao
-                }else
-                    
+                } else {
+                    System.out.println("Pesquisar por nome");
+                    ClienteDao q = new ClienteDao();
+                    List<Cliente> clientePorNome = q.getClientePorNome(dadosPesquisa); //do dao
+                    frame.setListCliente(clientePorNome);
+
+                }
                 break;
-                
+
             case "editar":
+                frame.mostrarClienteFrame();
+                
                 break;
             case "remover":
                 break;

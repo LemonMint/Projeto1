@@ -20,7 +20,7 @@ import java.util.List;
  *
  * @author Lemon
  */
-public class MostrarFuncionarioListener implements ActionListener,FocusListener {
+public class MostrarFuncionarioListener implements ActionListener {
 
     private MostrarFuncionarioFrame frame;
 
@@ -33,7 +33,7 @@ public class MostrarFuncionarioListener implements ActionListener,FocusListener 
         switch (ae.getActionCommand()) {
             case "pesquisar":
                 String dadosPesquisa = frame.getDadosPesquisa();
-                if (dadosPesquisa.matches("[0-9]+")&& !dadosPesquisa.isEmpty()) {
+                if (dadosPesquisa.matches("[0-9]+") && !dadosPesquisa.isEmpty()) {
                     Integer codigoPesquisado = Integer.valueOf(dadosPesquisa);
                     //Pesquisar por codigo
                     System.out.println("pesquisar por codigo");
@@ -53,37 +53,11 @@ public class MostrarFuncionarioListener implements ActionListener,FocusListener 
                 System.out.println("Editar clicado");
                 frame.mostrarFuncionarioFrame();
                 break;
-                
+
             case "voltar":
                 frame.Sair();
 
         }
 
-    }
-
-    @Override
-    public void focusGained(FocusEvent fe) {
-        System.out.println("ENTROU NO FOCUS");
-        String dadosPesquisa = frame.getDadosPesquisa();
-                if (dadosPesquisa.matches("[0-9]+")&& !dadosPesquisa.isEmpty()) {
-                    Integer codigoPesquisado = Integer.valueOf(dadosPesquisa);
-                    //Pesquisar por codigo
-                    System.out.println("pesquisar por codigo");
-                    FuncionarioDao q = new FuncionarioDao();
-                    Funcionario funcionario = q.getFuncionarioPorCodigo(codigoPesquisado); //do dao
-                    frame.setListFuncionario(Arrays.asList(funcionario));
-
-                } else {
-                    //Pesquisa por nome 
-                    System.out.println("Pesquisar por nome");
-                    FuncionarioDao q = new FuncionarioDao();
-                    List<Funcionario> funcionarioPorNome = q.getFuncionarioPorNome(dadosPesquisa); //do dao
-                    frame.setListFuncionario(funcionarioPorNome);
-                }
-    }
-
-    @Override
-    public void focusLost(FocusEvent fe) {
-    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

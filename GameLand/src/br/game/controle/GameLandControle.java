@@ -62,17 +62,17 @@ public class GameLandControle {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "insert into jogo (codigoJogo , nomeJogo, precoJogo, plataformaJogo, generoJogo, descricao, precoVenda, produtora)values(?,?,?,?,?,?,?,?)";
+            String sql = "insert into jogo (nomeJogo, precoJogo, plataformaJogo, generoJogo, descricao, precoVenda, produtora)values(?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
 
-            ps.setInt(1, jogo.getCodigoJogo());
-            ps.setString(2, jogo.getNomeJogo());
-            ps.setDouble(3, jogo.getPrecoJogo());      //Verificar
-            ps.setString(4, jogo.getPlataformaJogo());
-            ps.setString(5, jogo.getGeneroJogo());
-            ps.setString(6, jogo.getDescricao());
-            ps.setDouble(7, jogo.getPrecoVenda());
-            ps.setString(8, jogo.getProdutora());
+            //ps.setInt(1, jogo.getCodigoJogo());
+            ps.setString(1, jogo.getNomeJogo());
+            ps.setDouble(2, jogo.getPrecoJogo());      //Verificar
+            ps.setString(3, jogo.getPlataformaJogo());
+            ps.setString(4, jogo.getGeneroJogo());
+            ps.setString(5, jogo.getDescricao());
+            ps.setDouble(6, jogo.getPrecoVenda());
+            ps.setString(7, jogo.getProdutora());
             ps.execute();
 
             conn.commit();

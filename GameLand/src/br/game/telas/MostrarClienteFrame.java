@@ -6,6 +6,8 @@
 package br.game.telas;
 
 import br.game.listerners.MostrarClientesListener;
+import br.game.modelo.Cliente;
+import java.util.List;
 
 /**
  *
@@ -13,7 +15,9 @@ import br.game.listerners.MostrarClientesListener;
  */
 public class MostrarClienteFrame extends javax.swing.JInternalFrame {
 
-    MostrarClientesListener listener = new MostrarClientesListener(this);
+    private MostrarClientesListener listener = new MostrarClientesListener(this);
+    private PrincipalFrame frame;
+
     /**
      * Creates new form MostrarClienteFrame
      */
@@ -28,14 +32,28 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
         btRemover.setActionCommand("remover");
         btVoltar.setActionCommand("voltar");
     }
-    
-    public String getDadosPesquisa(){
+
+    public String getDadosPesquisa() {
         return txtPesquisa.getText();
     }
-    
-      public void Sair() {
+
+    public void Sair() {
         PrincipalFrame.telaMostrarJogos = null;
         this.dispose();
+    }
+
+    public void setListCliente(List<Cliente> lista) {
+        listaCliente.setListData(lista.toArray());
+    }
+
+    public void mostrarClienteFrame() {
+        Cliente cliente = (Cliente) listaCliente.getSelectedValue();
+        frame.criarRegistroCliente(cliente);
+        listaCliente.setListData(new Object[]{});
+    }
+
+    public void setPrincipal(PrincipalFrame frame) {
+        this.frame = frame;
     }
 
     /**
@@ -50,23 +68,19 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         btPesquisar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        listaCliente = new javax.swing.JList();
         txtPesquisa = new javax.swing.JTextField();
         btEditar = new javax.swing.JButton();
         btRemover = new javax.swing.JButton();
         btVoltar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(51, 51, 51));
+        setTitle("Pesquisar Cliente");
         setPreferredSize(new java.awt.Dimension(520, 435));
 
         btPesquisar.setText("Pesquisar");
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(listaCliente);
 
         btEditar.setText("Editar");
 
@@ -136,9 +150,9 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
     private javax.swing.JButton btPesquisar;
     private javax.swing.JButton btRemover;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList listaCliente;
     private javax.swing.JTextField txtPesquisa;
     // End of variables declaration//GEN-END:variables
 }

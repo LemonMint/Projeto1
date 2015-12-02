@@ -6,6 +6,7 @@
 package br.game.telas;
 
 import br.game.listerners.PrincipalListener;
+import br.game.modelo.Cliente;
 import br.game.modelo.Funcionario;
 
 public class PrincipalFrame extends javax.swing.JFrame {
@@ -49,6 +50,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
         }
         telaRegistrarCliente.setVisible(true);
     }
+    
+        public void criarRegistroCliente(Cliente cliente) {
+        if (telaRegistrarCliente == null) {
+            telaRegistrarCliente = new RegistrarClienteFrame(cliente);
+            jDesktopPane1.add(telaRegistrarCliente);
+        }
+        telaRegistroFuncionario.setVisible(true);
+    }
 
     public void criarRegistroJogos() {
         if (telaRegistrarJogos == null) {
@@ -83,18 +92,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
         }
         telaMostraFuncionario.setVisible(true);
     }
-    
-        public void criarRegistroFunconario(Funcionario funcionario) {
+
+    public void criarRegistroFunconario(Funcionario funcionario) {
         if (telaRegistroFuncionario == null) {
             telaRegistroFuncionario = new RegistroFuncionarioFrame(funcionario);
             jDesktopPane1.add(telaRegistroFuncionario);
         }
         telaRegistroFuncionario.setVisible(true);
     }
-
-    
-
-  
 
     public void criarMostrarCliente() {
         if (telaMostrarCliente == null) {

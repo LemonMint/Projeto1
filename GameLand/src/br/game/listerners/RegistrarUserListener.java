@@ -11,53 +11,53 @@ import java.io.IOException;
 
 public class RegistrarUserListener implements ActionListener {
 
-    private RegistrarClienteFrame user;
-
-    public RegistrarUserListener(RegistrarClienteFrame user) {
-        this.user = user;
-    }
-
+    private RegistrarClienteFrame frame;
     ClienteDao dao = new ClienteDao();
+
+    public RegistrarUserListener(RegistrarClienteFrame frame) {
+        this.frame = frame;
+    }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        Cliente u = user.getUsuario();
         switch (ae.getActionCommand()) {
             case "cadastrar":
+                Cliente cliente = frame.getUsuario();
                 try {
-                    if (u != null) {
-                        if (u.getCodigo() == null) {
-                            dao.insert(u);
+                    if (cliente != null) {
+                        if (cliente.getCodigo() == null) {
+                            dao.insert(cliente);
                             System.out.println("DAO ADICIONAR");
                         } else {
-                            dao.update(u);
+                            dao.update(cliente);
                             System.out.println("DAO ALTERAR");
                         }
                     }
-                    JOptionPane.showMessageDialog(user, "Nome: " + u.getNome() + "Adicionado com Sucesso");
-                    SalvarLog.escreverLog("Usuário:" + u.getNome() + " salvo com sucesso", "log.txt");
+                    JOptionPane.showMessageDialog(frame, "Nome: " + cliente.getNome() + "Adicionado com Sucesso");
+                    SalvarLog.escreverLog("Usuário:" + cliente.getNome() + " salvo com sucesso", "log.txt");
                 } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(user, "Erro ao salvar log");
+                    JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                 }
                 break;
 
             case "voltar":
-                user.Sair();
+                frame.Sair();
                 try {
                     SalvarLog.escreverLog("Saida da tela de Registro de Usuario", "log.txt");
                 } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(user, "Erro ao salvar log");
+                    JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                 }
                 break;
             case "excluir":
-                if (u != null) {
-                    if (u.getCodigo() != null) {
-                        dao.delete(u);
+                cliente = frame.getUsuario();
+                if (cliente != null) {
+                    if (cliente.getCodigo() != null) {
+                        dao.delete(cliente);
                         System.out.println("DAO DELETAR");
                     }
                 }
                 break;
         }
     }
-    
+
 }

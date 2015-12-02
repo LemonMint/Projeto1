@@ -17,18 +17,12 @@ import br.game.modelo.Cliente;
 public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
 
     private RegistrarUserListener listener = new RegistrarUserListener(this);
+    private Integer codigoCliente= null;
 
     public RegistrarClienteFrame() {
         initComponents();
-        txtNomeCadastro.addFocusListener(new LimparCampoListener(txtNomeCadastro, "Informe seu nome completo"));
-        txtCpf.addFocusListener(new LimparCampoListener(txtCpf, "Digite seu CPF"));
-        txtCep.addFocusListener(new LimparCampoListener(txtCep, "Informe seu CEP"));
-        txtEmail.addFocusListener(new LimparCampoListener(txtEmail, "Informe seu endereço de E-mail"));
-        txtTelefone.addFocusListener(new LimparCampoListener(txtTelefone, "Informe seu número de Telefone"));
-        btCadastrar.addActionListener(listener);
-        btCadastrar.setActionCommand("cadastrar");
-        btVoltar.addActionListener(listener);
-        btVoltar.setActionCommand("voltar");
+        initListeners();
+
     }
     //menuExit.addActionListener(listener);
     //menuExit.setActionCommand("Sair");
@@ -37,7 +31,7 @@ public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
         Cliente usuario = new Cliente();
         usuario.setTelefone(txtTelefone.getText());
         usuario.setEmail(txtEmail.getText());
-        usuario.setCEP(Integer.parseInt(txtCep.getText()));
+        usuario.setCEP(Integer.valueOf(txtCep.getText().toString()));
         usuario.setIdade(Integer.valueOf(boxIdade.getSelectedItem().toString()));
         usuario.setNome(txtNomeCadastro.getText());
         usuario.setCpf(txtCpf.getText());
@@ -53,6 +47,39 @@ public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
     public void Sair() {
         PrincipalFrame.telaRegistrarCliente = null;
         this.dispose();
+    }
+
+    public RegistrarClienteFrame(Cliente c) {
+        initComponents();
+        initListeners();
+        if (c != null) {
+            codigoCliente = c.getCodigo();
+            txtCep.setText(String.valueOf(c.getCEP()));
+            txtCpf.setText(c.getCpf());
+            txtEmail.setText(c.getEmail());
+            txtNomeCadastro.setText(c.getNome());
+            txtTelefone.setText(String.valueOf(c.getTelefone()));
+            boxIdade.setSelectedItem(c.getIdade());
+            if (c.isSexo()) {
+                masculinoUser.setSelected(true);
+            } else {
+                femininoUser.setSelected(true);
+            }
+        }
+
+    }
+
+    private void initListeners() {
+        txtNomeCadastro.addFocusListener(new LimparCampoListener(txtNomeCadastro, "Informe seu nome completo"));
+        txtCpf.addFocusListener(new LimparCampoListener(txtCpf, "Digite seu CPF"));
+        txtCep.addFocusListener(new LimparCampoListener(txtCep, "Informe seu CEP"));
+        txtEmail.addFocusListener(new LimparCampoListener(txtEmail, "Informe seu endereço de E-mail"));
+        txtTelefone.addFocusListener(new LimparCampoListener(txtTelefone, "Informe seu número de Telefone"));
+        btCadastrar.addActionListener(listener);
+        btCadastrar.setActionCommand("cadastrar");
+        btVoltar.addActionListener(listener);
+        btVoltar.setActionCommand("voltar");
+
     }
 
     /**
