@@ -63,7 +63,7 @@ public class Jogo {
         this.generoJogo = generoJogo;
     }
 
-    public int getCodigoJogo() {
+    public Integer getCodigoJogo() {
         return codigoJogo;
     }
 

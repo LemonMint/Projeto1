@@ -695,3 +695,12 @@ Tue Dec 01 16:15:19 BRST 2015 : Menu: MostrarFuncionario foi acessado
 Tue Dec 01 16:15:44 BRST 2015 : clicou em sair da tela de exclusão de usuário
 Tue Dec 01 16:15:49 BRST 2015 : clicou em sair da tela de exclusão de usuário
 Tue Dec 01 16:16:04 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Tue Dec 01 21:22:47 BRST 2015 : Entrada login e senha.
+Tue Dec 01 21:22:47 BRST 2015 : Entrada com sucesso.
+Tue Dec 01 21:22:49 BRST 2015 : Menu: Jogos foi acessado
+Tue Dec 01 21:22:55 BRST 2015 : Menu: registrarJogo foi Acessado
+Tue Dec 01 21:23:30 BRST 2015 : Jogo:br.game.modelo.Jogo@11dd95c cadastrado com sucesso
+Tue Dec 01 21:23:36 BRST 2015 : Saida da tela de Registro de Jogos
+Tue Dec 01 22:45:08 BRST 2015 : Entrada login e senha.
+Tue Dec 01 22:45:08 BRST 2015 : Entrada com sucesso.
+Tue Dec 01 22:45:11 BRST 2015 : Menu: registrar foi Acessado

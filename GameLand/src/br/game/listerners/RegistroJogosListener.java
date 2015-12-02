@@ -1,5 +1,6 @@
 package br.game.listerners;
 
+import br.game.controle.GameLandControle;
 import br.game.inout.SalvarLog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +17,8 @@ public class RegistroJogosListener implements ActionListener {
         this.frame = frame;
     }
 
+    GameLandControle dao = new GameLandControle();
+
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
@@ -23,6 +26,17 @@ public class RegistroJogosListener implements ActionListener {
                 try {
                     Jogo jogo = frame.getJogo();
                     JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
+
+                    if (jogo != null) {
+                        if (jogo.getCodigoJogo() == null) {
+                            dao.insert(jogo);
+                            System.out.println("DAO ADICIONAR");
+                        } else {
+                            dao.update(jogo);
+                            System.out.println("DAO ALTERAR");
+                        }
+                    }
+
                     SalvarLog.escreverLog("Jogo:" + frame.getJogo() + " cadastrado com sucesso", "log.txt");
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
@@ -41,7 +55,11 @@ public class RegistroJogosListener implements ActionListener {
                 //definir
                 break;
             case "excluir":
-                //Definir
+                Jogo jogo = frame.getJogo();
+                if (jogo != null) {
+                    dao.delete(jogo);
+                }
+
                 break;
         }
     }

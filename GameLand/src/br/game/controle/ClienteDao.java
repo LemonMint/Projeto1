@@ -24,16 +24,16 @@ public class ClienteDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "insert into clientes (codigo, nome, email, idade, sexo, cpf, CEP, telefone) values(?,?,?,?,?,?,?,?)";
+            String sql = "insert into cliente (codigo, nome, email, idade, sexo, cpf, CEP, telefone) values(?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, cliente.getCodigo());
             ps.setString(2, cliente.getNome());
             ps.setString(3, cliente.getEmail());
             ps.setInt(4, cliente.getIdade());
             if (cliente.isSexo()) {
-                ps.setString(5, "Masculino");
+                ps.setBoolean(5, true);
             } else {
-                ps.setString(5, "Feminino");
+                ps.setBoolean(5, false);
             }
             ps.setString(6, cliente.getCpf());
             ps.setInt(7, cliente.getCEP());
@@ -118,15 +118,15 @@ public class ClienteDao {
         try {
             conn = Conexao.getConnection(); /*nome, email, idade, sexo, cpf, CEP, telefone*/
 
-            String sql = "update clientes set nome = ?, email = ?, idade = ?, sexo = ?, cpf = ?, CEP = ?, telefone = ? where codigo = ?";
+            String sql = "update cliente set nome = ?, email = ?, idade = ?, sexo = ?, cpf = ?, CEP = ?, telefone = ? where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, cliente.getNome());
             ps.setString(2, cliente.getEmail());
             ps.setInt(3, cliente.getIdade());
             if (cliente.isSexo()) {
-                ps.setString(4, "Masculino");
+                ps.setBoolean(4, true);
             } else {
-                ps.setString(4, "Feminino");
+                ps.setBoolean(4, false);
             }
             ps.setString(5, cliente.getCpf());
             ps.setInt(6, cliente.getCEP());
@@ -171,7 +171,7 @@ public class ClienteDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, nome, email, idade, sexo, cpf, CEP, telefone from clientes where codigo = ?";
+            String sql = "select codigo, nome, email, idade, sexo, cpf, CEP, telefone from cliente where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
@@ -180,7 +180,7 @@ public class ClienteDao {
                 String nome = rs.getString(2);
                 String email = rs.getString(3);
                 Integer idade = rs.getInt(4);
-                String sexo = rs.getString(5);
+                Boolean sexo = rs.getBoolean(5);
                 String cpf = rs.getString(6);
                 Integer cep = rs.getInt(7);
                 String telefone = rs.getString(8);
@@ -191,7 +191,7 @@ public class ClienteDao {
                 cliente.setNome(nome);
                 cliente.setEmail(email);
                 cliente.setIdade(idade);
-                cliente.setSexo(true);
+                cliente.setSexo(sexo);
                 cliente.setCpf(cpf);
                 cliente.setCEP(cep);
                 cliente.setTelefone(telefone);
@@ -219,7 +219,6 @@ public class ClienteDao {
         return null;
     }
     
-    
     public List<Cliente> getClientePorNome(String nomePesquisado) {
         List<Cliente> lista = new ArrayList<Cliente>();
         Connection conn = null;
@@ -231,25 +230,16 @@ public class ClienteDao {
             ps.setString(1, nomePesquisado);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                Integer cod = rs.getInt(1);
-                String nome = rs.getString(2);
-                String email = rs.getString(3);
-                Integer idade = rs.getInt(4);
-                String sexo = rs.getString(5);
-                String cpf = rs.getString(6);
-                Integer cep = rs.getInt(7);
-                String telefone = rs.getString(8);
-
                 Cliente cliente = new Cliente();
 
-                cliente.setCodigo(cod);
-                cliente.setNome(nome);
-                cliente.setEmail(email);
-                cliente.setIdade(idade);
-                cliente.setSexo(true);
-                cliente.setCpf(cpf);
-                cliente.setCEP(cep);
-                cliente.setTelefone(telefone);
+                cliente.setCodigo(rs.getInt(1));
+                cliente.setNome(rs.getString(2));
+                cliente.setEmail(rs.getString(3));
+                cliente.setIdade(rs.getInt(4));
+                cliente.setSexo(rs.getBoolean(5));
+                cliente.setCpf(rs.getString(6));
+                cliente.setCEP(rs.getInt(7));
+                cliente.setTelefone(rs.getString(8));
                 
                 lista.add(cliente);
                 return lista;
