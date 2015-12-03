@@ -967,3 +967,173 @@ Thu Dec 03 18:37:37 BRST 2015 : Entrada com sucesso.
 Thu Dec 03 18:37:39 BRST 2015 : Menu: MostrarFuncionario foi acessado
 Thu Dec 03 19:23:17 BRST 2015 : Menu: MostrarCliente foi acessado
 Thu Dec 03 19:23:22 BRST 2015 : Menu: Fim do programa
+Thu Dec 03 20:16:05 BRST 2015 : Fim do aplicativo
+Thu Dec 03 20:20:48 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:20:48 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:21:01 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:21:28 BRST 2015 : Usuário:LOl salvo com sucesso
+Thu Dec 03 20:21:29 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:27:45 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:27:45 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:27:46 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:27:57 BRST 2015 : Menu: registrar foi Acessado
+Thu Dec 03 20:28:08 BRST 2015 : Usuário:lollo salvo com sucesso
+Thu Dec 03 20:28:10 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:28:10 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:30:37 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:31:07 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 20:31:09 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:31:44 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:31:46 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:31:53 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:31:57 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:32:03 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 20:32:08 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:32:11 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:32:17 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 20:32:17 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:32:23 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 20:32:24 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:32:31 BRST 2015 : Usuário:Raul2 salvo com sucesso
+Thu Dec 03 20:32:32 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:41:39 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:41:39 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:41:41 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:43:37 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:43:37 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:43:45 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:43:52 BRST 2015 : Menu: registrar foi Acessado
+Thu Dec 03 20:43:53 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:43:54 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:44:00 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:44:13 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:44:50 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:44:50 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:44:52 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:44:56 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Thu Dec 03 20:45:10 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 20:45:13 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:45:15 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:46:46 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:46:46 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:46:47 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:46:57 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:47:00 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:47:04 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:47:16 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 20:49:45 BRST 2015 : Fim do aplicativo
+Thu Dec 03 20:49:47 BRST 2015 : Menu: Fim do programa
+Thu Dec 03 20:49:49 BRST 2015 : Menu: Fim do programa
+Thu Dec 03 20:49:52 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:49:52 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:49:54 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:51:13 BRST 2015 : Menu: Fim do programa
+Thu Dec 03 20:52:26 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:52:26 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:52:28 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:53:00 BRST 2015 : Usuário:Raul2 salvo com sucesso
+Thu Dec 03 20:53:01 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:54:08 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:54:08 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:54:10 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:55:10 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:55:10 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:55:12 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:55:30 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 20:56:52 BRST 2015 : Entrada login e senha.
+Thu Dec 03 20:56:52 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 20:56:53 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 20:57:11 BRST 2015 : Usuário:LOl salvo com sucesso
+Thu Dec 03 20:57:17 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 20:57:38 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 20:57:39 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:00:29 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:00:29 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:00:30 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 21:00:41 BRST 2015 : Usuário:Raul2 salvo com sucesso
+Thu Dec 03 21:00:42 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:02:52 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:03:06 BRST 2015 : Usuário:asdsa salvo com sucesso
+Thu Dec 03 21:03:08 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:03:33 BRST 2015 : Usuário:Raul23 salvo com sucesso
+Thu Dec 03 21:03:35 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:03:52 BRST 2015 : Usuário:dsds salvo com sucesso
+Thu Dec 03 21:03:52 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:07:20 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:07:20 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:07:23 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:07:41 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:07:45 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:08:05 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:08:05 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:08:06 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:08:15 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:08:49 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:09:03 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:09:12 BRST 2015 : Menu: Fim do programa
+Thu Dec 03 21:10:44 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:10:44 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:10:45 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 21:10:51 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 21:11:24 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:11:24 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:11:26 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:11:47 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:11:54 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:12:06 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:12:14 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:12:16 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 21:12:24 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 21:12:27 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:12:31 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Thu Dec 03 21:12:46 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:12:48 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:12:52 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:12:54 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:15:33 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:15:33 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:15:35 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Thu Dec 03 21:15:49 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:15:51 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:16:00 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:17:02 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:17:02 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:17:06 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Thu Dec 03 21:17:20 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:18:20 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:18:20 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:18:24 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:18:33 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:19:44 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:19:44 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:19:45 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:19:52 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:20:15 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:20:29 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:20:29 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:20:30 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:20:36 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:20:41 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:21:00 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:21:16 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:21:27 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:21:30 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:21:36 BRST 2015 : Menu: pesquisar foi clicado
+Thu Dec 03 21:21:40 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:22:35 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:22:35 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:22:36 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 21:22:43 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 21:22:54 BRST 2015 : Usuário:Raul salvo com sucesso
+Thu Dec 03 21:22:56 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:22:59 BRST 2015 : Saida da tela de Registro de Usuario
+Thu Dec 03 21:23:12 BRST 2015 : Menu: Créditos foi acessado.
+Thu Dec 03 21:23:13 BRST 2015 : Menu: RegistroFuncionario foi Acessado
+Thu Dec 03 21:23:15 BRST 2015 : clicou em sair da tela de exclusão de usuário
+Thu Dec 03 21:23:26 BRST 2015 : Fim do aplicativo
+Thu Dec 03 21:23:33 BRST 2015 : Fim do aplicativo
+Thu Dec 03 21:24:11 BRST 2015 : Entrada login e senha.
+Thu Dec 03 21:24:11 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 21:24:12 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 21:24:23 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 21:24:35 BRST 2015 : Menu: Fim do programa

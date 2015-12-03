@@ -5,9 +5,11 @@
  */
 package br.game.telas;
 
+import br.game.controle.ClienteDao;
 import br.game.listerners.MostrarClientesListener;
 import br.game.modelo.Cliente;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -54,6 +56,15 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
 
     public void setPrincipal(PrincipalFrame frame) {
         this.frame = frame;
+    }
+
+    public void removerCliente() {
+        Cliente Cliente = (Cliente) listaCliente.getSelectedValue();
+        ClienteDao dao = new ClienteDao();
+        dao.delete(Cliente);
+        JOptionPane.showMessageDialog(this, "\"" + Cliente.getNome() + "\"" + " foi removido com sucesso.");
+        listaCliente.setListData(new Object[]{});
+       
     }
 
     /**

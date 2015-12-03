@@ -229,9 +229,10 @@ public class FuncionarioDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select * from funcionario where nome = ?";
+            String sql = "select distinct * from funcionario where lower(nome) like lower(?)";
             //String sql = "SELECT CODIGO, NOME, TELEFONE, RG, CPF, CARGO, IDADE, SEXO, SENHA FROM FUNCIONARIO WHERE NOME = ?";
             ps = conn.prepareStatement(sql);
+            nome1 = "%" + nome1 + "%";
             ps.setString(1, nome1);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {

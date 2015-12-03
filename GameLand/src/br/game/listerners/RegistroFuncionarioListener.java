@@ -34,10 +34,14 @@ public class RegistroFuncionarioListener implements ActionListener {
                 if (funcionario != null) {
                     if (funcionario.getCodigo() == null) {
                         dao.insert(funcionario);
+                        JOptionPane.showMessageDialog(frame, "Funcionario: " + funcionario.getNome() + " adicionado.");
                         System.out.println("DAO ADICIONAR");
+                        frame.Sair();
                     } else {
                         dao.update(funcionario);
+                        JOptionPane.showMessageDialog(frame, "Funcionario: " + funcionario.getNome() + " alterado.");
                         System.out.println("DAO ALTERAR");
+                        frame.Sair();
                     }
                 }
                 SalvarLog.escreverLog("Menu: pesquisar foi clicado", "log.txt");

@@ -25,7 +25,7 @@ public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
 
     }
     //menuExit.addActionListener(listener);
-    //menuExit.setActionCommand("Sair");
+    //menuExit.setActionCommand("sair");
 
     public Cliente getUsuario() {
         Cliente usuario = new Cliente();
@@ -45,7 +45,7 @@ public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
 
     }
 
-    public void Sair() {
+    public void sair() {
         PrincipalFrame.telaRegistrarCliente = null;
         this.dispose();
     }
@@ -60,7 +60,7 @@ public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
             txtEmail.setText(c.getEmail());
             txtNomeCadastro.setText(c.getNome());
             txtTelefone.setText(String.valueOf(c.getTelefone()));
-            boxIdade.setSelectedItem(c.getIdade());
+            boxIdade.setSelectedIndex(c.getIdade() -14);
             if (c.isSexo()) {
                 masculinoUser.setSelected(true);
             } else {

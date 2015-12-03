@@ -28,13 +28,17 @@ public class RegistrarUserListener implements ActionListener {
                         System.out.println(cliente.getCodigo());
                         if (cliente.getCodigo() == null) {
                             dao.insert(cliente);
+                            JOptionPane.showMessageDialog(frame, "Cliente: " + cliente.getNome() + " Adicionado");
                             System.out.println("DAO ADICIONAR");
+                            frame.sair();
                         } else {
                             dao.update(cliente);
+                            JOptionPane.showMessageDialog(frame, "Cliente: " + cliente.getNome() + " Alterado");
                             System.out.println("DAO ALTERAR");
+                            frame.sair();
                         }
                     }
-                    JOptionPane.showMessageDialog(frame, "Nome: " + cliente.getNome() + "Adicionado com Sucesso");
+                    
                     SalvarLog.escreverLog("Usuário:" + cliente.getNome() + " salvo com sucesso", "log.txt");
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
@@ -42,7 +46,7 @@ public class RegistrarUserListener implements ActionListener {
                 break;
 
             case "voltar":
-                frame.Sair();
+                frame.sair();
                 try {
                     SalvarLog.escreverLog("Saida da tela de Registro de Usuario", "log.txt");
                 } catch (IOException ex) {

@@ -50,7 +50,6 @@ public class MostrarFuncionarioListener implements ActionListener {
                 }
                 break;
             case "editar":
-                System.out.println("Editar clicado");
                 frame.mostrarFuncionarioFrame();
                 break;
 
@@ -59,6 +58,7 @@ public class MostrarFuncionarioListener implements ActionListener {
                 break;
                 
             case "remover":
+                frame.removerFuncionario();
                 break;
 
         }

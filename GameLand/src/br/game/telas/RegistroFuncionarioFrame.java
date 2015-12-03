@@ -18,7 +18,7 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
 
     private RegistroFuncionarioListener listener = new RegistroFuncionarioListener(this);
     private Integer codigoFuncionario = null;
-
+    
     /**
      * Creates new form RegistroFuncionario
      */
@@ -42,7 +42,7 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
             } else {
                 jRadioButton2.setSelected(true);
             }
-            jComboBox1.setSelectedItem(f.getIdade());
+            jComboBox1.setSelectedIndex(f.getIdade()-16);
             pwSenha.setText(String.valueOf(f.getSenha()));
             pwReSenha.setText(String.valueOf(f.getSenha()));
         }
@@ -63,7 +63,7 @@ public class RegistroFuncionarioFrame extends javax.swing.JInternalFrame {
             } else {
                 funcionario.setSexo(Funcionario.FEMININO);
             }
-            funcionario.setIdade(Integer.valueOf(jComboBox1.getSelectedItem().toString()));
+            funcionario.setIdade(Integer.valueOf(String.valueOf(jComboBox1.getSelectedItem())));
             funcionario.setSenha(Integer.valueOf(String.valueOf(pwSenha.getPassword())));
             return funcionario;
         } else {

@@ -5,9 +5,11 @@
  */
 package br.game.telas;
 
+import br.game.controle.FuncionarioDao;
 import br.game.listerners.MostrarFuncionarioListener;
 import br.game.modelo.Funcionario;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -57,6 +59,13 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
         this.principal = principal;
     }
 
+    public void removerFuncionario(){
+        Funcionario funcionario = (Funcionario) listFuncionario.getSelectedValue();
+        FuncionarioDao dao = new FuncionarioDao();
+        dao.delete(funcionario);
+        JOptionPane.showMessageDialog(this, "\"" +funcionario.getNome() + "\"" + " foi removido com sucesso.");
+        listFuncionario.setListData(new Object[]{});
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -82,6 +91,7 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
 
         btPesquisar.setText("Pesquisar");
 
+        listFuncionario.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jScrollPane1.setViewportView(listFuncionario);
 
         btEditar.setText("Editar");

@@ -77,7 +77,7 @@ public class ClienteDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "delete from clientes where codigo = ?";
+            String sql = "delete from cliente where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, cliente.getCodigo());
             ps.execute();

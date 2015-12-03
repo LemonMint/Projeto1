@@ -45,6 +45,7 @@ public class MostrarClientesListener implements ActionListener {
                 frame.mostrarClienteFrame();
                 break;
             case "remover":
+                frame.removerCliente();
                 break;
             case "voltar":
                 frame.sair();
