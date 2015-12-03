@@ -100,6 +100,5 @@ public class Funcionario {
     public String toString() {
         return  codigo + " " + nome;
     }
-
     
 }
