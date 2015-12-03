@@ -43,7 +43,6 @@ public class MostrarClientesListener implements ActionListener {
 
             case "editar":
                 frame.mostrarClienteFrame();
-                
                 break;
             case "remover":
                 break;

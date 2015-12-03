@@ -56,6 +56,10 @@ public class MostrarFuncionarioListener implements ActionListener {
 
             case "voltar":
                 frame.Sair();
+                break;
+                
+            case "remover":
+                break;
 
         }
 

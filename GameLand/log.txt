@@ -962,3 +962,8 @@ Thu Dec 03 18:31:39 BRST 2015 : Entrada login e senha.
 Thu Dec 03 18:31:39 BRST 2015 : Entrada com sucesso.
 Thu Dec 03 18:31:40 BRST 2015 : Menu: MostrarCliente foi acessado
 Thu Dec 03 18:31:42 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 18:37:37 BRST 2015 : Entrada login e senha.
+Thu Dec 03 18:37:37 BRST 2015 : Entrada com sucesso.
+Thu Dec 03 18:37:39 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Thu Dec 03 19:23:17 BRST 2015 : Menu: MostrarCliente foi acessado
+Thu Dec 03 19:23:22 BRST 2015 : Menu: Fim do programa
