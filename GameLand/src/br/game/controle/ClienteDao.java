@@ -171,23 +171,24 @@ public class ClienteDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, nome, email, idade, sexo, cpf, CEP, telefone from cliente where codigo = ?";
+            String sql = "select * from cliente where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                Integer cod = rs.getInt(1);
-                String nome = rs.getString(2);
-                String email = rs.getString(3);
-                Integer idade = rs.getInt(4);
-                Boolean sexo = rs.getBoolean(5);
-                String cpf = rs.getString(6);
-                Integer cep = rs.getInt(7);
-                String telefone = rs.getString(8);
+                Integer cod = rs.getInt("codigo");
+                String nome = rs.getString("nome");
+                String email = rs.getString("email");
+                Integer idade = rs.getInt("idade");
+                Boolean sexo = rs.getBoolean("sexo");
+                String cpf = rs.getString("cpf");
+                Integer cep = rs.getInt("cep");
+                String telefone = rs.getString("telefone");
 
                 Cliente cliente = new Cliente();
 
                 cliente.setCodigo(cod);
+                System.out.println("codigo setado:" + cod);
                 cliente.setNome(nome);
                 cliente.setEmail(email);
                 cliente.setIdade(idade);
@@ -225,20 +226,22 @@ public class ClienteDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select * from cliente where codigo = ?";
+            String sql = "select distinct * from cliente where lower(nome) like lower(?)";
             ps = conn.prepareStatement(sql);
+            nomePesquisado = "%" + nomePesquisado + "%";
             ps.setString(1, nomePesquisado);
             ResultSet rs = ps.executeQuery();
             while(rs.next()) {
                 Cliente cliente = new Cliente();
-                cliente.setCodigo(rs.getInt(1));
-                cliente.setNome(rs.getString(2));
-                cliente.setEmail(rs.getString(3));
-                cliente.setIdade(rs.getInt(4));
-                cliente.setSexo(rs.getBoolean(5));
-                cliente.setCpf(rs.getString(6));
-                cliente.setCEP(rs.getInt(7));
-                cliente.setTelefone(rs.getString(8));
+                cliente.setCodigo(rs.getInt("codigo"));
+                System.out.println("codigo setado por nome:" + cliente.getCodigo());
+                cliente.setNome(rs.getString("nome"));
+                cliente.setEmail(rs.getString("email"));
+                cliente.setIdade(rs.getInt("idade"));
+                cliente.setSexo(rs.getBoolean("sexo"));
+                cliente.setCpf(rs.getString("cpf"));
+                cliente.setCEP(rs.getInt("cep"));
+                cliente.setTelefone(rs.getString("telefone"));
                 
                 lista.add(cliente);
 

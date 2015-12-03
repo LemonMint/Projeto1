@@ -37,8 +37,8 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
         return txtPesquisa.getText();
     }
 
-    public void Sair() {
-        PrincipalFrame.telaMostrarJogos = null;
+    public void sair() {
+        PrincipalFrame.telaMostrarCliente = null;
         this.dispose();
     }
 
@@ -80,6 +80,7 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
 
         btPesquisar.setText("Pesquisar");
 
+        listaCliente.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jScrollPane1.setViewportView(listaCliente);
 
         btEditar.setText("Editar");

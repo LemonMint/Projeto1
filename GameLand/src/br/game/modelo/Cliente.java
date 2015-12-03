@@ -79,4 +79,10 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    @Override
+    public String toString() {
+        return codigo + "\t " + nome + "\t " + cpf;
+    }
+
+    
 }

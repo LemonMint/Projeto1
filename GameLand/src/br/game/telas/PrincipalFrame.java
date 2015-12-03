@@ -8,6 +8,10 @@ package br.game.telas;
 import br.game.listerners.PrincipalListener;
 import br.game.modelo.Cliente;
 import br.game.modelo.Funcionario;
+import java.awt.Dimension;
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class PrincipalFrame extends javax.swing.JFrame {
 
@@ -45,18 +49,28 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         if (telaRegistrarCliente == null) {
             telaRegistrarCliente = new RegistrarClienteFrame();
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaRegistrarCliente.getSize();
+            telaRegistrarCliente.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
+
             jDesktopPane1.add(telaRegistrarCliente);
 
         }
         telaRegistrarCliente.setVisible(true);
     }
-    
-        public void criarRegistroCliente(Cliente cliente) {
+
+    public void criarRegistroCliente(Cliente cliente) {
         if (telaRegistrarCliente == null) {
             telaRegistrarCliente = new RegistrarClienteFrame(cliente);
             jDesktopPane1.add(telaRegistrarCliente);
         }
-        telaRegistroFuncionario.setVisible(true);
+        try {
+            telaRegistrarCliente.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(PrincipalFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        telaRegistrarCliente.setVisible(true);
     }
 
     public void criarRegistroJogos() {
@@ -87,6 +101,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarMostrarFuncionario() {
         if (telaMostraFuncionario == null) {
             telaMostraFuncionario = new MostrarFuncionarioFrame();
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaMostraFuncionario.getSize();
+            telaMostraFuncionario.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             telaMostraFuncionario.setPrincipal(this);
             jDesktopPane1.add(telaMostraFuncionario);
         }
@@ -98,12 +116,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
             telaRegistroFuncionario = new RegistroFuncionarioFrame(funcionario);
             jDesktopPane1.add(telaRegistroFuncionario);
         }
+        telaRegistroFuncionario.requestFocus();
         telaRegistroFuncionario.setVisible(true);
     }
 
     public void criarMostrarCliente() {
         if (telaMostrarCliente == null) {
             telaMostrarCliente = new MostrarClienteFrame();
+            telaMostrarCliente.setPrincipal(this);
             jDesktopPane1.add(telaMostrarCliente);
         }
         telaMostrarCliente.setVisible(true);
@@ -120,32 +140,31 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
-        btJogos = new javax.swing.JButton();
         btClientes = new javax.swing.JButton();
+        btJogos = new javax.swing.JButton();
+        btRegistrarJogo = new javax.swing.JButton();
         btRegistrar = new javax.swing.JButton();
         btCadastrarFuncionario = new javax.swing.JButton();
-        btRegistrarJogo = new javax.swing.JButton();
         btSair = new javax.swing.JButton();
         btMostrarFuncionarios = new javax.swing.JButton();
         btCreditos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
 
         jDesktopPane1.setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
+        btClientes.setText("Clientes");
+
         btJogos.setText("Jogos");
 
-        btClientes.setText("Clientes");
+        btRegistrarJogo.setText("Cadastrar Jogos");
 
         btRegistrar.setText("Cadastrar Clientes");
 
         btCadastrarFuncionario.setText("Cadastrar Funcionários");
-
-        btRegistrarJogo.setText("Cadastrar Jogos");
 
         btSair.setText("Sair");
 

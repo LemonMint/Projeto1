@@ -25,6 +25,7 @@ public class RegistrarUserListener implements ActionListener {
                 Cliente cliente = frame.getUsuario();
                 try {
                     if (cliente != null) {
+                        System.out.println(cliente.getCodigo());
                         if (cliente.getCodigo() == null) {
                             dao.insert(cliente);
                             System.out.println("DAO ADICIONAR");

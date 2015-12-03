@@ -17,7 +17,7 @@ import br.game.modelo.Cliente;
 public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
 
     private RegistrarUserListener listener = new RegistrarUserListener(this);
-    private Integer codigoCliente= null;
+    private Integer codigoCliente = null;
 
     public RegistrarClienteFrame() {
         initComponents();
@@ -29,6 +29,7 @@ public class RegistrarClienteFrame extends javax.swing.JInternalFrame {
 
     public Cliente getUsuario() {
         Cliente usuario = new Cliente();
+        usuario.setCodigo(codigoCliente);
         usuario.setTelefone(txtTelefone.getText());
         usuario.setEmail(txtEmail.getText());
         usuario.setCEP(Integer.valueOf(txtCep.getText().toString()));

@@ -109,14 +109,19 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JButton" name="btClientes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Clientes"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JButton" name="btJogos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Jogos"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btClientes">
+            <Component class="javax.swing.JButton" name="btRegistrarJogo">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Clientes"/>
+                <Property name="text" type="java.lang.String" value="Cadastrar Jogos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btRegistrar">
@@ -127,11 +132,6 @@
             <Component class="javax.swing.JButton" name="btCadastrarFuncionario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cadastrar Funcion&#xe1;rios"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btRegistrarJogo">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cadastrar Jogos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btSair">

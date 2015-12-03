@@ -173,20 +173,20 @@ public class FuncionarioDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, telefone, nome, rg, cpf, cargo, idade, sexo, senha from funcionario where codigo = ?";
+            String sql = "select * from funcionario where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                Integer cod = rs.getInt(1);
-                String nome = rs.getString(2);
-                String telefone = rs.getString(3);
-                String rg = rs.getString(4);
-                String cpf = rs.getString(5);
-                String cargo = rs.getString(6);
-                Integer idade = rs.getInt(7);
-                Boolean sexo = rs.getBoolean(8);
-                Integer senha = rs.getInt(9);
+                Integer cod = rs.getInt("codigo");
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String rg = rs.getString("rg");
+                String cpf = rs.getString("cpf");
+                String cargo = rs.getString("cargo");
+                Integer idade = rs.getInt("idade");
+                Boolean sexo = rs.getBoolean("sexo");
+                Integer senha = rs.getInt("senha");
 
                 Funcionario funcionario = new Funcionario();
 
@@ -229,21 +229,21 @@ public class FuncionarioDao {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigo, nome, telefone, rg, cpf, cargo, idade, sexo, senha from funcionario where nome = ?";
+            String sql = "select * from funcionario where nome = ?";
             //String sql = "SELECT CODIGO, NOME, TELEFONE, RG, CPF, CARGO, IDADE, SEXO, SENHA FROM FUNCIONARIO WHERE NOME = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, nome1);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Integer cod = rs.getInt(1);
-                String nome = rs.getString(2);
-                String telefone = rs.getString(3);
-                String rg = rs.getString(4);
-                String cpf = rs.getString(5);
-                String cargo = rs.getString(6);
-                Integer idade = rs.getInt(7);
-                Boolean sexo = rs.getBoolean(8);
-                Integer senha = rs.getInt(9);
+                Integer cod = rs.getInt("codigo");
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String rg = rs.getString("rg");
+                String cpf = rs.getString("cpf");
+                String cargo = rs.getString("cargo");
+                Integer idade = rs.getInt("idade");
+                Boolean sexo = rs.getBoolean("sexo");
+                Integer senha = rs.getInt("senha");
 
                 Funcionario funcionario = new Funcionario();
 
