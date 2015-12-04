@@ -269,6 +269,53 @@ public class ClienteDao {
         }
         return lista;
     }
+    
+    public List<Cliente> getClientePorLista() {
+        List<Cliente> lista = new ArrayList<Cliente>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = Conexao.getConnection();
+            String sql = "select * from cliente";
+            ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()) {
+                Cliente cliente = new Cliente();
+                cliente.setCodigo(rs.getInt("codigo"));
+                System.out.println("codigo setado por nome:" + cliente.getCodigo());
+                cliente.setNome(rs.getString("nome"));
+                cliente.setEmail(rs.getString("email"));
+                cliente.setIdade(rs.getInt("idade"));
+                cliente.setSexo(rs.getBoolean("sexo"));
+                cliente.setCpf(rs.getString("cpf"));
+                cliente.setCEP(rs.getInt("cep"));
+                cliente.setTelefone(rs.getString("telefone"));
+                
+                lista.add(cliente);
+            }
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+        }
+        return lista;
+    }
 
     
 

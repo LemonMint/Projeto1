@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import br.game.modelo.Cliente;
+import br.game.telas.MostrarClienteFrame;
 import br.game.telas.RegistrarClienteFrame;
 import java.io.IOException;
 
@@ -16,7 +17,7 @@ public class RegistrarUserListener implements ActionListener {
 
     public RegistrarUserListener(RegistrarClienteFrame frame) {
         this.frame = frame;
-    }
+    }    
 
     @Override
     public void actionPerformed(ActionEvent ae) {

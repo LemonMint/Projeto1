@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class MostrarClientesListener implements ActionListener {
 
@@ -37,12 +38,11 @@ public class MostrarClientesListener implements ActionListener {
                     ClienteDao q = new ClienteDao();
                     List<Cliente> clientePorNome = q.getClientePorNome(dadosPesquisa); //do dao
                     frame.setListCliente(clientePorNome);
-
                 }
                 break;
-
             case "editar":
                 frame.mostrarClienteFrame();
+                frame.setObjeto();
                 break;
             case "remover":
                 frame.removerCliente();

@@ -81,7 +81,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return codigo + "\t " + nome + "\t " + cpf;
+        return codigo + " - " + nome + "   CPF: " + cpf + "   E-Mail: " + email;
     }
 
     

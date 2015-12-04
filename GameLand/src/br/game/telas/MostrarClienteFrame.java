@@ -9,6 +9,7 @@ import br.game.controle.ClienteDao;
 import br.game.listerners.MostrarClientesListener;
 import br.game.modelo.Cliente;
 import java.util.List;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +26,7 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
      */
     public MostrarClienteFrame() {
         initComponents();
+        iniciarLista();
         btEditar.addActionListener(listener);
         btPesquisar.addActionListener(listener);
         btVoltar.addActionListener(listener);
@@ -51,7 +53,6 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
     public void mostrarClienteFrame() {
         Cliente cliente = (Cliente) listaCliente.getSelectedValue();
         frame.criarRegistroCliente(cliente);
-        listaCliente.setListData(new Object[]{});
     }
 
     public void setPrincipal(PrincipalFrame frame) {
@@ -63,10 +64,18 @@ public class MostrarClienteFrame extends javax.swing.JInternalFrame {
         ClienteDao dao = new ClienteDao();
         dao.delete(Cliente);
         JOptionPane.showMessageDialog(this, "\"" + Cliente.getNome() + "\"" + " foi removido com sucesso.");
-        listaCliente.setListData(new Object[]{});
-       
+        listaCliente.setModel(new DefaultListModel());
+        iniciarLista();
     }
 
+    public void iniciarLista() {
+        ClienteDao dao = new ClienteDao();
+        setListCliente(dao.getClientePorLista());
+    }
+
+    public void setObjeto(){
+        listaCliente.setModel(new DefaultListModel());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

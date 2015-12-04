@@ -64,6 +64,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarRegistroCliente(Cliente cliente) {
         if (telaRegistrarCliente == null) {
             telaRegistrarCliente = new RegistrarClienteFrame(cliente);
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaRegistrarCliente.getSize();
+            telaRegistrarCliente.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             jDesktopPane1.add(telaRegistrarCliente);
         }
         try {
@@ -77,6 +81,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarRegistroJogos(Jogo jogo) {
         if (telaRegistrarJogos == null) {
             telaRegistrarJogos = new RegistroJogosFrame(jogo);
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaRegistrarJogos.getSize();
+            telaRegistrarJogos.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             jDesktopPane1.add(telaRegistrarJogos);
         }
         try {
@@ -91,6 +99,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarRegistroJogos() {
         if (telaRegistrarJogos == null) {
             telaRegistrarJogos = new RegistroJogosFrame();
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaRegistrarJogos.getSize();
+            telaRegistrarJogos.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             jDesktopPane1.add(telaRegistrarJogos);
         }
         telaRegistrarJogos.setVisible(true);
@@ -101,6 +113,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
         if (telaMostrarJogos == null) {
             telaMostrarJogos = new MostrarJogosFrame();
             telaMostrarJogos.setPrincipal(this);
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaMostrarJogos.getSize();
+            telaMostrarJogos.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             jDesktopPane1.add(telaMostrarJogos);
         }
         telaMostrarJogos.setVisible(true);
@@ -109,6 +125,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarRegistroFunconario() {
         if (telaRegistroFuncionario == null) {
             telaRegistroFuncionario = new RegistroFuncionarioFrame();
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaRegistroFuncionario.getSize();
+            telaRegistroFuncionario.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             jDesktopPane1.add(telaRegistroFuncionario);
         }
         telaRegistroFuncionario.setVisible(true);
@@ -130,9 +150,17 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarRegistroFunconario(Funcionario funcionario) {
         if (telaRegistroFuncionario == null) {
             telaRegistroFuncionario = new RegistroFuncionarioFrame(funcionario);
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaRegistroFuncionario.getSize();
+            telaRegistroFuncionario.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             jDesktopPane1.add(telaRegistroFuncionario);
         }
-        telaRegistroFuncionario.requestFocus();
+        try {
+            telaRegistroFuncionario.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(PrincipalFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
         telaRegistroFuncionario.setVisible(true);
     }
 
@@ -140,10 +168,15 @@ public class PrincipalFrame extends javax.swing.JFrame {
         if (telaMostrarCliente == null) {
             telaMostrarCliente = new MostrarClienteFrame();
             telaMostrarCliente.setPrincipal(this);
+            Dimension desktopSize = jDesktopPane1.getSize();
+            Dimension jInternalFrameSize = telaMostrarCliente.getSize();
+            telaMostrarCliente.setLocation((desktopSize.width - jInternalFrameSize.width) / 2,
+                    (desktopSize.height - jInternalFrameSize.height) / 2);
             jDesktopPane1.add(telaMostrarCliente);
         }
         telaMostrarCliente.setVisible(true);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

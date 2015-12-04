@@ -162,21 +162,22 @@ public class GameLandControle {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select codigoJogo = ? , nomeJogo = ?, precoJogo = ?, plataformaJogo = ?, generoJogo = ? , descricao = ?, precoVenda = ?, produtora = ? from jogo where nomeJogo = ?";
+            String sql = "select distinct * from jogo where lower(nomejogo) like lower(?)";
             ps = conn.prepareStatement(sql);
+            nomeJogo = "%" + nomeJogo + "%";
             ps.setString(1, nomeJogo);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 Jogo jogo = new Jogo();
 
-                jogo.setCodigoJogo(rs.getInt(1));
-                jogo.setNomeJogo(rs.getString(2));
-                jogo.setPrecoJogo(rs.getDouble(3));
-                jogo.setPlataformaJogo(rs.getString(4));
-                jogo.setGeneroJogo(rs.getString(5));
-                jogo.setDescricao(rs.getString(6));
-                jogo.setPrecoVenda(rs.getDouble(7));
-                jogo.setProdutora(rs.getString(8));
+                jogo.setCodigoJogo(rs.getInt("codigojogo"));
+                jogo.setNomeJogo(rs.getString("nomejogo"));
+                jogo.setPrecoJogo(rs.getDouble("precojogo"));
+                jogo.setPlataformaJogo(rs.getString("plataformajogo"));
+                jogo.setGeneroJogo(rs.getString("generojogo"));
+                jogo.setDescricao(rs.getString("descricao"));
+                jogo.setPrecoVenda(rs.getDouble("precovenda"));
+                jogo.setProdutora(rs.getString("produtora"));
 
                 lista.add(jogo);
             }

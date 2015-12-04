@@ -101,6 +101,7 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
 
         btRemover.setText("Remover");
 
+        jList1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jScrollPane1.setViewportView(jList1);
 
         btVoltar.setText("Voltar");
