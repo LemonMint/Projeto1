@@ -8,16 +8,42 @@ package br.game.telas;
 import br.game.listerners.LimparCampoListener;
 import br.game.listerners.RegistroJogosListener;
 import br.game.modelo.Jogo;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class RegistroJogosFrame extends javax.swing.JInternalFrame {
 
     private RegistroJogosListener listener = new RegistroJogosListener(this);
+
+    private Integer codigoJogo = null;
 
     /**
      * Creates new form Registro
      */
     public RegistroJogosFrame() {
         initComponents();
+        initListeners();
+    }
+
+    public RegistroJogosFrame(Jogo jogo) {
+
+        initComponents();
+        initListeners();
+        if (jogo != null) {
+            codigoJogo = jogo.getCodigoJogo();
+            areaDescricao.setText(jogo.getDescricao());
+            boxGenero.setSelectedItem(jogo.getGeneroJogo());
+            boxPlataforma.setSelectedItem(jogo.getPlataformaJogo());
+            txtNomeJogo.setText(jogo.getNomeJogo());
+            txtPrecoCusto.setText(String.valueOf(jogo.getPrecoJogo()));
+            txtPrecoVenda.setText(String.valueOf(jogo.getPrecoVenda()));
+            txtProdutora.setText(jogo.getProdutora());
+        }
+
+    }
+
+    public void initListeners() {
+
         txtNomeJogo.addFocusListener(new LimparCampoListener(txtNomeJogo, txtNomeJogo.getText()));
         txtPrecoCusto.addFocusListener(new LimparCampoListener(txtPrecoCusto, txtPrecoCusto.getText()));
         txtPrecoVenda.addFocusListener(new LimparCampoListener(txtPrecoVenda, txtPrecoVenda.getText()));
@@ -28,10 +54,12 @@ public class RegistroJogosFrame extends javax.swing.JInternalFrame {
         btVoltar.setActionCommand("voltar");
         btProcurar.addActionListener(listener);
         btProcurar.setActionCommand("procurar");
+
     }
 
     public Jogo getJogo() {
         Jogo jogo = new Jogo();
+        jogo.setCodigoJogo(codigoJogo);
         jogo.setNomeJogo(txtNomeJogo.getText());
         jogo.setPrecoJogo(Double.parseDouble(txtPrecoCusto.getText()));
         jogo.setGeneroJogo(boxGenero.getSelectedItem().toString());

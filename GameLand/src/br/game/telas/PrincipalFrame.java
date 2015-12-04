@@ -8,6 +8,7 @@ package br.game.telas;
 import br.game.listerners.PrincipalListener;
 import br.game.modelo.Cliente;
 import br.game.modelo.Funcionario;
+import br.game.modelo.Jogo;
 import java.awt.Dimension;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
@@ -73,6 +74,20 @@ public class PrincipalFrame extends javax.swing.JFrame {
         telaRegistrarCliente.setVisible(true);
     }
 
+    public void criarRegistroJogos(Jogo jogo) {
+        if (telaRegistrarJogos == null) {
+            telaRegistrarJogos = new RegistroJogosFrame(jogo);
+            jDesktopPane1.add(telaRegistrarJogos);
+        }
+        try {
+            telaRegistrarJogos.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(PrincipalFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        telaRegistrarJogos.setVisible(true);
+
+    }
+
     public void criarRegistroJogos() {
         if (telaRegistrarJogos == null) {
             telaRegistrarJogos = new RegistroJogosFrame();
@@ -85,6 +100,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public void criarMostrarJogos() {
         if (telaMostrarJogos == null) {
             telaMostrarJogos = new MostrarJogosFrame();
+            telaMostrarJogos.setPrincipal(this);
             jDesktopPane1.add(telaMostrarJogos);
         }
         telaMostrarJogos.setVisible(true);
@@ -128,7 +144,6 @@ public class PrincipalFrame extends javax.swing.JFrame {
         }
         telaMostrarCliente.setVisible(true);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -6,7 +6,7 @@ public class Jogo {
     private double precoJogo;
     private String plataformaJogo;
     private String generoJogo;
-    private int codigoJogo;
+    private Integer codigoJogo;
     private String descricao;
     private double precoVenda;
     private String produtora;
@@ -22,7 +22,7 @@ public class Jogo {
     public Jogo() {
     }
 
-    public Jogo(String nomeJogo, double precoJogo, String plataformaJogo, String generoJogo, int codigoJogo, String descricao) {
+    public Jogo(String nomeJogo, double precoJogo, String plataformaJogo, String generoJogo, Integer codigoJogo, String descricao) {
         this.nomeJogo = nomeJogo;
         this.precoJogo = precoJogo;
         this.plataformaJogo = plataformaJogo;
@@ -67,7 +67,7 @@ public class Jogo {
         return codigoJogo;
     }
 
-    public void setCodigoJogo(int codigoJogo) {
+    public void setCodigoJogo(Integer codigoJogo) {
         this.codigoJogo = codigoJogo;
     }
 
@@ -87,5 +87,8 @@ public class Jogo {
         this.precoVenda = precoVenda;
     }
     
-    
+    @Override
+    public String toString() {
+        return "Codigo: " + codigoJogo + "\t Nome: " + nomeJogo + "\t Genero: " + generoJogo + "\t Plataforma: " + plataformaJogo + "\t Preço compra: " + precoJogo + "\t Preço venda: " + precoVenda + " \t";
+    }
 }

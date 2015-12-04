@@ -5,8 +5,12 @@
  */
 package br.game.telas;
 
+import br.game.controle.GameLandControle;
 import br.game.listerners.LimparCampoListener;
 import br.game.listerners.MostrarJogosListener;
+import br.game.modelo.Jogo;
+import java.util.List;
+import javax.swing.DefaultListModel;
 
 /**
  *
@@ -15,6 +19,7 @@ import br.game.listerners.MostrarJogosListener;
 public class MostrarJogosFrame extends javax.swing.JInternalFrame {
 
     private MostrarJogosListener listener = new MostrarJogosListener(this);
+    PrincipalFrame frame = null;
 
     //Imagem do tamanho 330 por 110
     /**
@@ -33,14 +38,38 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
         btRemover.setActionCommand("remover");
     }
 
-    public int PesquisaCod() {
-        return Integer.parseInt(txtPesquisar.getText());
+    public String PesquisaCod() {
+        return txtPesquisar.getText();
     }
 
-    
-     public void Sair() {
+    public void Sair() {
         PrincipalFrame.telaMostrarJogos = null;
         this.dispose();
+    }
+
+    public void setListCliente(List<Jogo> lista) {
+        jList1.setListData(lista.toArray());
+    }
+
+    public void mostrarJogoFrame() {
+        Jogo jogo = (Jogo) jList1.getSelectedValue();
+        frame.criarRegistroJogos(jogo);
+        jList1.setListData(new Object[]{});
+    }
+
+    public void setPrincipal(PrincipalFrame frame) {
+        this.frame = frame;
+    }
+
+    public void setListJogos(List<Jogo> lista) {
+        jList1.setListData(lista.toArray());
+    }
+
+    public void DeletarRegistroJogos() {
+        Jogo jogo = (Jogo) jList1.getSelectedValue();
+        GameLandControle gameLand = new GameLandControle();
+        gameLand.delete(jogo);
+        jList1.setModel(new DefaultListModel());
     }
 
     /**

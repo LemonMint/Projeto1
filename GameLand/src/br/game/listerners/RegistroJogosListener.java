@@ -25,7 +25,7 @@ public class RegistroJogosListener implements ActionListener {
             case "cadastrar":
                 try {
                     Jogo jogo = frame.getJogo();
-                    JOptionPane.showMessageDialog(frame, "Cadastro de um novo Jogo");
+                    JOptionPane.showMessageDialog(frame, "Jogo registrado com sucesso!");
 
                     if (jogo != null) {
                         if (jogo.getCodigoJogo() == null) {
@@ -41,6 +41,7 @@ public class RegistroJogosListener implements ActionListener {
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(frame, "Erro ao salvar log");
                 }
+                frame.Sair();
                 break;
             case "voltar":
                 frame.Sair();
@@ -57,9 +58,10 @@ public class RegistroJogosListener implements ActionListener {
             case "excluir":
                 Jogo jogo = frame.getJogo();
                 if (jogo != null) {
+                    JOptionPane.showMessageDialog(frame, "Jogo excluido com sucesso!");
                     dao.delete(jogo);
+                    frame.Sair();
                 }
-
                 break;
         }
     }
