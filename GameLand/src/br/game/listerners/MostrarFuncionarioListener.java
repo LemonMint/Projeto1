@@ -51,6 +51,7 @@ public class MostrarFuncionarioListener implements ActionListener {
                 break;
             case "editar":
                 frame.mostrarFuncionarioFrame();
+                frame.setObjeto();
                 break;
 
             case "voltar":

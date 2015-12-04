@@ -1447,3 +1447,47 @@ Fri Dec 04 01:36:43 BRST 2015 : Menu: MostrarCliente foi acessado
 Fri Dec 04 01:36:50 BRST 2015 : Usuário:10 salvo com sucesso
 Fri Dec 04 01:37:05 BRST 2015 : Usuário:Raul2 salvo com sucesso
 Fri Dec 04 01:37:10 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:38:02 BRST 2015 : Entrada login e senha.
+Fri Dec 04 12:38:02 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 12:38:51 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:38:56 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:39:07 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:39:27 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:40:16 BRST 2015 : Usuário:Raul3 salvo com sucesso
+Fri Dec 04 12:49:15 BRST 2015 : Entrada login e senha.
+Fri Dec 04 12:49:15 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 12:49:18 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:49:23 BRST 2015 : Usuário:Raul10 salvo com sucesso
+Fri Dec 04 12:49:43 BRST 2015 : Usuário:Raul111 salvo com sucesso
+Fri Dec 04 12:49:50 BRST 2015 : Saida da tela de Registro de Usuario
+Fri Dec 04 12:49:59 BRST 2015 : Entrada login e senha.
+Fri Dec 04 12:49:59 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 12:50:00 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:50:09 BRST 2015 : Usuário:Raul1 salvo com sucesso
+Fri Dec 04 12:56:11 BRST 2015 : Entrada login e senha.
+Fri Dec 04 12:56:11 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 12:56:19 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:56:25 BRST 2015 : Usuário:Raul1222 salvo com sucesso
+Fri Dec 04 12:58:23 BRST 2015 : Entrada login e senha.
+Fri Dec 04 12:58:23 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 12:58:25 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:58:38 BRST 2015 : Usuário:Ra salvo com sucesso
+Fri Dec 04 12:59:10 BRST 2015 : Entrada login e senha.
+Fri Dec 04 12:59:10 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 12:59:12 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 12:59:27 BRST 2015 : Usuário:raul salvo com sucesso
+Fri Dec 04 12:59:37 BRST 2015 : Usuário:Ra salvo com sucesso
+Fri Dec 04 12:59:40 BRST 2015 : Saida da tela de Registro de Usuario
+Fri Dec 04 12:59:52 BRST 2015 : Menu: MostrarCliente foi acessado
+Fri Dec 04 13:03:31 BRST 2015 : Entrada login e senha.
+Fri Dec 04 13:03:31 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 13:03:33 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Fri Dec 04 13:05:17 BRST 2015 : Entrada login e senha.
+Fri Dec 04 13:05:17 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 13:05:20 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Fri Dec 04 13:05:28 BRST 2015 : Menu: pesquisar foi clicado
+Fri Dec 04 13:06:20 BRST 2015 : Menu: Fim do programa
+Fri Dec 04 13:06:24 BRST 2015 : Entrada login e senha.
+Fri Dec 04 13:06:24 BRST 2015 : Entrada com sucesso.
+Fri Dec 04 13:06:25 BRST 2015 : Menu: MostrarFuncionario foi acessado
+Fri Dec 04 13:06:35 BRST 2015 : Menu: Fim do programa

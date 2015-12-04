@@ -27,6 +27,7 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
      */
     public MostrarJogosFrame() {
         initComponents();
+        iniciarLista();
         txtPesquisar.addFocusListener(new LimparCampoListener(txtPesquisar, txtPesquisar.getText()));
         btPesquisar.addActionListener(listener);
         btPesquisar.setActionCommand("pesquisar");
@@ -69,6 +70,16 @@ public class MostrarJogosFrame extends javax.swing.JInternalFrame {
         Jogo jogo = (Jogo) jList1.getSelectedValue();
         GameLandControle gameLand = new GameLandControle();
         gameLand.delete(jogo);
+        jList1.setModel(new DefaultListModel());
+        iniciarLista();
+    }
+    
+     public void iniciarLista() {
+        GameLandControle dao = new GameLandControle();
+        setListJogos(dao.getJogoPorLista());
+    }
+
+    public void setObjeto(){
         jList1.setModel(new DefaultListModel());
     }
 

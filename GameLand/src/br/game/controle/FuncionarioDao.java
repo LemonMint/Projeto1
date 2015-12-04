@@ -281,4 +281,60 @@ public class FuncionarioDao {
         return lista;
     }
 
+    public List<Funcionario> getFuncionarioPorLista() {
+        List<Funcionario> lista = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = Conexao.getConnection();
+            String sql = "select * from funcionario";
+            //String sql = "SELECT CODIGO, NOME, TELEFONE, RG, CPF, CARGO, IDADE, SEXO, SENHA FROM FUNCIONARIO WHERE NOME = ?";
+            ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Integer cod = rs.getInt("codigo");
+                String nome = rs.getString("nome");
+                String telefone = rs.getString("telefone");
+                String rg = rs.getString("rg");
+                String cpf = rs.getString("cpf");
+                String cargo = rs.getString("cargo");
+                Integer idade = rs.getInt("idade");
+                Boolean sexo = rs.getBoolean("sexo");
+                Integer senha = rs.getInt("senha");
+
+                Funcionario funcionario = new Funcionario();
+
+                funcionario.setCodigo(cod);
+                funcionario.setNome(nome);
+                funcionario.setTelefone(telefone);
+                funcionario.setRg(rg);
+                funcionario.setCpf(cpf);
+                funcionario.setCargo(cargo);
+                funcionario.setIdade(idade);
+                funcionario.setSexo(sexo);
+                funcionario.setSenha(senha);
+                lista.add(funcionario);
+
+            }
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+        }
+        return lista;
+    }
+    
 }

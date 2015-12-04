@@ -9,6 +9,7 @@ import br.game.controle.FuncionarioDao;
 import br.game.listerners.MostrarFuncionarioListener;
 import br.game.modelo.Funcionario;
 import java.util.List;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +26,7 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
      */
     public MostrarFuncionarioFrame() {
         initComponents();
+        iniciarLista();
 //        listFuncionario.addFocusListener(listener);
         btEditar.addActionListener(listener);
         btEditar.setActionCommand("editar");
@@ -65,7 +67,18 @@ public class MostrarFuncionarioFrame extends javax.swing.JInternalFrame {
         dao.delete(funcionario);
         JOptionPane.showMessageDialog(this, "\"" +funcionario.getNome() + "\"" + " foi removido com sucesso.");
         listFuncionario.setListData(new Object[]{});
+        iniciarLista();
     }
+    
+     public void iniciarLista() {
+        FuncionarioDao dao = new FuncionarioDao();
+        setListFuncionario(dao.getFuncionarioPorLista());
+    }
+
+    public void setObjeto(){
+        listFuncionario.setModel(new DefaultListModel());
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

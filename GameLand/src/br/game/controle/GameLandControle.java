@@ -247,4 +247,50 @@ public class GameLandControle {
         return null;
     }
 
+    
+       public List<Jogo> getJogoPorLista() {
+        List<Jogo> lista = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = Conexao.getConnection();
+            String sql = "select* from jogo";
+            ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                Jogo jogo = new Jogo();
+
+                jogo.setCodigoJogo(rs.getInt("codigojogo"));
+                jogo.setNomeJogo(rs.getString("nomejogo"));
+                jogo.setPrecoJogo(rs.getDouble("precojogo"));
+                jogo.setPlataformaJogo(rs.getString("plataformajogo"));
+                jogo.setGeneroJogo(rs.getString("generojogo"));
+                jogo.setDescricao(rs.getString("descricao"));
+                jogo.setPrecoVenda(rs.getDouble("precovenda"));
+                jogo.setProdutora(rs.getString("produtora"));
+
+                lista.add(jogo);
+            }
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                }
+            }
+        }
+        return lista;
+    }
+    
+    
 }
